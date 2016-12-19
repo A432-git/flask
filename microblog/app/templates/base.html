@@ -1,0 +1,362 @@
+﻿<html>
+  <head>
+    <title>DM CTC LAB Management</title>
+    <style >
+     *{font-family:Arial, Helvetica, sans-serif;font-size:14px;border:none;}
+     body{text-align:justify;}
+     .red{color:red;}
+     .top{background:#AFEEEE;cursor:pointer;}
+     .up{background:#FFFFCC url(http://down.psd.cn/uploads/allimg/080912/173019330.gif) no-repeat right 5px;}
+     .down{background:#FFFFCC url(http://down.psd.cn/uploads/allimg/080912/173019334.gif) no-repeat right 5px;}
+     .hov{background:#F0EFE5;}
+     .odd{background-color:#c7e5ff;}
+     .even{background-color:#eaf5ff}
+     table,tr,td,th{
+        padding: 0;
+        margin: 0;
+        }
+        table{
+        width: 100%;
+        border-color: #eee;
+        }
+        table tr{
+        line-height: 30px;
+        border-color: #aaa;
+        }
+        table th,table td{
+        text-align: center;
+        border-color: #fff;
+        }
+        table tr:nth-child(odd){
+        background: #DCDCDC;
+        }
+        table tr:nth-child(even){
+        background: #F8F8FF;
+        }
+</style>
+  </head>
+  <body >
+    <table style="width:100%" border="0" id="hiden-table">
+    <tr class="top">
+    <th><b><a href="/home">Home</a></b></th>
+    <th><b><a href="/array">Array</a></b></th>
+    <th><b><a href="/score">Score</a></b></th>
+    <th><b><a href="/array">Home</a></b></th>
+    <th><b><a href="/array">Home</a></b></th>
+    <th><b><a href="/array">Home</a></b></th>
+    </tr>
+    </table>
+    {% block content %}{% endblock %}
+    <script type="text/javascript">
+    
+    var trs = document.getElementById('table').getElementsByTagName('tr');
+   window.onload = function(){
+    for( var i=0; i<trs.length; i++ ){
+     trs[i].onmousedown = function(){
+      tronmousedown(this);
+     }
+    }
+   }
+   function tronmousedown(obj){
+    for( var o=0; o<trs.length; o++ ){
+     if( trs[o] == obj ){
+      trs[o].style.backgroundColor = '#DFEBF2';
+     }
+     else{
+      trs[o].style.backgroundColor = '';
+     }
+    }
+   }
+ var tableSort = function(){
+  this.initialize.apply(this,arguments);
+ }
+ 
+ tableSort.prototype = {
+ 
+  initialize : function(tableId,clickRow,startRow,endRow,classUp,classDown,selectClass){
+   this.Table = document.getElementById(tableId);
+   this.rows = this.Table.rows;//所有行
+   this.Tags = this.rows[clickRow-1].cells;//标签td
+   this.up = classUp;
+   this.down = classDown;
+   this.startRow = startRow;
+   this.selectClass = selectClass;
+   this.endRow = (endRow == 999? this.rows.length : endRow);
+   this.T2Arr = this._td2Array();//所有受影响的td的二维数组
+   this.setShow();
+  },
+  //设置标签切换
+  setShow:function(){
+   var defaultClass = this.Tags[0].className;
+   for(var Tag ,i=0;Tag = this.Tags[i];i++){
+    Tag.index = i;
+    addEventListener(Tag ,'click', Bind(Tag,statu));
+   }
+   var _this =this;
+   var turn = 0;
+   function statu(){
+    for(var i=0;i<_this.Tags.length;i++){
+     _this.Tags[i].className = defaultClass;
+    }
+    if(turn==0){
+     addClass(this,_this.down)
+     _this.startArray(0,this.index);
+     turn=1;
+    }else{
+     addClass(this,_this.up)
+     _this.startArray(1,this.index);
+     turn=0;
+    }
+   }
+  },
+  //设置选中列样式
+  colClassSet:function(num,cla){
+   //得到关联到的td
+   for(var i= (this.startRow-1);i<(this.endRow);i++){
+    for(var n=0;n<this.rows[i].cells.length;n++){
+     removeClass(this.rows[i].cells[n],cla);
+    }
+    addClass(this.rows[i].cells[num],cla);
+   }
+  },
+  //开始排序  num 根据第几列排序  aord 逆序还是顺序
+  startArray:function(aord,num){
+   var afterSort = this.sortMethod(this.T2Arr,aord,num);//排序后的二维数组传到排序方法中去
+   this.array2Td(num,afterSort);//输出
+  },
+  //将受影响的行和列转换成二维数组
+  _td2Array:function(){  
+   var arr=[];
+   for(var i=(this.startRow-1),l=0;i<(this.endRow);i++,l++){
+    arr[l]=[];
+    for(var n=0;n<this.rows[i].cells.length;n++){
+     arr[l].push(this.rows[i].cells[n].innerHTML);
+    }
+   }
+   return arr;
+  },
+  //根据排序后的二维数组来输出相应的行和列的 innerHTML 
+  array2Td:function(num,arr){
+   this.colClassSet(num,this.selectClass); 
+   for(var i= (this.startRow-1),l=0;i<(this.endRow);i++,l++){
+    for(var n=0;n<this.Tags.length;n++){
+     this.rows[i].cells[n].innerHTML = arr[l][n]; 
+    }
+   }
+  },
+  //传进来一个二维数组，根据二维数组的子项中的w项排序，再返回排序后的二维数组
+  sortMethod:function(arr,aord,w){
+   //var effectCol = this.getColByNum(whichCol);
+   arr.sort(function(a,b){
+    x = killHTML(a[w]);
+    y = killHTML(b[w]);
+    x = x.replace(/,/g,'');
+    y = y.replace(/,/g,'');
+    switch (isNaN(x)){
+     case false:
+     return Number(x) - Number(y);
+     break;
+     case true:
+     return x.localeCompare(y);
+     break;
+    }
+   });
+   arr = aord==0?arr:arr.reverse();
+   return arr;
+  }
+ }
+ /*-----------------------------------*/
+ function addEventListener(o,type,fn){
+  if(o.attachEvent){o.attachEvent('on'+type,fn)}
+  else if(o.addEventListener){o.addEventListener(type,fn,false)}
+  else{o['on'+type] = fn;}
+ }
+ 
+ function hasClass(element, className) { 
+  var reg = new RegExp('(\\s|^)'+className+'(\\s|$)'); 
+  return element.className.match(reg); 
+ } 
+  
+ function addClass(element, className) { 
+  if (!this.hasClass(element, className)) 
+  { 
+   element.className += " "+className; 
+  } 
+ } 
+  
+ function removeClass(element, className) { 
+  if (hasClass(element, className)) { 
+   var reg = new RegExp('(\\s|^)'+className+'(\\s|$)'); 
+   element.className = element.className.replace(reg,' '); 
+  } 
+ } 
+ 
+ var Bind = function(object, fun) {
+  return function() {
+   return fun.apply(object, arguments);
+  }
+ }
+ //去掉所有的html标记
+ function killHTML(str){
+  return str.replace(/<[^>]+>/g,"");
+ }
+ //------------------------------------------------
+ //tableid  第几行是标签行，从第几行开始排序，第几行结束排序(999表示最后) 升序标签样式，降序标签样式  选中列样式
+ //注意标签行的class应该是一致的
+ var ex1 = new tableSort('table',1,2,999,'up','down','hov');
+ var theTable = document.getElementById("table2");
+     var totalPage = document.getElementById("spanTotalPage");
+     var pageNum = document.getElementById("spanPageNum");
+
+
+     var spanPre = document.getElementById("spanPre");
+     var spanNext = document.getElementById("spanNext");
+     var spanFirst = document.getElementById("spanFirst");
+     var spanLast = document.getElementById("spanLast");
+
+
+     var numberRowsInTable = theTable.rows.length;
+     var pageSize = 15;
+     var page = 1;
+
+
+     //Next
+     function next() {
+
+
+         hideTable();
+
+
+         currentRow = pageSize * page;
+         maxRow = currentRow + pageSize;
+         if (maxRow > numberRowsInTable) maxRow = numberRowsInTable;
+         for (var i = currentRow; i < maxRow; i++) {
+             theTable.rows[i].style.display = '';
+         }
+         page++;
+
+
+         if (maxRow == numberRowsInTable) { nextText(); lastText(); }
+         showPage();
+         preLink();
+         firstLink();
+     }
+
+
+     //Previous
+     function pre() {
+
+
+         hideTable();
+
+
+         page--;
+
+
+         currentRow = pageSize * page;
+         maxRow = currentRow - pageSize;
+         if (currentRow > numberRowsInTable) currentRow = numberRowsInTable;
+         for (var i = maxRow; i < currentRow; i++) {
+             theTable.rows[i].style.display = '';
+         }
+
+
+
+
+         if (maxRow == 0) { preText(); firstText(); }
+         showPage();
+         nextLink();
+         lastLink();
+     }
+
+
+     //The First
+     function first() {
+         hideTable();
+         page = 1;
+         for (var i = 0; i < pageSize; i++) {
+             theTable.rows[i].style.display = '';
+         }
+         showPage();
+
+
+         preText();
+         nextLink();
+         lastLink();
+     }
+
+
+     //Last
+     function last() {
+         hideTable();
+         page = pageCount();
+         currentRow = pageSize * (page - 1);
+         for (var i = currentRow; i < numberRowsInTable; i++) {
+             theTable.rows[i].style.display = '';
+         }
+         showPage();
+
+
+         preLink();
+         nextText();
+         firstLink();
+     }
+
+
+     function hideTable() {
+         for (var i = 0; i < numberRowsInTable; i++) {
+             theTable.rows[i].style.display = 'none';
+         }
+     }
+
+
+     function showPage() {
+         pageNum.innerHTML = page;
+     }
+
+
+     //总共页数
+     function pageCount() {
+         var count = 0;
+         if (numberRowsInTable % pageSize != 0) count = 1;
+         return parseInt(numberRowsInTable / pageSize) + count;
+     }
+
+
+     //显示链接
+     function preLink() { spanPre.innerHTML = "<a href='javascript:pre();'>Previous</a>"; }
+     function preText() { spanPre.innerHTML = "Previous"; }
+
+
+     function nextLink() { spanNext.innerHTML = "<a href='javascript:next();'>Next</a>"; }
+     function nextText() { spanNext.innerHTML = "Next"; }
+
+
+     function firstLink() { spanFirst.innerHTML = "<a href='javascript:first();'>The First</a>"; }
+     function firstText() { spanFirst.innerHTML = "The First"; }
+
+
+     function lastLink() { spanLast.innerHTML = "<a href='javascript:last();'>Last</a>"; }
+     function lastText() { spanLast.innerHTML = "Last"; }
+
+
+     //隐藏表格
+     function hide() {
+         for (var i = pageSize; i < numberRowsInTable; i++) {
+             theTable.rows[i].style.display = 'none';
+         }
+
+
+         totalPage.innerHTML = pageCount();
+         pageNum.innerHTML = '1';
+
+
+         nextLink();
+         lastLink();
+     }
+
+
+     hide();
+</script>
+  </body>
+</html>
