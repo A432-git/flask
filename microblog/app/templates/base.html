@@ -4,6 +4,7 @@
     <style >
      *{font-family:Arial, Helvetica, sans-serif;font-size:14px;border:none;}
      body{text-align:justify;}
+     th.green{clor:green;}
      .red{color:red;}
      .top{background:#AFEEEE;cursor:pointer;}
      .up{background:#FFFFCC url(http://down.psd.cn/uploads/allimg/080912/173019330.gif) no-repeat right 5px;}
@@ -33,11 +34,24 @@
         table tr:nth-child(even){
         background: #F8F8FF;
         }
+        #footer{
+          position:fixed;
+          background:$fff;
+          bottom:20px;
+          right:10px;
+          width:250px;
+          height:50px;
+        }
+        center {font-size: 300%}
 </style>
   </head>
-  <body >
-    <table style="width:100%" border="0" id="hiden-table">
-    <tr class="top">
+  <body background="../static/bg4.jpg" >
+  
+    <table style="background:#0000FF" border="0" id="hiden-table">
+    
+    <center>MRQE SOULUTION DATA MOBLITY HARDWARE MANAGEMENT</center>
+    
+    <tr style="color:#0000FF;background:#F0F0F0">
     <th><b><a href="/home">Home</a></b></th>
     <th><b><a href="/array">Array</a></b></th>
     <th><b><a href="/score">Score</a></b></th>
@@ -46,7 +60,13 @@
     <th><b><a href="/array">Home</a></b></th>
     </tr>
     </table>
+    
     {% block content %}{% endblock %}
+    <footer>
+    <div id="footer">
+      <h1>Contact information:Reid Yang</h1> <a href="mailto:someone@example.com">reid.yang@emc.com</a>
+      </div>
+    </footer>
     <script type="text/javascript">
     
     var trs = document.getElementById('table').getElementsByTagName('tr');
