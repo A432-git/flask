@@ -1,0 +1,43 @@
+*{font-family:Arial, Helvetica, sans-serif;font-size:14px;border:none;}
+     body{text-align:justify;}
+     th.green{clor:green;}
+     .blue{color:#20B2AA;}
+     .top{background:#20B2AA;cursor:pointer;}
+     .up{background:#FFFFCC url(http://down.psd.cn/uploads/allimg/080912/173019330.gif) no-repeat right 5px;}
+     .down{background:#FFFFCC url(http://down.psd.cn/uploads/allimg/080912/173019334.gif) no-repeat right 5px;}
+     .hov{background:#F0EFE5;}
+     .odd{background-color:#c7e5ff;}
+     .even{background-color:#eaf5ff}
+     table,tr,td,th{
+        padding: 1;
+        margin: 1;
+        border:0;
+        }
+        table{
+        width: 100%;
+        border-color: #eee;
+        }
+        table tr{
+        line-height: 30px;
+        border="0" 
+        }
+        table th,table td{
+        text-align: center;
+        border-color: #fff;
+        }
+        table tr:nth-child(odd){
+        background: #DCDCDC;
+        }
+        table tr:nth-child(even){
+        background: #F8F8FF;
+        }
+        #footer{
+          position:fixed;
+          background:$fff;
+          bottom:20px;
+          right:10px;
+          width:600px;
+          height:30px;
+          text-align:right;
+        }
+        center {font-size: 300%}
