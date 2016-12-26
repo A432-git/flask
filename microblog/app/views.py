@@ -1,9 +1,12 @@
-from flask import render_template
+import os
+from flask import Flask, request, render_template, redirect, url_for
+from werkzeug.utils import secure_filename
 from app import app
 import xlrd
-book = xlrd.open_workbook("data.xlsx")
 
+UPLOAD_FOLDER =r'C:\Users\Administrator\Desktop\script\flask\microblog'
 def getData(sheetName):
+    book = xlrd.open_workbook(r'data.xlsx')
     sh = book.sheet_by_name(sheetName)
     num_rows = sh.nrows
     num_cols = sh.ncols
@@ -22,9 +25,10 @@ def getData(sheetName):
         else:
             heads=row
             posts['heads'] = row
+    print("-----------------")
     return posts
 @app.route('/')
-@app.route('/home')
+@app.route('/home/')
 def home():
     return render_template("Home.html",title = 'home',)
 
@@ -73,3 +77,17 @@ def standardTB():
 @app.route('/baseline tc')
 def baselineTC():
     return render_template("data.html",posts = getData(sheetName = "Baseline TC"))
+
+@app.route('/manageByReid')
+def manageByReid():
+    return render_template("manage.html",)
+ 
+@app.route('/upload', methods=['GET', 'POST'])
+def upload():
+    if request.method == 'GET':
+        return render_template('manage.html')
+    elif request.method == 'POST':
+        f = request.files['file']
+        fname = secure_filename(f.filename) 
+        f.save(os.path.join(UPLOAD_FOLDER, fname))
+        return render_template("data.html",posts = getData(sheetName = "Array"))
