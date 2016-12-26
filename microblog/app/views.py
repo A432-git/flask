@@ -4,9 +4,9 @@ from werkzeug.utils import secure_filename
 from app import app
 import xlrd
 
-UPLOAD_FOLDER =r'C:\Users\Administrator\Desktop\script\flask\microblog'
+UPLOAD_FOLDER =r'C:\Users\Administrator\Desktop\script\flask\microblog\app\static\Uploads'
 def getData(sheetName):
-    book = xlrd.open_workbook(r'data.xlsx')
+    book = xlrd.open_workbook(r'C:\Users\Administrator\Desktop\script\flask\microblog\app\static\Uploads\data.xlsx')
     sh = book.sheet_by_name(sheetName)
     num_rows = sh.nrows
     num_cols = sh.ncols
