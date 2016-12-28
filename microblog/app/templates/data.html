@@ -1,8 +1,8 @@
 ﻿{% extends "base.html" %}
 {% block content %}
-<table style="width:100%" border="0" class="warp_table" id="example">
+<table   id="example">
    <thead>
-    <tr class="blue">
+    <tr >
     {% for head in posts.heads%}
         <th ><b>{{head}}</b></th>
     {% endfor %}
@@ -13,7 +13,7 @@
         <th ><b>{{head}}</b></th>
     {% endfor %}
      </tfoot>
-    <tbody id="table2" text-align="center">
+    <tbody id="table2" >
 {% for post in posts.body %}
 
   <tr>
