@@ -1,6 +1,6 @@
 ﻿{% extends "base.html" %}
 {% block content %}
-<table   id="example">
+<table  border="0"  id="example">
    <thead>
     <tr >
     {% for head in posts.heads%}
@@ -24,4 +24,9 @@
 {% endfor %}
   </tbody>
 </table>
+<script type=text/javascript>
+     $(document).ready(function() {
+        $('#example').DataTable();
+    } );
+     </script>
 {% endblock %}
