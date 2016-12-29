@@ -2,41 +2,38 @@
   <head>
     <title>DM CTC LAB Management</title>
     
-     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script> 
+	<script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <script src="https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/plug-ins/9dcbecd42ad/integration/jqueryui/dataTables.jqueryui.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
     <link rel="stylesheet" href="https://cdn.datatables.net/plug-ins/9dcbecd42ad/integration/jqueryui/dataTables.jqueryui.css"/>
-    
+	<script src="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
      <link rel="stylesheet" href="../static/css/style.css" /> 
-     <link rel="shortcut icon" href="{{ url_for('static', filename='ico.ico') }}">
   </head>
   <body background="../static/bg4.jpg" >
-  
     <table style="background:#0000FF" border="0" id="hiden-table" width="100%">
     
     <center >MRQE SOULUTION DATA MOBLITY HARDWARE MANAGEMENT</center>
     
     <tr style="color:#0000FF;background:#F0F0F0">
-    <th><b><a href="/home">Home</a></b></th>
-    <th><b><a href="/array">Array</a></b></th>
-    <th><b><a href="/host">Host</a></b></th>
-    <th><b><a href="/virtualization">Virtualization</a></b></th>
-    <th><b><a href="/falcon 404 IP assignment">Falcon IP</a></b></th>
-    <th><b><a href="/sanblaze">Sanblaze</a></b></th>
-    <th><b><a href="/rockies">Rockies</a></b></th>
-    <th><b><a href="/service">Service</a></b></th>
-    <th><b><a href="/daily tool">Daily Tool</a></b></th>
-    <th><b><a href="/special setup">Special Setup</a></b></th>
-    <th><b><a href="/standard tb">Standard TB</a></b></th>
-    <th><b><a href="/baseline tc">Baseline TC</a></b></th>
+    <th><a href="/home">Home</a></th>
+    <th><a href="/array">Array</a></th>
+    <th><a href="/host">Host</a></th>
+    <th><a href="/virtualization">Virtualization</a></th>
+    <th><a href="/falcon 404 IP assignment">Falcon IP</a></th>
+    <th><a href="/sanblaze">Sanblaze</a></th>
+    <th><a href="/rockies">Rockies</a></th>
+    <th><a href="/service">Service</a></th>
+    <th><a href="/daily tool">Daily Tool</a></th>
+    <th><a href="/special setup">Special Setup</a></th>
+    <th><a href="/standard tb">Standard TB</a></th>
+    <th><a href="/baseline tc">Baseline TC</a></th>
     {% if user %}
-       <th><b><a href="/form">Form</a></b></th>
+       <th><a href="/form">Form</a></th>
     {% else %}
 
     {% endif %}
-
     </tr>
     </table>
     

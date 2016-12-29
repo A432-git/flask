@@ -1,7 +1,7 @@
 *{font-family:Arial, Helvetica, sans-serif;font-size:14px;border:none;}
      body{text-align:justify;}
      .blue{color:#20B2AA;}
-    
+    a{ font: 30px/1.5 arial; }
         
         #footer{
           position:fixed;
