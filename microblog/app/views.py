@@ -5,31 +5,38 @@ from app import app
 import xlrd
 
 UPLOAD_FOLDER =r'.\app\static\Uploads'
-def getData(sheetName):
-    book = xlrd.open_workbook(r'.\app\static\Uploads\data.xlsx')
-    sh = book.sheet_by_name(sheetName)
-    num_rows = sh.nrows
-    num_cols = sh.ncols
-    num_rows = sh.nrows
-    posts={}
-    posts['body']=[]
-    posts['heads']=[]
-    for curr_row in range(num_rows):
-        post={}
+DATA = r'.\app\static\Uploads\data.xlsx'
+allPages = {}
+def initData():
+    book = xlrd.open_workbook(DATA)
+    sheetNames = book.sheet_names()
+    for sheetName in sheetNames:        
+        sh = book.sheet_by_name(sheetName)
+        num_rows = sh.nrows
+        num_cols = sh.ncols
+        num_rows = sh.nrows    
+        posts={}
         
-        row = sh.row_values(curr_row)
-        if(curr_row !=0):
-            post = dict(zip(heads,row))
-            posts['body'].append(post)
+        posts['body']=[]
+        posts['heads']=[]
+        for curr_row in range(num_rows):
+            post={}
             
-        else:
-            heads=row
-            posts['heads'] = row
-    print("-----------------")
-    return posts
+            row = sh.row_values(curr_row)
+            if(curr_row !=0):
+                post = dict(zip(heads,row))
+                posts['body'].append(post)
+                
+            else:
+                heads=row
+                posts['heads'] = row
+        allPages[sheetName] = posts
+def getData(sheetName):
+    return allPages[sheetName]
 @app.route('/')
 @app.route('/home/')
 def home():
+    initData()
     return render_template("Home.html",title = 'home',)
 
 @app.route('/array')
@@ -90,4 +97,5 @@ def upload():
         f = request.files['file']
         fname = secure_filename(f.filename) 
         f.save(os.path.join(UPLOAD_FOLDER, fname))
+        initData()
         return render_template("data.html",posts = getData(sheetName = "Array"))
