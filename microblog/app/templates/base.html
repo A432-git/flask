@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/plug-ins/9dcbecd42ad/integration/jqueryui/dataTables.jqueryui.css"/>
     
      <link rel="stylesheet" href="../static/css/style.css" /> 
-     
+     <link rel="shortcut icon" href="{{ url_for('static', filename='ico.ico') }}">
   </head>
   <body background="../static/bg4.jpg" >
   
@@ -49,8 +49,18 @@
     <script type=text/javascript>
      $(document).ready(function() {
         
-        $('#example').DataTable();
+        var table = $('#example').DataTable();
+        $('#example tbody').on( 'click', 'tr', function () {
+        if ( $(this).hasClass('selected') ) {
+            $(this).removeClass('selected');
+        }
+        else {
+            table.$('tr.selected').removeClass('selected');
+            $(this).addClass('selected');
+        }
+        } );
     } );
+     
      </script>
   </body>
 </html>
