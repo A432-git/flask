@@ -1,14 +1,11 @@
 ﻿<html>
   <head>
     <title>DM CTC LAB Management</title>
-    
-	<script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-
+    <script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/plug-ins/9dcbecd42ad/integration/jqueryui/dataTables.jqueryui.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
     <link rel="stylesheet" href="https://cdn.datatables.net/plug-ins/9dcbecd42ad/integration/jqueryui/dataTables.jqueryui.css"/>
-	<script src="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
      <link rel="stylesheet" href="../static/css/style.css" /> 
   </head>
   <body background="../static/bg4.jpg" >
@@ -29,11 +26,6 @@
     <th><a href="/special setup">Special Setup</a></th>
     <th><a href="/standard tb">Standard TB</a></th>
     <th><a href="/baseline tc">Baseline TC</a></th>
-    {% if user %}
-       <th><a href="/form">Form</a></th>
-    {% else %}
-
-    {% endif %}
     </tr>
     </table>
     
@@ -46,11 +38,7 @@
     <script type=text/javascript>
      $(document).ready(function() {
         
-        var table = $('#example').DataTable({
-             "dom": '<"toolbar">frtip'
-        }
-        );
-         $("div.toolbar").html('<a href="">Add</a>');
+        var table = $('#example').DataTable();
         $('#example tbody').on( 'click', 'tr', function () {
         if ( $(this).hasClass('selected') ) {
             $(this).removeClass('selected');
