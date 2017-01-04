@@ -32,11 +32,12 @@ def initData():
                 posts['heads'] = row
         allPages[sheetName] = posts
 def getData(sheetName):
+    if(len(allPages.keys()) < 1):
+        initData()
     return allPages[sheetName]
 @app.route('/')
 @app.route('/home/')
 def home():
-    initData()
     return render_template("Home.html",title = 'home',)
 
 @app.route('/array')
