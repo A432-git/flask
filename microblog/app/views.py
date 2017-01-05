@@ -88,7 +88,7 @@ def baselineTC():
 
 @app.route('/manageByReid')
 def manageByReid():
-    return render_template("manage.html",)
+    return render_template("Manage.html",)
  
 @app.route('/upload', methods=['GET', 'POST'])
 def upload():
