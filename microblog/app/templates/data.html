@@ -9,9 +9,11 @@
     </tr>
     </thead>
      <tfoot>
+     <tr>
      {% for head in posts.heads%}
         <th ><b>{{head}}</b></th>
     {% endfor %}
+    </tr>
      </tfoot>
     <tbody >
 {% for post in posts.body %}
