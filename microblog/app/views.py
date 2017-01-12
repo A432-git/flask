@@ -82,9 +82,9 @@ def specialSetup():
 def standardTB():
     return render_template("data.html",posts = getData(sheetName = "Standard TB"))
     
-@app.route('/baseline tc')
-def baselineTC():
-    return render_template("data.html",posts = getData(sheetName = "Baseline TC"))
+@app.route('/default configuration')
+def defaultConfig():
+    return render_template("data.html",posts = getData(sheetName = "Default configuration"))
 
 @app.route('/manageByReid')
 def manageByReid():
