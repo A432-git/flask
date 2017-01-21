@@ -3,9 +3,11 @@ from flask import Flask, request, render_template, redirect, url_for
 from werkzeug.utils import secure_filename
 from app import app
 import xlrd
-
-UPLOAD_FOLDER =r'.\app\static\Uploads'
-DATA = r'.\app\static\Uploads\data.xlsx'
+# dirname=os.path.dirname(os.path.abspath(__file__))
+# UPLOAD_FOLDER =r'.\app\Uploads'
+# DATA = r'.\app\Uploads\data.xlsx'
+UPLOAD_FOLDER =os.path.join(os.path.dirname(os.path.abspath(__file__)),'Uploads')
+DATA = os.path.join(UPLOAD_FOLDER,'data.xlsx')
 allPages = {}
 def initData():
     book = xlrd.open_workbook(DATA)
