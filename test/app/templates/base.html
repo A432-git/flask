@@ -9,34 +9,17 @@
      <link rel="stylesheet" href="../static/css/style.css" /> 
   </head>
   <body  style= "background-image:url(../static/bg.jpg)"  >
-  <center >MRQE SOULUTION DATA MOBLITY HARDWARE MANAGEMENT  <h2>MRQR DMCTC:Reid Yang | Mail To: <a href="mailto:reid.yang@emc.com">reid.yang@emc.com</a> | Telephone:+8682966616</h2> </center>
+  <center >MRQE SOULUTION DATA MOBLITY HARDWARE MANAGEMENT</center>
     <table style="background:#0000FF" border="0" id="hiden-table" width="100%">
     <tr style="color:#0000FF;background:#F0F0F0">
-     <th><a href="/Home">Home</a></th>
     {% for link in links %}
-
-     <th><a href="/data/{{ link }}">{{ link }}</a></th>
+    
+     <th><a href="{{ link }}">{{ link }}</a></th>
     {% endfor %} 
+    {% block content %}{% endblock %}
     </tr>
     </table>
     
-    {% block content %}{% endblock %}
-   
-    <script type=text/javascript>
-     $(document).ready(function() {
-        
-        var table = $('#example').DataTable();
-        $('#example tbody').on( 'click', 'tr', function () {
-        if ( $(this).hasClass('selected') ) {
-            $(this).removeClass('selected');
-        }
-        else {
-            table.$('tr.selected').removeClass('selected');
-            $(this).addClass('selected');
-        }
-        } );
-    } );
-     
-     </script>
+    
   </body>
 </html>

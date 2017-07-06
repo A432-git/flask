@@ -3,6 +3,9 @@ from flask import Flask, request, render_template, redirect, url_for
 from werkzeug.utils import secure_filename
 from app import app
 import xlrd
+# dirname=os.path.dirname(os.path.abspath(__file__))
+# UPLOAD_FOLDER =r'.\app\Uploads'
+# DATA = r'.\app\Uploads\data.xlsx'
 UPLOAD_FOLDER =os.path.join(os.path.dirname(os.path.abspath(__file__)),'Uploads')
 DATA = os.path.join(UPLOAD_FOLDER,'data.xlsx')
 allPages = {}
@@ -39,14 +42,55 @@ def getData(sheetName):
         initData()
     return allPages[sheetName]
 @app.route('/')
-@app.route('/Home')
+@app.route('/home/')
 def home():
     return render_template("Home.html",links=getKeys())
 
-@app.route('/data/<name>')
-def data(name):
-    return render_template("data.html",links=getKeys(),posts = getData(sheetName = name))
+@app.route('/Array')
+def array():
+    return render_template("data.html",links=getKeys(),posts = getData(sheetName = "Array"))
 
+@app.route('/Host')
+def host():
+    return render_template("data.html",links=getKeys(),posts = getData(sheetName = "Host"))
+
+@app.route('/Virtualization')
+def virtualization():
+    return render_template("data.html",links=getKeys(),posts = getData(sheetName = "Virtualization"))
+
+@app.route('/Falcon 404 IP assignment')
+def falconIPAssignment():
+    return render_template("data.html",links=getKeys(),posts = getData(sheetName = "Falcon 404 IP assignment"))
+    
+@app.route('/Rockies')
+def rockies():
+    return render_template("data.html",links=getKeys(),posts = getData(sheetName = "Rockies"))
+    
+    
+@app.route('/Sanblaze')
+def sanblaze():
+    return render_template("data.html",links=getKeys(),posts = getData(sheetName = "Sanblaze"))
+
+    
+@app.route('/Service')
+def service():
+    return render_template("data.html",links=getKeys(),posts = getData(sheetName = "Service"))    
+
+@app.route('/Daily tool')
+def dailyTool():
+    return render_template("data.html",links=getKeys(),posts = getData(sheetName = "Daily tool"))
+    
+@app.route('/Special setup')
+def specialSetup():
+    return render_template("data.html",links=getKeys(),posts = getData(sheetName = "Special setup"))
+    
+@app.route('/Standard tb')
+def standardTB():
+    return render_template("data.html",links=getKeys(),posts = getData(sheetName = "Standard TB"))
+    
+@app.route('/Default configuration')
+def defaultConfig():
+    return render_template("data.html",links=getKeys(),posts = getData(sheetName = "Default configuration"))
 
 @app.route('/manageByReid')
 def manageByReid():
