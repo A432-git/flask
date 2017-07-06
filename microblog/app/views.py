@@ -12,6 +12,7 @@ allPages = {}
 def initData():
     book = xlrd.open_workbook(DATA)
     sheetNames = book.sheet_names()
+
     for sheetName in sheetNames:        
         sh = book.sheet_by_name(sheetName)
         num_rows = sh.nrows
@@ -40,7 +41,7 @@ def getData(sheetName):
 @app.route('/')
 @app.route('/home/')
 def home():
-    return render_template("Home.html",title = 'home',)
+    return render_template("Home.html")
 
 @app.route('/array')
 def array():
