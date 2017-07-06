@@ -24,7 +24,7 @@
    
     <script type=text/javascript>
      $(document).ready(function() {
-        
+        $("#div1").fadeIn(600);
         var table = $('#example').DataTable();
         $('#example tbody').on( 'click', 'tr', function () {
         if ( $(this).hasClass('selected') ) {
@@ -35,6 +35,7 @@
             $(this).addClass('selected');
         }
         } );
+         
     } );
      
      </script>
