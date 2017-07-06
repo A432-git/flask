@@ -6,7 +6,7 @@ import xlrd
 UPLOAD_FOLDER =os.path.join(os.path.dirname(os.path.abspath(__file__)),'Uploads')
 DATA = os.path.join(UPLOAD_FOLDER,'data.xlsx')
 allPages = {}
-def getKeys():
+def getSheetNames():
     book = xlrd.open_workbook(DATA)
     sheetNames = book.sheet_names()
     return sheetNames
@@ -41,16 +41,16 @@ def getData(sheetName):
 @app.route('/')
 @app.route('/Home')
 def home():
-    return render_template("Home.html",links=getKeys())
+    return render_template("Home.html",links=getSheetNames())
 
 @app.route('/data/<name>')
 def data(name):
-    return render_template("data.html",links=getKeys(),posts = getData(sheetName = name))
+    return render_template("data.html",links=getSheetNames(),posts = getData(sheetName = name))
 
 
 @app.route('/manageByReid')
 def manageByReid():
-    return render_template("Manage.html",)
+    return render_template("Manage.html",links=getSheetNames())
  
 @app.route('/upload', methods=['GET', 'POST'])
 def upload():
