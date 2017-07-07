@@ -38,11 +38,13 @@ def getData(sheetName):
     if(len(allPages.keys()) < 1):
         initData()
     return allPages[sheetName]
-@app.route('/')
+
+
 @app.route('/data/Home')
 def home():
     return render_template("Home.html",links=getSheetNames())
 
+@app.route('/')
 @app.route('/Main')
 def main():
     return render_template("main.html",links=getSheetNames())
@@ -66,4 +68,4 @@ def upload():
         fname = secure_filename(f.filename) 
         f.save(os.path.join(UPLOAD_FOLDER, fname))
         initData()
-        return render_template("data.html",posts = getData(sheetName = "Array"))
+        return render_template("main.html",links=getSheetNames())
