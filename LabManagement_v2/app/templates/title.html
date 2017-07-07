@@ -1,0 +1,21 @@
+﻿<html>
+  <head>
+    <title>DM CTC LAB Management</title>
+    <link rel="stylesheet" href="../static/css/style.css" /> 
+    <script type="text/javascript">
+
+    </script>
+  </head>
+  <body  style= "background-image:url(../static/bg.jpg)"  >
+  <center >MRQE SOULUTION DATA MOBLITY HARDWARE MANAGEMENT  <h2>MRQE Data Mobility CTC:Reid Yang | Mail To: <a href="mailto:reid.yang@emc.com">reid.yang@emc.com</a> | Telephone:+8682966616</h2> </center>
+    <table style="background:#0000FF" border="0" id="hiden-table" width="100%">
+    <tr style="color:#0000FF;background:#F0F0F0">
+     <th><a href="/Home">Home</a></th>
+    {% for link in links %}
+
+     <th><a class="a" onClick="my_a()" href="#">{{ link }}</a></th>
+    {% endfor %} 
+    </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+﻿<html>
+  <head>
+    <title>DM CTC LAB Management</title>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script> 
+    <script src="https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/plug-ins/9dcbecd42ad/integration/jqueryui/dataTables.jqueryui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
+    <link rel="stylesheet" href="https://cdn.datatables.net/plug-ins/9dcbecd42ad/integration/jqueryui/dataTables.jqueryui.css"/>
+     <link rel="stylesheet" href="../static/css/style.css" /> 
+  </head>
+  <body  style= "background-image:url(../static/bg.jpg)"  >    
+    {% block content %}{% endblock %}
+   
+    <script type=text/javascript>
+     $(document).ready(function() {
+        $("#div1").fadeIn(500);
+        var table = $('#example').DataTable();
+        $('#example tbody').on( 'click', 'tr', function () {
+        if ( $(this).hasClass('selected') ) {
+            $(this).removeClass('selected');
+        }
+        else {
+            table.$('tr.selected').removeClass('selected');
+            $(this).addClass('selected');
+        }
+        } );
+         
+    } );
+     
+     </script>
+  </body>
+</html>
