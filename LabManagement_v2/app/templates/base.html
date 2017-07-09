@@ -14,7 +14,11 @@
     <script type=text/javascript>
      $(document).ready(function() {
         $("#div1").fadeIn(500);
-        var table = $('#example').DataTable();
+        var table = $('#example').DataTable(
+        {
+        stateSave: true,
+        processing: true
+        });
         $('#example tbody').on( 'click', 'tr', function () {
         if ( $(this).hasClass('selected') ) {
             $(this).removeClass('selected');
