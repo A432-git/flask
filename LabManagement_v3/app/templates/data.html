@@ -1,0 +1,21 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<div id="div1" style="display:none;">
+<table  border="0"  class="hover" id="example">
+   <thead>
+    <tr >
+    {% for head in heads%}
+        <th ><b>{{head}}</b></th>
+    {% endfor %}
+    </tr>
+    </thead>
+     <tfoot>
+     <tr>
+    {% for head in heads%}
+        <th ><b>{{head}}</b></th>
+    {% endfor %}
+    </tr>
+     </tfoot>
+</table>
+</div>
+{% endblock %}

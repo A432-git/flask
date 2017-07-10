@@ -1,0 +1,18 @@
+*{font-family:Arial, Helvetica, sans-serif;font-size:14px;border:none;}
+     body{text-align:justify;}
+        
+        #footer{
+          position:fixed;
+          background:$fff;
+          bottom:20px;
+          right:10px;
+          width:600px;
+          height:30px;
+          text-align:right;
+        }
+        
+        center {font-size: 300%}
+        .disabled {
+           pointer-events: none;
+           cursor: default;
+        }
