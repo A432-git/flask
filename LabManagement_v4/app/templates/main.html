@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <title></title>
+ <style type="text/css">
+.min{ min-height:"100%"; width:"100%"}
+</style>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+ </head>
+ <body  style= "background-image:url(../static/bg.jpg)"  >
+  <center ><h1 face="arial">MRQE SOULUTION DATA MOBLITY HARDWARE MANAGEMENT</h1> <h3 face="arial" color="blue">MRQE Data Mobility CTC:Reid Yang | Mail To: <a href="mailto:reid.yang@emc.com">reid.yang@emc.com</a> | Telephone:+8682966616</h3> </center>
+
+
+    <nav class="navbar navbar-inverse"  role="navigation">
+	<div class="container-fluid" >
+	<div class="navbar-header">
+		<a class="navbar-brand" href="#">Home</a>
+	</div>
+	<div>
+		<ul class="nav navbar-nav navbar-left" > 
+        {% for link in links %}
+            <li class="active"><a href="#">{{ link }}</a></li>
+        {% endfor %}
+        </ul>
+        </div>
+     
+
+	</div>
+</nav>
+    <script>
+    var nodetr=document.getElementsByTagName("a");
+    for (var i=0;i<nodetr.length;i++){
+        nodetr[i].onclick=function(){
+        //alert(this.innerHTML);
+        document.getElementById("iframe1Id").src = "/data/"+this.innerHTML;
+        }
+    }
+
+    </script>
+   <div class="min">
+     <iframe scrolling="yes" src="/data/Home" id="iframe1Id" name="iframe1Name" width="100%" onload="this.height=0;var fdh=(this.Document?this.Document.body.scrollHeight:this.contentDocument.body.offsetHeight);this.height=(fdh>900?fdh:900)"></iframe>
+    </div>
+  </table>
+   </body>
+</html>
