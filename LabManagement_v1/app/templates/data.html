@@ -1,0 +1,31 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<div id="div1" style="display:none;">
+<table  border="0"  class="hover" id="example">
+   <thead>
+    <tr >
+    {% for head in posts.heads%}
+        <th ><b>{{head}}</b></th>
+    {% endfor %}
+    </tr>
+    </thead>
+     <tfoot>
+     <tr>
+     {% for head in posts.heads%}
+        <th ><b>{{head}}</b></th>
+    {% endfor %}
+    </tr>
+     </tfoot>
+    <tbody >
+{% for post in posts.body %}
+
+  <tr>
+   {% for head in posts.heads%}
+        <td>{{post[head]}}</td>
+    {% endfor %}   
+  </tr>
+{% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}
