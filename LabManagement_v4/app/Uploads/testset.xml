@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opt doc_type="TC_CFG" version="2">
+  <test_set name="LUN_Migration_CCTS">
+  <!--
+ <identities>
+    <identity name="utms_project" value="Midrange"/>
+    <identity name="utms_domain" value="USD"/>
+    <identity name="utms_team_name" value="MRQE-Data Migration"/>
+    <identity name="utms_user_email" value="reid.yang@emc.com"/>
+    <identity name="utms_cycle_id" value="52188"/>
+    <identity name="ax_id" value="2016041011"/>
+    <identity name="utms_address" value="utmswebserver01.corp.emc.com:8082"/>
+  </identities>
+  <identity ax_id="2016041011"/>
+  
+  <hooks>
+    <hook location="ANT/Hooks/CommonTestExecutionHook">
+      <parameters>
+        <parameter name="skip_test_on_duplicate_ars" value="0"/>
+        <parameter name="enable_health_check" value="0"/>
+        <parameter name="enable_rbatrace_dc" value="0"/>
+        <parameter name="additional_references" value="CTEE 2017-11"/>
+        <parameter name="ar_summary_tag" value="[MRQE/SOL][DM]"/>
+        <parameter name="product_release" value="Falcon SP2"/>
+        <parameter name="triage_parallel_tests_post_test_case" value="1"/>
+        <parameter name="enable_recovery" value="1"/>
+        <parameter name="triage_sequential_tests_post_test_set" value="1"/>
+        <parameter name="enable_test_skipping" value="0"/>
+      </parameters>
+    </hook>
+  </hooks>
+  -->
+  <test_groups>
+    <test_group type="sequential">
+
+      <test type="cct" name="CCT_LUN_Migration_41160_Migrate_LUN_With_ODX">
+        <location>/root/tools/config/Automatos/Reid/Dry_Run_Unity_LUN_Migration_ODX_OB-D1099/CCT_LUN_Migration_41160_Migrate_LUN_With_ODX.xml</location>
+      </test>
+    </test_group>
+  </test_groups>
+</test_set>
+</opt>
