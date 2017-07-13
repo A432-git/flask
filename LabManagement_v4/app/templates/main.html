@@ -13,23 +13,13 @@
  <body  style= "background-image:url(../static/bg.jpg)"  >
   <center ><h1 face="arial">MRQE SOULUTION DATA MOBLITY HARDWARE MANAGEMENT</h1> <h3 face="arial" color="blue">MRQE Data Mobility CTC:Reid Yang | Mail To: <a href="mailto:reid.yang@emc.com">reid.yang@emc.com</a> | Telephone:+8682966616</h3> </center>
 
-
-    <nav class="navbar navbar-inverse"  role="navigation">
-	<div class="container-fluid" >
-	<div class="navbar-header">
-		<a class="navbar-brand" href="#">Home</a>
-	</div>
-	<div>
-		<ul class="nav navbar-nav navbar-left" > 
-        {% for link in links %}
+    <ul class="nav nav-pills">
+  <li class="active"><a href="#">Home</a></li>
+  {% for link in links %}
             <li class="active"><a href="#">{{ link }}</a></li>
         {% endfor %}
-        </ul>
-        </div>
-     
-
-	</div>
-</nav>
+</ul>
+ 
     <script>
     var nodetr=document.getElementsByTagName("a");
     for (var i=0;i<nodetr.length;i++){

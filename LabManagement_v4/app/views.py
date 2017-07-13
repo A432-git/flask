@@ -59,12 +59,6 @@ def initData():
     jsonToFile(allPages)
 
 
-
-@app.route('/data/Home')
-def home():
-    
-    return render_template("Home.html",links=getSheetNames())
-
 @app.route('/')
 @app.route('/Main')
 def main():
@@ -74,7 +68,10 @@ def main():
     
 @app.route('/data/<name>')
 def data(name):
-    return render_template("data.html",links=getSheetNames(),heads = getHeads(name),title = name )
+    if(name=='Home'):
+        return render_template("Home.html",links=getSheetNames())
+    else:
+        return render_template("data.html",links=getSheetNames(),heads = getHeads(name),title = name )
 
 @app.route('/ajax/<name>')
 def ajaxJson(name):
