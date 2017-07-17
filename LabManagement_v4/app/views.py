@@ -34,12 +34,11 @@ def initData():
     allPages = {}
     book = xlrd.open_workbook(DATA)
     sheetNames = book.sheet_names()
-    allPages['keys']= sheetNames
     for sheetName in sheetNames:        
         sh = book.sheet_by_name(sheetName)
         num_rows = sh.nrows
         num_cols = sh.ncols
-        num_rows = sh.nrows    
+        # num_rows = sh.nrows    
         posts={}
         posts['body']=[]
         posts['heads']=[]

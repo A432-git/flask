@@ -18,7 +18,7 @@ def initData():
         sh = book.sheet_by_name(sheetName)
         num_rows = sh.nrows
         num_cols = sh.ncols
-        num_rows = sh.nrows    
+        # num_rows = sh.nrows    
         posts={}
         posts['body']=[]
         posts['heads']=[]
