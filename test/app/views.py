@@ -25,7 +25,7 @@ def test():
     if request.method == 'GET':
         return render_template('manage.html')
     elif request.method == 'POST':
-        request_data = request.get_json()
-        keys=request_data.get('test')
+        # request_data = request.get_json()
+        keys=request.json.get('test')
         return jsonify({'length':len(keys),'data':keys[1]})
 
