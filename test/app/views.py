@@ -1,5 +1,5 @@
 import os
-from flask import Flask, request, render_template, redirect, url_for
+from flask import Flask, request,jsonify, render_template, redirect, url_for
 from werkzeug.utils import secure_filename
 from app import app
 import xlrd
@@ -17,4 +17,15 @@ def initData():
 def home():
     initData()
     return render_template("Home.html",links=allPages['keys'])
+    
+
+    
+@app.route('/test', methods=['GET', 'POST'])
+def test():
+    if request.method == 'GET':
+        return render_template('manage.html')
+    elif request.method == 'POST':
+        request_data = request.get_json()
+        keys=request_data.get('test')
+        return jsonify({'test':keys})
 

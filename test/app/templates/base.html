@@ -19,7 +19,28 @@
     {% block content %}{% endblock %}
     </tr>
     </table>
+	<a>click</a>
     
-    
+        <script>
+    var nodetr=document.getElementsByTagName("a");
+    for (var i=0;i<nodetr.length;i++){
+        nodetr[i].onclick=function(){
+        alert(this.innerHTML);
+        //document.getElementById("iframe1Id").src = "/data/"+this.innerHTML;
+		jQuery.ajax ({
+			url: '/test',
+			type: "POST",
+			data: JSON.stringify({'test':"testdata"}),
+			dataType: "json",
+			contentType: "application/json; charset=utf-8",
+			success: function(data){
+				//
+				alert(data['test']);
+			}
+		});
+        }
+    }
+
+    </script>
   </body>
 </html>
