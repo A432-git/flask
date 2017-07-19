@@ -27,5 +27,5 @@ def test():
     elif request.method == 'POST':
         request_data = request.get_json()
         keys=request_data.get('test')
-        return jsonify({'test':keys})
+        return jsonify({'length':len(keys),'data':keys[1]})
 

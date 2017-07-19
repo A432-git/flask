@@ -30,12 +30,13 @@
 		jQuery.ajax ({
 			url: '/test',
 			type: "POST",
-			data: JSON.stringify({'test':"testdata"}),
+			data: JSON.stringify({'test':["testdata","testarea"]}),
 			dataType: "json",
 			contentType: "application/json; charset=utf-8",
 			success: function(data){
 				//
-				alert(data['test']);
+				alert(data['length']);
+				alert(data['data']);
 			}
 		});
         }
