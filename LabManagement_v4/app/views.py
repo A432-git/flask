@@ -1,5 +1,5 @@
 import os
-from flask import Flask, request,jsonify, render_template, redirect, url_for
+from flask import Flask, session,request,jsonify, render_template, redirect,g, url_for
 from werkzeug.utils import secure_filename
 from app import app
 import xlrd
@@ -37,8 +37,7 @@ def initData():
     for sheetName in sheetNames:        
         sh = book.sheet_by_name(sheetName)
         num_rows = sh.nrows
-        num_cols = sh.ncols
-        # num_rows = sh.nrows    
+        num_cols = sh.ncols  
         posts={}
         posts['body']=[]
         posts['heads']=[]
@@ -56,21 +55,27 @@ def initData():
                 posts['heads'] = row
         allPages[sheetName] = posts
     jsonToFile(allPages)
+    return sheetNames
+
+@app.before_first_request
+def  before_first_request():
+    # g.sheetnames = initData()
+    session['links'] = initData()
 
 
 @app.route('/')
 @app.route('/Main')
 def main():
-    initData()
-    return render_template("main.html",links=getSheetNames())
+    
+    return render_template("main.html",links=session['links'])
 
     
 @app.route('/data/<name>')
 def data(name):
     if(name=='Home'):
-        return render_template("Home.html",links=getSheetNames())
+        return render_template("Home.html",links=session['links'])
     else:
-        return render_template("data.html",links=getSheetNames(),heads = getHeads(name),title = name )
+        return render_template("data.html",links=session['links'],heads = getHeads(name),title = name )
 
 @app.route('/ajax/<name>')
 def ajaxJson(name):
@@ -79,7 +84,7 @@ def ajaxJson(name):
               
 @app.route('/manageByReid')
 def manageByReid():
-    return render_template("Manage.html",links=getSheetNames())
+    return render_template("Manage.html",links=session['links'])
  
 @app.route('/upload', methods=['GET', 'POST'])
 def upload():
@@ -90,4 +95,4 @@ def upload():
         fname = secure_filename(f.filename) 
         f.save(os.path.join(UPLOAD_FOLDER, fname))
         initData()
-        return render_template("main.html",links=getSheetNames())
+        return render_template("main.html",links=session['links'])
