@@ -1,0 +1,77 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+<meta charset="utf-8">
+<title>ajax Example</title>
+<script type=text/javascript src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.0.min.js"></script>
+<script type=text/javascript>
+$.fn.stringify = function() {
+  return JSON.stringify(this);
+    }
+var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+
+function ajaxForm(){
+    var _TheArray = [
+		{ name: 'Reid', ar_found: 7.0, ar_fix: 3.9,case:10},
+		{ name: 'David', ar_found: 6.9, ar_fix: 4.2, case:10},
+		{ name: 'Bonn', ar_found: 9.5, ar_fix: 5.7, case:10},
+		{ name: 'Cherry', ar_found: 14.5, ar_fix: 8.5,case:10 },
+		{ name: 'Jesse', ar_found: 18.4, ar_fix: 11.9,case:10 },
+		{ name: 'Jacky', ar_found: 21.5, ar_fix: 15.2,case:10 },
+		{ name: 'Leon', ar_found: 25.2, ar_fix: 17.0,case:10 },
+		{ name: 'Jennifer', ar_found: 26.5, ar_fix: 16.6,case:10 },
+		{ name: 'Bo', ar_found: 23.3, ar_fix: 14.2,case:10 },
+		{ name: 'Jia', ar_found: 18.3, ar_fix: 10.3,case:10 },
+		{ name: 'Hedy', ar_found: 13.9, ar_fix: 6.6 ,case:10},
+		{ name: 'Merry', ar_found: 9.6, ar_fix: 4.8,case:10 }
+		]
+	;
+	$.ajax({
+		type: 'post',
+		url: '/test',
+		dataType: 'json',
+		data:{
+			'n1': $('input[name=n1]').val(),
+			'n2': $('input[name=n2]').val(),
+			'n3': $('input[name=n3]').val(),
+            'body':$(_TheArray).stringify(),
+		},
+		error: function(xhr, err){
+			alert('请求失败，原因可能是：' + err + '！')
+		},
+		success: function(data, textStatus){
+			$('#max').text(data.max);
+			$('#min').text(data.min);
+            $('#body').text(data.body);
+            $('#length').text(data.length);
+            $('#length1').text(data.length1);
+			$('#data').text(data.dt);
+			
+		}
+	});
+	return false
+}
+</script>
+</head>
+
+	<h1>ajax Example</h1>
+	<form action="" method="post" onSubmit="return ajaxForm()">
+		<p>在下面 3 个文本框中输入数字，然后点击按钮。</p>
+		<input name="n1" type="text" />
+		<input name="n2" type="text" />
+		<input name="n3" type="text" />
+		<input type="submit" />
+		<p>最大数：<span id=max></span></p>
+		<p>最小数：<span id=min></span></p>
+        <p>长度：<span id=length></span></p>
+        <p>长度1：<span id=length1></span></p>
+        <p>Body:<span id=body></span></p>
+		<p>Data:<span id=data></span></p>
+	</form>
+	<div id="mountNode"></div>
+<script>/*Fixing iframe window.innerHeight 0 issue in Safari*/document.body.clientHeight;</script>
+<script src="https://gw.alipayobjects.com/os/antv/assets/g2/3.0.5-beta.4/g2.min.js"></script>
+<script src="https://gw.alipayobjects.com/os/antv/assets/data-set/0.8.5/data-set.min.js"></script>
+
+</body>
+</html>

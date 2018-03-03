@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height">
+    <title>多条折线图</title>
+    <style>::-webkit-scrollbar{display:none;}html,body{overflow:hidden;height:100%;}</style>
+</head>
+<body>
+<div id="mountNode"></div>
+<script>/*Fixing iframe window.innerHeight 0 issue in Safari*/document.body.clientHeight;</script>
+<script src="https://gw.alipayobjects.com/os/antv/assets/g2/3.0.5-beta.4/g2.min.js"></script>
+<script src="https://gw.alipayobjects.com/os/antv/assets/data-set/0.8.5/data-set.min.js"></script>
+<script>
+  const data = [
+{ name: 'Reid', ar_found: 7.0, ar_fix: 3.9,case:10},
+{ name: 'David', ar_found: 6.9, ar_fix: 4.2, case:14},
+{ name: 'Bonn', ar_found: 9.5, ar_fix: 5.7, case:17},
+{ name: 'Cherry', ar_found: 14.5, ar_fix: 8.5,case:19 },
+{ name: 'Jesse', ar_found: 18.4, ar_fix: 11.9,case:9 },
+{ name: 'Jacky', ar_found: 21.5, ar_fix: 15.2,case:8 },
+{ name: 'Leon', ar_found: 25.2, ar_fix: 17.0,case:10 },
+{ name: 'Jennifer', ar_found: 26.5, ar_fix: 16.6,case:14 },
+{ name: 'Bo', ar_found: 23.3, ar_fix: 14.2,case:10 },
+{ name: 'Jia', ar_found: 18.3, ar_fix: 10.3,case:18 },
+{ name: 'Hedy', ar_found: 13.9, ar_fix: 6.6 ,case:17},
+{ name: 'Merry', ar_found: 9.6, ar_fix: 4.8,case:10 }
+  ];
+  const ds = new DataSet();
+  const dv = ds.createView().source(data);
+  dv.transform({
+    type: 'fold',
+    fields: [ 'ar_found', 'ar_fix','case' ], // 展开字段集
+    key: 'item', // key字段
+    value: 'number', // value字段
+  });
+  const chart = new G2.Chart({
+    container: 'mountNode',
+    forceFit: true,
+    height: window.innerHeight
+  });
+  chart.source(dv, {
+    name: {
+      range: [ 0, 1 ]
+    }
+  });
+  chart.tooltip({
+    crosshairs: {
+      type: 'line'
+    }
+  });
+  chart.axis('number', {
+    label: {
+      formatter: val => {
+        return val + '个';
+      }
+    }
+  });
+  chart.line().position('name*number').color('item');
+  chart.point().position('name*number').color('item').size(4).shape('circle').style({
+    stroke: '#fff',
+    lineWidth: 1
+  });
+  chart.render();
+</script>
+</body>
+</html>
