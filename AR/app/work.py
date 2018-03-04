@@ -2,14 +2,17 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 import json
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:@Baidu123@localhost/test'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:@baidu123@localhost/test'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 db = SQLAlchemy(app)
 
-class Item(db.Model):
+class Work(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(50), unique=True)
-    price = db.Column(db.String(50), unique=True)
+    name = db.Column(db.String(50))
+    ar_found = db.Column(db.Integer)
+    ar_fix = db.Column(db.Integer)
+    script = db.Column(db.Integer)
+    case = db.Column(db.Integer)
 
     def __init__(self, _item):
         # self.id=_item['id']
@@ -18,7 +21,7 @@ class Item(db.Model):
         self.__dict__.update(_item)  
 
     def __repr__(self):
-        return '<Item %r>' % self.name
+        return '<Work %r>' % self.name
     
         
     def save(self):
@@ -38,52 +41,43 @@ class Item(db.Model):
         return json.loads(json.dumps(obj2dict(self)))
     
     @staticmethod
-    def getItem(json_str):
+    def getWork(json_str):
         return json.loads(json_str, cls=userDecode)
+
 
 class userDecode(json.JSONDecoder):
     def decode(self, s):
         dic = super().decode(s)
-        return Item(dic['id'], dic['name'],dic['price'])
+        return Work(dic)
         
 def obj2dict(obj):
 
-    if (isinstance(obj, Item)):
+    if (isinstance(obj, Work)):
         return {
-            'id':obj.id,
+            'ar_found':obj.ar_found,
+            'ar_fix':obj.ar_fix,
             'name': obj.name,
-            'price': obj.price
+            'script':obj.script,
+            'case':obj.case
         }
     else:
         return obj  
 
     
-# item = {'name':'test101','price':'$101'}
-# print(item['id'])
-# admin=Item(item)
+work = {'name':'jennifer','ar_found':88,'ar_fix':40,'script':50,'case':80}
+admin=Work(work)
 # print(admin.name)
 # admin.save()
-# for i in range(7,100):
-    # name = 'test'+ str(i)
-    # price = '$' +str(i)
-    # print('name' + name)
-    # admin = Item(i, name, price)
-    # admin.save()
-# init fun1
-# item={'id':7,'name':'test7','price':'$7'}
-# u = Item(item)
-# print(u)
-# uobj = json.dumps(obj2dict(u))
-# uobj= u.getJson()
-# print( uobj['id'])
-# uobj=json.loads(uobj)
-# print(uobj['id'])
-# u2=Item(uobj)
-# print(u2)
-# u2 = Item.getItem(uobj)
-# print(u2)
-# u2 = json.loads(uobj, cls=userDecode)
-# print('Item: ', u2)
+
+
+uobj= admin.getJson()
+lists = list(uobj.keys())
+print( lists)
+lists.remove('name')
+print(lists)
+print(json.dumps(uobj))
+u2 = json.loads(json.dumps(uobj), cls=userDecode)
+print('Work: ', u2)
 # admin.save()
 
 # db.create_all() # In case user table doesn't exists already. Else remove it.    
@@ -91,15 +85,15 @@ def obj2dict(obj):
 # db.session.save(admin)
 
 # db.session.commit() # This is needed to write the changes to database
-# data=[]
-# items = Item.query.all()
-# for item in items:
-        # print(item)
+data=[]
+works = Work.query.all()
+for work in works:
+        print(work)
         # post = dict(zip(['id','name','price'],[ item.id,str(item.name, encoding = "utf-8")  ,str(item.price, encoding = "utf-8") ]))
         # data.append(post)
-        # print(item.getJson())
-        # data.append(item.getJson())
-# print(data)
+        print(work.getJson().keys())
+        data.append(work.getJson())
+print(data)
 # item = Item.query.filter_by(name='test4').first()
 # if( not item is None):
     # print(item.name)
