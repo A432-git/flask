@@ -1,58 +1,49 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,height=device-height">
-    <title>多条折线图</title>
-    <style>::-webkit-scrollbar{display:none;}html,body{overflow:hidden;height:100%;}</style>
-</head>
-<body>
-<div id="mountNode"></div>
-<script>/*Fixing iframe window.innerHeight 0 issue in Safari*/document.body.clientHeight;</script>
-<script src="https://gw.alipayobjects.com/os/antv/assets/g2/3.0.5-beta.4/g2.min.js"></script>
-<script src="https://gw.alipayobjects.com/os/antv/assets/data-set/0.8.5/data-set.min.js"></script>
-<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script> 
-<script>
-  
-  $.getJSON('/test',function (data) {
-  const ds = new DataSet();
-  const dv = ds.createView().source(data);
-  dv.transform({
-    type: 'fold',
-    fields: [ 'ar_found', 'ar_fix','case' ], // 展开字段集
-    key: 'item', // key字段
-    value: 'number', // value字段
-  });
-  const chart = new G2.Chart({
-    container: 'mountNode',
-    forceFit: true,
-    height: window.innerHeight
-  });
-  chart.source(dv, {
-    name: {
-      range: [ 0, 1 ]
-    }
-  });
-  chart.tooltip({
-    crosshairs: {
-      type: 'line'
-    }
-  });
-  chart.axis('number', {
-    label: {
-      formatter: val => {
-        return val + '个';
-      }
-    }
-  });
-  chart.line().position('name*number').color('item');
-  chart.point().position('name*number').color('item').size(4).shape('circle').style({
-    stroke: '#fff',
-    lineWidth: 1
-  });
-  chart.render();
-});
-  
-</script>
-</body>
+﻿<html>
+  <head>
+    <title>DM CTC LAB Management</title>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script> 
+    <script src="https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/plug-ins/9dcbecd42ad/integration/jqueryui/dataTables.jqueryui.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
+    <link rel="stylesheet" href="https://cdn.datatables.net/plug-ins/9dcbecd42ad/integration/jqueryui/dataTables.jqueryui.css"/>
+     <link rel="stylesheet" href="../static/css/style.css" /> 
+     
+  </head>
+  <body  style= "background-image:url(../static/bg.jpg)"  >    
+    {% block content %}{% endblock %}
+   
+    <script type=text/javascript>
+     $(document).ready(function() {
+        $("#div1").fadeIn(200);
+        var table = $('#example').DataTable(
+        {
+            ajax:"/ajax/{{title}}",
+            stateSave: true,
+            //processing: true,
+            type:"POST",
+            "deferRender": true
+            //"initComplete": function () {
+            //var api = this.api();
+            //api.$('td').click( function () {
+               // api.search( this.innerHTML ).draw();
+                //} );
+            //}
+        });
+        
+        $('#example tbody').on( 'click', 'tr', function () {
+        if ( $(this).hasClass('selected') ) {
+            $(this).removeClass('selected');
+        }
+        else {
+            table.$('tr.selected').removeClass('selected');
+            $(this).addClass('selected');
+        }
+        } );
+         
+    } );
+     
+     </script>
+  </body>
 </html>

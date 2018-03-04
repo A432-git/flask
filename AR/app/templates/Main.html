@@ -1,0 +1,44 @@
+<html>
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript"> 
+ 
+	$(document).ready(function(){
+		$(".intro").click(function(){
+        //alert(this.innerHTML);
+        document.getElementById("iframe1Id").src = "/data_excel/"+this.innerHTML;
+        });
+		$(".lab").click(function(){
+        //alert(this.innerHTML);
+        document.getElementById("iframe1Id").src = "/data/"+this.innerHTML;
+        });
+	});
+	
+</script>
+<body>
+<ul class="nav nav-pills">  
+    <li class="dropdown">  
+        <a href="#" class="dropdown-toggle"  data-toggle="dropdown">LAB<span class="caret"></span></a>  
+		<ul class="dropdown-menu">  
+           <li><a class="lab" href="#">cycle_01</a></li>
+			<li><a class="lab" href="#">cycle_02</a></li>
+			<li><a class="lab" href="#">cycle_03</a></li>
+        </ul> 
+    </li>  
+    <li class="dropdown">  
+        <!-- span标签 是添加一个下三角的图标 -->  
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">REPORT<span class="caret"></span></a>  
+        <ul class="dropdown-menu">  
+           <li><a class="intro" href="#">cycle_01</a></li>
+			<li><a class="intro" href="#">cycle_02</a></li>
+			<li><a class="intro" href="#">cycle_03</a></li>
+        </ul>  
+    </li>  
+    <li><a href="#">C</a></li>  
+</ul> 
+ <div class="min">
+     <iframe scrolling="yes" src="#" id="iframe1Id" name="iframe1Name" width="100%" onload="this.height=0;var fdh=(this.Document?this.Document.body.scrollHeight:this.contentDocument.body.offsetHeight);this.height=(fdh>900?fdh:900)"></iframe>
+    </div>
+</body>
+</html>

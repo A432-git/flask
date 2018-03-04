@@ -6,13 +6,38 @@ import xlrd
 import json
 from .work import Work
 UPLOAD_FOLDER =os.path.join(os.path.dirname(os.path.abspath(__file__)),'Uploads')
-DATA = os.path.join(UPLOAD_FOLDER,'data.xlsx')
+DATA = os.path.join(UPLOAD_FOLDER,'AR.xlsx')
 allPages = {}
 def initData():
     book = xlrd.open_workbook(DATA)
     sheetNames = book.sheet_names()
     allPages['keys'] = sheetNames
+    for sheetName in sheetNames:        
+        sh = book.sheet_by_name(sheetName)
+        num_rows = sh.nrows
+        num_cols = sh.ncols  
+        posts={}
+        posts['body']=[]
+        posts['body_arr']=[]
+        posts['heads']=[]
+        posts['title']=sheetName
+        for curr_row in range(num_rows):
+            post={}            
+            row = sh.row_values(curr_row)
+            if(curr_row !=0):
+                post = dict(zip(heads,row))
+                posts['body'].append(post)   
+                posts['body_arr'].append(row)
+            else:
+                heads=row
+                posts['heads'] = row
+        allPages[sheetName] = posts
 
+        
+@app.before_first_request
+def  before_first_request():
+    initData()
+    
 @app.route('/g2')
 def g2():
     return render_template("base_bak.html")
@@ -40,7 +65,7 @@ def g2_4():
 @app.route('/home/')
 def home():
     #initData()
-    return render_template("1.html")
+    return render_template("Main.html")
     
 
     
@@ -104,3 +129,22 @@ def data4():
         data.append(work.getJson())
        
     return jsonify(data = data,fields = fields)
+
+@app.route('/data_excel/<cycle_name>')
+def data_excel(cycle_name):
+    return render_template("data_excel.html",cycle=cycle_name)
+    
+@app.route('/dataExcel/<cycle_name>')
+def dataExcel(cycle_name):
+    return jsonify(allPages[cycle_name])
+    
+@app.route('/data/<name>')
+def dataLab(name):
+    if(name=='Home'):
+        return render_template("Home.html",links=allPages['keys'])
+    else:
+        return render_template("data.html",links=allPages['keys'],heads = allPages[name]['heads'],title = name)
+
+@app.route('/ajax/<name>')
+def ajaxJson(name):
+        return jsonify(data = allPages[name]['body_arr'])
