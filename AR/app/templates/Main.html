@@ -13,32 +13,70 @@
         //alert(this.innerHTML);
         document.getElementById("iframe1Id").src = "/data/"+this.innerHTML;
         });
+		$(".manage").click(function(){
+        //alert(this.innerHTML);
+        document.getElementById("iframe1Id").src = "/manageByReid";
+        });
 	});
 	
 </script>
-<body>
-<ul class="nav nav-pills">  
-    <li class="dropdown">  
-        <a href="#" class="dropdown-toggle"  data-toggle="dropdown">LAB<span class="caret"></span></a>  
-		<ul class="dropdown-menu">  
-           <li><a class="lab" href="#">cycle_01</a></li>
-			<li><a class="lab" href="#">cycle_02</a></li>
-			<li><a class="lab" href="#">cycle_03</a></li>
-        </ul> 
-    </li>  
-    <li class="dropdown">  
-        <!-- span标签 是添加一个下三角的图标 -->  
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">REPORT<span class="caret"></span></a>  
-        <ul class="dropdown-menu">  
-           <li><a class="intro" href="#">cycle_01</a></li>
-			<li><a class="intro" href="#">cycle_02</a></li>
-			<li><a class="intro" href="#">cycle_03</a></li>
-        </ul>  
-    </li>  
-    <li><a href="#">C</a></li>  
-</ul> 
+
+<body style= "background-image:url(../static/bg.jpg)">
+<nav class="navbar navbar-inverse " role="navigation">
+    <div class="container-fluid">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">Data Mobility CTC</a>
+    </div>
+    <div>
+        <ul class="nav navbar-nav">
+            <li ><a href="#">iOS</a></li>
+            <li><a href="#">SVN</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    LAB <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li ><a class="lab" href="#">cycle_01</a></li>
+					<li ><a class="lab" href="#">cycle_02</a></li>
+					<li ><a class="lab" href="#">cycle_03</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">分离的链接</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">另一个分离的链接</a></li>
+                </ul>
+            </li>
+			<li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    REPORT <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li ><a class="intro" href="#">cycle_01</a></li>
+					<li ><a class="intro" href="#">cycle_02</a></li>
+					<li ><a class="intro" href="#">cycle_03</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">分离的链接</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">另一个分离的链接</a></li>
+                </ul>
+            </li>
+        </ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Settings <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li ><a class="manage" href="#">Upload</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    </div>
+</nav>
+
  <div class="min">
-     <iframe scrolling="yes" src="#" id="iframe1Id" name="iframe1Name" width="100%" onload="this.height=0;var fdh=(this.Document?this.Document.body.scrollHeight:this.contentDocument.body.offsetHeight);this.height=(fdh>900?fdh:900)"></iframe>
+     <iframe frameborder="0" scrolling="yes" src="" id="iframe1Id" name="iframe1Name" width="100%" onload="this.height=0;var fdh=(this.Document?this.Document.body.scrollHeight:this.contentDocument.body.offsetHeight);this.height=(fdh>1000?fdh:990)"></iframe>
     </div>
 </body>
+
 </html>

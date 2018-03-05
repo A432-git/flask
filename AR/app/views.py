@@ -148,3 +148,18 @@ def dataLab(name):
 @app.route('/ajax/<name>')
 def ajaxJson(name):
         return jsonify(data = allPages[name]['body_arr'])
+		
+@app.route('/manageByReid')
+def manageByReid():
+    return render_template("Manage.html")
+ 
+@app.route('/upload', methods=['GET', 'POST'])
+def upload():
+    if request.method == 'GET':
+        return render_template('manage.html')
+    elif request.method == 'POST':
+        f = request.files['file']
+        fname = secure_filename(f.filename) 
+        f.save(os.path.join(UPLOAD_FOLDER, fname))
+        initData()
+        return render_template("Main.html")
