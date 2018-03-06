@@ -16,3 +16,20 @@
            pointer-events: none;
            cursor: default;
         }
+
+div {
+margin:0;
+padding:0;
+}
+.first {
+            width: 45%;
+            float:left;
+            height: 500px;
+             border: 1px solid #3B6273;
+        }
+        .second {
+            width: 45%;
+            float:left;
+            height: 500px;
+             border: 1px solid #3B6273;
+        }

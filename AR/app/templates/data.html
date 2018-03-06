@@ -1,6 +1,39 @@
 ﻿{% extends "base.html" %}
 {% block content %}
+<script type=text/javascript>
+     $(document).ready(function() {
+        $("#div1").fadeIn(200);
+        var table = $('#example').DataTable(
+        {
+            ajax:"/ajax/{{title}}",
+            stateSave: true,
+			
+            //processing: true,
+            type:"POST",
+            "deferRender": true
+            //"initComplete": function () {
+            //var api = this.api();
+            //api.$('td').click( function () {
+               // api.search( this.innerHTML ).draw();
+                //} );
+            //}
+        });
+        
+        $('#example tbody').on( 'click', 'tr', function () {
+        if ( $(this).hasClass('selected') ) {
+            $(this).removeClass('selected');
+        }
+        else {
+            table.$('tr.selected').removeClass('selected');
+            $(this).addClass('selected');
+        }
+        } );
+         
+    } );
+     
+     </script>
 <div id="div1" style="display:none;height:auto">
+<h2>Example Heading <span class="label label-default"></span></h2>
 <table  border="1"  class="hover" id="example">
    <thead>
     <tr >

@@ -36,9 +36,9 @@
                     LAB <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
-                    <li ><a class="lab" href="#">cycle_01</a></li>
-					<li ><a class="lab" href="#">cycle_02</a></li>
-					<li ><a class="lab" href="#">cycle_03</a></li>
+					{% for item in labItems%}
+						 <li ><a class="lab" href="#">{{item}}</a></li>
+					{% endfor %}
                     <li class="divider"></li>
                     <li><a href="#">分离的链接</a></li>
                     <li class="divider"></li>
@@ -50,9 +50,10 @@
                     REPORT <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
-                    <li ><a class="intro" href="#">cycle_01</a></li>
-					<li ><a class="intro" href="#">cycle_02</a></li>
-					<li ><a class="intro" href="#">cycle_03</a></li>
+				{% for item in workItems%}
+						 <li ><a class="intro" href="#">{{item}}</a></li>
+					{% endfor %}
+                  
                     <li class="divider"></li>
                     <li><a href="#">分离的链接</a></li>
                     <li class="divider"></li>

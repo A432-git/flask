@@ -1,19 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,height=device-height">
-    <title>Excel直方图</title>
-    <style>::-webkit-scrollbar{display:none;}html,body{overflow:hidden;height:100%;}</style>
-</head>
-<script>/*Fixing iframe window.innerHeight 0 issue in Safari*/document.body.clientHeight;</script>
-<script src="https://gw.alipayobjects.com/os/antv/assets/g2/3.0.5-beta.4/g2.min.js"></script>
-<script src="https://gw.alipayobjects.com/os/antv/assets/data-set/0.8.5/data-set.min.js"></script>
-<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{% extends "base.html" %}
+{% block content %}
+<script type=text/javascript>
+     $(document).ready(function() {
+        $("#div1").fadeIn(200);
+        var table = $('#example').DataTable(
+        {
+            "scrollY": 200,
+			ajax:"/dataExcelArray/{{title}}",
+            stateSave: true,
+            //processing: true,
+            type:"POST",
+            "deferRender": true
+            //"initComplete": function () {
+            //var api = this.api();
+            //api.$('td').click( function () {
+               // api.search( this.innerHTML ).draw();
+                //} );
+            //}
+			
+        });
+        
+        $('#example tbody').on( 'click', 'tr', function () {
+        if ( $(this).hasClass('selected') ) {
+            $(this).removeClass('selected');
+        }
+        else {
+            table.$('tr.selected').removeClass('selected');
+            $(this).addClass('selected');
+        }
+        } );
+         
+    } );
+     
+     </script>
+<h2>Table Heading</h2>
+<table  border="0"  class="hover" id="example">
+   <thead>
+    <tr >
+    {% for head in heads%}
+        <th ><b>{{head}}</b></th>
+    {% endfor %}
+    </tr>
+    </thead>
+     <tfoot>
+     <tr>
+    {% for head in heads%}
+        <th ><b>{{head}}</b></th>
+    {% endfor %}
+    </tr>
+     </tfoot>
+</table>
 <script>
-$.get("/dataExcel/{{cycle}}",function(data,status){
+$.get("/dataExcel/{{title}}",function(data,status){
       //alert("数据：" +data+ "\n状态：" + status);
 	var arr = data['heads'];
 	arr.splice($.inArray('name',arr),1);
@@ -30,7 +68,7 @@ $.get("/dataExcel/{{cycle}}",function(data,status){
   const chart = new G2.Chart({
     container: 'mountNode',
     forceFit: true,
-    height: 600
+    height: 300
   });
   chart.source(dv);
   chart.interval().position('work_type*number').color('name').adjust([{
@@ -41,9 +79,8 @@ $.get("/dataExcel/{{cycle}}",function(data,status){
   //chart.changeData(data);
 });
 </script>
-<body style= "background-image:url(../static/bg.jpg)">
-
+<div  class='second' width="50%">
+<h2>Chart Heading <span class="label label-default"></span></h2>
 <div id="mountNode"></div>
-
-</body>
-</html>
+</div>
+{% endblock %}
