@@ -17,6 +17,10 @@
         //alert(this.innerHTML);
         document.getElementById("iframe1Id").src = "/manageByReid";
         });
+		$(".home").click(function(){
+        //alert(this.innerHTML);
+        document.getElementById("iframe1Id").src = "/data/Home";
+        });
 	});
 	
 </script>
@@ -25,7 +29,7 @@
 <nav class="navbar navbar-inverse " role="navigation">
     <div class="container-fluid">
     <div class="navbar-header">
-        <a class="navbar-brand" href="#">Data Mobility CTC</a>
+        <a class="navbar-brand home" href="#">Data Mobility CTC</a>
     </div>
     <div>
         <ul class="nav navbar-nav">
@@ -76,7 +80,7 @@
 </nav>
 
  <div class="min">
-     <iframe frameborder="0" scrolling="yes" src="" id="iframe1Id" name="iframe1Name" width="100%" onload="this.height=0;var fdh=(this.Document?this.Document.body.scrollHeight:this.contentDocument.body.offsetHeight);this.height=(fdh>1000?fdh:990)"></iframe>
+     <iframe frameborder="0" scrolling="yes" src="/data/Home" id="iframe1Id" name="iframe1Name" width="100%" onload="this.height=0;var fdh=(this.Document?this.Document.body.scrollHeight:this.contentDocument.body.offsetHeight);this.height=(fdh>1000?fdh:990)"></iframe>
     </div>
 </body>
 

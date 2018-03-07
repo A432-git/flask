@@ -33,7 +33,8 @@
     } );
      
      </script>
-<h2>Table Heading</h2>
+ <div  class='first' width="50%">
+<h2>{{title}}</h2>
 <table  border="0"  class="hover" id="example">
    <thead>
     <tr >
@@ -50,6 +51,7 @@
     </tr>
      </tfoot>
 </table>
+</div>
 <script>
 $.get("/dataExcel/{{title}}",function(data,status){
       //alert("数据：" +data+ "\n状态：" + status);
@@ -79,8 +81,8 @@ $.get("/dataExcel/{{title}}",function(data,status){
   //chart.changeData(data);
 });
 </script>
-<div  class='second' width="50%">
-<h2>Chart Heading <span class="label label-default"></span></h2>
+<div  class='second' width="30%">
+<h2>{{title}} <span class="label label-default"></span></h2>
 <div id="mountNode"></div>
 </div>
 {% endblock %}
