@@ -1,0 +1,35 @@
+*{font-family:Arial, Helvetica, sans-serif;font-size:14px;border:none;}
+     body{text-align:justify;}
+        
+        #footer{
+          position:fixed;
+          background:$fff;
+          bottom:20px;
+          right:10px;
+          width:600px;
+          height:30px;
+          text-align:right;
+        }
+        
+        center {font-size: 300%}
+        .disabled {
+           pointer-events: none;
+           cursor: default;
+        }
+
+div {
+margin:0;
+padding:0;
+}
+.first {
+            width: 20%;
+            float:left;
+            height: 700px;
+             border: 1px solid #3B6273;
+        }
+        .second {
+            width: 40%;
+            float:right;
+            height: 700px;
+             border: 1px solid #3B6273;
+        }
