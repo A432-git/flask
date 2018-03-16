@@ -12,10 +12,8 @@ config = configparser.ConfigParser()
 config.read(INI)
 
 root = Root(host=config['DEFAULT']['redis_ip'])
-def init(force =0):
-    if(force == 0):
-        if(root.lab):
-            return
+
+def readExcelToRedis():
     for section in config.sections():
         excelItem = os.path.join(UPLOAD_FOLDER,config[section]['file'])
         redisKey = config[section]['redis_key']
@@ -45,6 +43,14 @@ def init(force =0):
                     posts['heads'] = row
             allPagesDict[sheetName] = posts
         root[redisKey] = allPagesDict
+def init(force =0):
+    if(force == 0):
+        if(root.lab):
+            pass
+        else:
+            readExcelToRedis()
+    else:
+        readExcelToRedis()
 @app.before_first_request
 def  before_first_request():
     init()
@@ -96,4 +102,4 @@ def upload():
         fname = secure_filename(f.filename) 
         f.save(os.path.join(UPLOAD_FOLDER, fname))
         init(force =1)
-        return jsonify(data = 'OK')
+        return jsonify(status='succeed')

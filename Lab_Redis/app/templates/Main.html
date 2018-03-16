@@ -33,37 +33,18 @@
     </div>
     <div>
         <ul class="nav navbar-nav">
-            <li ><a href="#">iOS</a></li>
-            <li><a href="#">SVN</a></li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    LAB <b class="caret"></b>
+                    Lab <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
 					{% for item in labItems%}
 						 <li ><a class="lab" href="#">{{item}}</a></li>
 					{% endfor %}
                     <li class="divider"></li>
-                    <li><a href="#">分离的链接</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">另一个分离的链接</a></li>
                 </ul>
             </li>
-			<li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    REPORT <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-				{% for item in workItems%}
-						 <li ><a class="intro" href="#">{{item}}</a></li>
-					{% endfor %}
-                  
-                    <li class="divider"></li>
-                    <li><a href="#">分离的链接</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">另一个分离的链接</a></li>
-                </ul>
-            </li>
+			  <li ><a href="#">Report</a></li>
         </ul>
 		<ul class="nav navbar-nav navbar-right">
 			<li class="dropdown">
