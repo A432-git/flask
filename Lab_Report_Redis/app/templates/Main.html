@@ -1,0 +1,78 @@
+<html>
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript"> 
+ 
+	$(document).ready(function(){
+		$(".intro").click(function(){
+        //alert(this.innerHTML);
+        document.getElementById("iframe1Id").src = "/data_excel/"+this.innerHTML;
+        });
+		$(".lab").click(function(){
+        //alert(this.innerHTML);
+        document.getElementById("iframe1Id").src = "/data/"+this.innerHTML;
+        });
+		$(".manage").click(function(){
+        //alert(this.innerHTML);
+        document.getElementById("iframe1Id").src = "/manageByReid";
+        });
+		$(".home").click(function(){
+        //alert(this.innerHTML);
+        document.getElementById("iframe1Id").src = "/data/Home";
+        });
+	});
+	
+</script>
+
+<body style= "background-color:	#D0D0D0;">
+<nav class="navbar navbar-inverse " role="navigation">
+    <div class="container-fluid">
+    <div class="navbar-header">
+        <a class="navbar-brand home" href="#">Data Mobility CTC</a>
+    </div>
+    <div>
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Lab <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+					{% for item in labItems%}
+						 <li ><a class="lab" href="#">{{item}}</a></li>
+					{% endfor %}
+                    <li class="divider"></li>
+                </ul>
+            </li>
+			 <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Report <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+					{% for item in workItems%}
+						 <li ><a class="intro" href="#">{{item}}</a></li>
+					{% endfor %}
+                    <li class="divider"></li>
+                </ul>
+            </li>
+        </ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Settings <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li ><a class="manage" href="#">Upload</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    </div>
+</nav>
+
+ <div class="min">
+     <iframe frameborder="0" scrolling="yes" src="/data/Home" id="iframe1Id" name="iframe1Name" width="100%" onload="this.height=0;var fdh=(this.Document?this.Document.body.scrollHeight:this.contentDocument.body.offsetHeight);this.height=(fdh>1000?fdh:990)"></iframe>
+    </div>
+</body>
+
+</html>

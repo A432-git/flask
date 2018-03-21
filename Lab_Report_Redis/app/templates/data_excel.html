@@ -1,13 +1,13 @@
-﻿{% extends "base.html" %}
+{% extends "base.html" %}
 {% block content %}
 <script type=text/javascript>
      $(document).ready(function() {
         $("#div1").fadeIn(200);
         var table = $('#example').DataTable(
         {
-            ajax:"/ajax/{{title}}",
+            "scrollY": 200,
+			ajax:"/dataExcelArray/{{title}}",
             stateSave: true,
-			
             //processing: true,
             type:"POST",
             "deferRender": true
@@ -17,6 +17,7 @@
                // api.search( this.innerHTML ).draw();
                 //} );
             //}
+			
         });
         
         $('#example tbody').on( 'click', 'tr', function () {
@@ -32,9 +33,12 @@
     } );
      
      </script>
-<div id="div1" style="position:fixed;height:auto;border:1px;width:1000px;margin:auto;left:100px;">
-<h2>{{title}} <span class="label label-default"></span></h2>
-<table  border="1"  class="hover" id="example">
+ <div  class="left">
+<div class="page-header">
+    <h1>{{title}}
+    </h1>
+</div>
+<table  border="0"  class="hover" id="example">
    <thead>
     <tr >
     {% for head in heads%}
@@ -50,5 +54,41 @@
     </tr>
      </tfoot>
 </table>
+</div>
+<script>
+$.get("/dataExcel/{{title}}",function(data,status){
+      //alert("数据：" +data+ "\n状态：" + status);
+	var arr = data['heads'];
+	arr.splice($.inArray('name',arr),1);
+	//alert(arr);
+	  const ds = new DataSet();
+  const dv = ds.createView().source(data['body']);
+  dv.transform({
+    type: 'fold',
+    fields: arr, // 展开字段集
+    key: 'work_type', // key字段
+    value: 'number', // value字段
+  });
+
+  const chart = new G2.Chart({
+    container: 'mountNode',
+    forceFit: true,
+    height: 300
+  });
+  chart.source(dv);
+  chart.interval().position('work_type*number').color('name').adjust([{
+    type: 'dodge',
+    marginRatio: 1 / 32
+  }]);
+  chart.render();
+  //chart.changeData(data);
+});
+</script>
+<div class="right">
+<div class="page-header">
+    <h1>{{title}}
+    </h1>
+</div>
+<div id="mountNode" ></div>
 </div>
 {% endblock %}
