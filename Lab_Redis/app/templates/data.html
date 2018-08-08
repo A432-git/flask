@@ -3,20 +3,54 @@
 <script type=text/javascript>
      $(document).ready(function() {
         $("#div1").fadeIn(200);
-        var table = $('#example').DataTable(
+        table = $('#example').DataTable(
         {
             ajax:"/ajax/{{title}}",
             stateSave: true,
 			
-            //processing: true,
+            processing: true,
             type:"POST",
-            "deferRender": true
-            //"initComplete": function () {
-            //var api = this.api();
-            //api.$('td').click( function () {
-               // api.search( this.innerHTML ).draw();
-                //} );
-            //}
+            "deferRender": true,
+			"columnDefs": [  
+                  
+			  {
+				  "targets": [-1], 
+				   "data": [0],
+				  "render": function(data, type, full) { 
+					  return colEdicHtml;
+				  }
+			  }                               
+              ],
+			dom: 'Bfrtip',
+			buttons: [
+				{
+					text: '<span class="glyphicon glyphicon-plus"></span>',
+					action: function ( e, dt, node, config ) {
+						$('#myModal').modal('show')
+						
+					}
+				},
+				{
+					text:'<span class="glyphicon glyphicon-download-alt"></span>',
+					extend: 'pdfHtml5',
+					messageTop: 'PDF created according to Table:{{sheetName}}.'
+				},
+				{
+					text:'<span class="glyphicon glyphicon-print"></span>',
+					extend: 'print',
+					messageTop: 'This print was produced using the Print button for DataTables'
+				},
+				{
+					text: '<span class="glyphicon glyphicon-refresh"></span>',
+					action: function ( e, dt, node, config ) {
+						t.ajax.reload();
+						ShowMsg("Succeed to Load Data....... ");
+						
+					}
+				},
+		
+			],
+            
         });
         
         $('#example tbody').on( 'click', 'tr', function () {
@@ -28,7 +62,7 @@
             $(this).addClass('selected');
         }
         } );
-         
+        
     } );
      
      </script>
@@ -40,6 +74,7 @@
     {% for head in heads%}
         <th ><b>{{head}}</b></th>
     {% endfor %}
+	<th ><b>Operation</b></th>
     </tr>
     </thead>
      <tfoot>
@@ -47,6 +82,7 @@
     {% for head in heads%}
         <th ><b>{{head}}</b></th>
     {% endfor %}
+	<th ><b>Operation</b></th>
     </tr>
      </tfoot>
 </table>

@@ -5,21 +5,16 @@
 	<script type="text/javascript"> 
  
 	$(document).ready(function(){
-		$(".intro").click(function(){
-        //alert(this.innerHTML);
-        document.getElementById("iframe1Id").src = "/data_excel/"+this.innerHTML;
-        });
+		
 		$(".lab").click(function(){
-        //alert(this.innerHTML);
-        document.getElementById("iframe1Id").src = "/data/"+this.innerHTML;
+		$("#iframe1Id").attr("src","/userview/"+this.innerHTML);
         });
 		$(".manage").click(function(){
-        //alert(this.innerHTML);
-        document.getElementById("iframe1Id").src = "/manageByReid";
+      
+		$("#iframe1Id").attr("src","/manageByReid");
         });
 		$(".home").click(function(){
-        //alert(this.innerHTML);
-        document.getElementById("iframe1Id").src = "/data/Home";
+		$("#iframe1Id").attr("src","/userview/Home");
         });
 	});
 	
@@ -61,7 +56,7 @@
 </nav>
 
  <div class="min">
-     <iframe frameborder="0" scrolling="yes" src="/data/Home" id="iframe1Id" name="iframe1Name" width="100%" onload="this.height=0;var fdh=(this.Document?this.Document.body.scrollHeight:this.contentDocument.body.offsetHeight);this.height=(fdh>1000?fdh:990)"></iframe>
+     <iframe frameborder="0" scrolling="yes" src="/userview/Home" id="iframe1Id" name="iframe1Name" width="100%" onload="this.height=0;var fdh=(this.Document?this.Document.body.scrollHeight:this.contentDocument.body.offsetHeight);this.height=(fdh>1000?fdh:990)"></iframe>
     </div>
 </body>
 
