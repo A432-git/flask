@@ -64,12 +64,35 @@ def home():
 @app.route('/userview/<name>')
 def dataLab(name):
 
-	if(name=='Home'):
-		return render_template("Home.html")
-	else:
-		return render_template("data.html",heads = root.lab[name]['heads'],title = name)
+    if(name=='Home'):
+        return render_template("Home.html")
+    else:
+        return render_template("data.html",heads = root.lab[name]['heads'],title = name)
   
+
+
+@app.route('/ajax/<name>/<action>',methods=['GET','POST'])
+def actionJson(name,action):
+    heads = root.lab[name]['heads']
+    values=[]
+    # for it in heads:
+        # values.append('hello')
+        # print('+++++++++++')
+    # data = zip(heads,values)
+    data={'name':'reid'}
+    if action == 'create':
         
+        return jsonify(data)
+    elif action == 'update':
+    
+        return jsonify(data)
+    elif action == 'delete':
+    
+        print('--------------')
+        return jsonify(data)
+    else:
+        return jsonify(data)    
+    return jsonify(data)  
         
 @app.route('/ajax/<name>')
 def ajaxJson(name):

@@ -226,3 +226,15 @@ function findUpdatedRow(table,key){
 	});
 }
 
+function getDict(key_arr,value_arr){
+	var map ={};
+	for(var i=0;i<key_arr.length;i++)
+	{
+		
+		map[key_arr[i]] = value_arr[i]
+	}
+	
+	return map;
+}
+
+

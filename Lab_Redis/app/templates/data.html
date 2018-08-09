@@ -43,8 +43,9 @@
 				{
 					text: '<span class="glyphicon glyphicon-refresh"></span>',
 					action: function ( e, dt, node, config ) {
-						t.ajax.reload();
-						ShowMsg("Succeed to Load Data....... ");
+						table.ajax.reload();
+						var map = getDict(['name','age'],['reid',12]);
+						ShowMsg("Succeed to Load Data....... "+map['age']);
 						
 					}
 				},
@@ -53,15 +54,73 @@
             
         });
         
-        $('#example tbody').on( 'click', 'tr', function () {
-        if ( $(this).hasClass('selected') ) {
-            $(this).removeClass('selected');
-        }
-        else {
-            table.$('tr.selected').removeClass('selected');
-            $(this).addClass('selected');
-        }
-        } );
+        
+		$("#example tbody").on("click", "#bEdit", function () {
+			//oldData = $('#example').DataTable().row($(this).parents('tr')).data();
+			//alert(oldData);
+			rowEdit(this);
+            
+		});
+	$("#example tbody").on("click", "#bElim", function () {
+		var row = $('#example').DataTable().row($(this).parents('tr'));
+		oldData = $('#example').DataTable().row($(this).parents('tr')).data();
+		alert(oldData);
+		alert("{{heads}}");
+		$.post("/ajax/{{title}}/delete",
+			{
+				
+			},
+			function(data,status){
+				alert("数据: " + data + "\n状态: " + status);
+				ShowSuccess("Succeed to Delete " + data.name);
+				row.remove().draw();
+			});   
+	 
+		//$('#example').DataTable().row($(this).parents('tr')).remove().draw();
+	});
+	$("#example tbody").on("click", "#bAcep", function () {
+	    var row = $('#example').DataTable().row($(this).parents('tr'));
+		var newData = rowAcep(this);
+		//alert(oldData);
+		//alert(newData);
+		$.post("/employee/update",
+			{
+				'name': newData[0],
+				'position': newData[1],
+				'office': newData[2],
+				'extn': newData[3],
+				'start_date': newData[4],
+				'salary': newData[5],	
+			},
+			function(data,status){
+				//alert("数据: " + data + "\n状态: " + status);
+				ShowSuccess("Succeed to Edit " + data.name);
+				row.data(newData).draw();
+			});   
+		
+		//$('#example').DataTable().row($(this).parents('tr')).data(newData).draw();
+	});
+	$("#example tbody").on("click", "#bCanc", function () {
+	 
+		rowCancel(this);
+	});
+	$('table').SetEditable(
+	 {
+	 columnsEd: "0,1,2,3,4,5",
+	 onEdit: function(newData) {
+			//t.row(this).data(newData).draw(false);
+			
+	 }, 
+    onDelete: function(row) {
+	 //row.remove().draw();
+	 //row.remove().draw(false);
+	 alert(' after delete');
+    }, 
+    onBeforeDelete: function() {
+	  //alert('beforeDelete')
+    },
+	 
+	 });
         
     } );
      
