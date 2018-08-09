@@ -75,19 +75,20 @@ def dataLab(name):
 def actionJson(name,action):
     heads = root.lab[name]['heads']
     values=[]
-    # for it in heads:
-        # values.append('hello')
-        # print('+++++++++++')
-    # data = zip(heads,values)
-    data={'name':'reid'}
+    content = request.form.get('content')
+    print(content)
+    content_array = content.split('###')
+    for it in content_array:
+        values.append(it)
+    data = dict(zip(heads,values))
     if action == 'create':
         
         return jsonify(data)
     elif action == 'update':
-    
+        # print("+++{}+++".format(data.Name))
         return jsonify(data)
     elif action == 'delete':
-    
+        # print("+++{}+++".format(data.Name))
         print('--------------')
         return jsonify(data)
     else:

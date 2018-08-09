@@ -64,15 +64,14 @@
 	$("#example tbody").on("click", "#bElim", function () {
 		var row = $('#example').DataTable().row($(this).parents('tr'));
 		oldData = $('#example').DataTable().row($(this).parents('tr')).data();
-		alert(oldData);
-		alert("{{heads}}");
+		//alert(oldData);
 		$.post("/ajax/{{title}}/delete",
 			{
-				
+				'content':oldData.join('###'),
 			},
 			function(data,status){
-				alert("数据: " + data + "\n状态: " + status);
-				ShowSuccess("Succeed to Delete " + data.name);
+				//alert("数据: " + data + "\n状态: " + status);
+				ShowSuccess("Succeed to Delete " + data.Name);
 				row.remove().draw();
 			});   
 	 
@@ -81,20 +80,15 @@
 	$("#example tbody").on("click", "#bAcep", function () {
 	    var row = $('#example').DataTable().row($(this).parents('tr'));
 		var newData = rowAcep(this);
-		//alert(oldData);
-		//alert(newData);
-		$.post("/employee/update",
+		alert(oldData);
+		alert(newData);
+		$.post("/ajax/{{title}}/update",
 			{
-				'name': newData[0],
-				'position': newData[1],
-				'office': newData[2],
-				'extn': newData[3],
-				'start_date': newData[4],
-				'salary': newData[5],	
+				'content':newData.join('###'),
 			},
 			function(data,status){
-				//alert("数据: " + data + "\n状态: " + status);
-				ShowSuccess("Succeed to Edit " + data.name);
+				alert("数据: " + data + "\n状态: " + status);
+				ShowSuccess("Succeed to Edit " + data.Name);
 				row.data(newData).draw();
 			});   
 		
