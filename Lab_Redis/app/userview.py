@@ -67,7 +67,7 @@ def dataLab(name):
     if(name=='Home'):
         return render_template("Home.html")
     else:
-        return render_template("data.html",heads = root.lab[name]['heads'],title = name)
+        return render_template("data.html",heads = root.lab[name]['heads'],title = name,num =len(root.lab[name]['heads']))
   
 
 

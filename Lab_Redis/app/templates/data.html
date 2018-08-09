@@ -44,8 +44,8 @@
 					text: '<span class="glyphicon glyphicon-refresh"></span>',
 					action: function ( e, dt, node, config ) {
 						table.ajax.reload();
-						var map = getDict(['name','age'],['reid',12]);
-						ShowMsg("Succeed to Load Data....... "+map['age']);
+						alert(getEditNum({{num}}));
+						ShowMsg("Succeed to Load Data....... ");
 						
 					}
 				},
@@ -100,7 +100,7 @@
 	});
 	$('table').SetEditable(
 	 {
-	 columnsEd: "0,1,2,3,4,5",
+	 columnsEd: getEditNum({{num}}),
 	 onEdit: function(newData) {
 			//t.row(this).data(newData).draw(false);
 			
