@@ -82,8 +82,7 @@ def actionJson(name,action):
         values.append(it)
     data = dict(zip(heads,values))
     if action == 'create':
-        
-        return jsonify(data)
+        return jsonify(content_array)
     elif action == 'update':
         # print("+++{}+++".format(data.Name))
         return jsonify(data)
