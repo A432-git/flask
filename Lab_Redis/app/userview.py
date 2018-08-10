@@ -67,7 +67,7 @@ def dataLab(name):
     if(name=='Home'):
         return render_template("Home.html")
     else:
-        return render_template("data.html",heads = root.lab[name]['heads'],title = name,num =len(root.lab[name]['heads']))
+        return render_template("data.html",heads = root.lab[name]['heads'],title = name)
   
 
 
@@ -89,7 +89,7 @@ def actionJson(name,action):
         return jsonify(data)
     elif action == 'delete':
         # print("+++{}+++".format(data.Name))
-        print('--------------')
+        # print('--------------')
         return jsonify(data)
     else:
         return jsonify(data)    

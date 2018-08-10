@@ -44,7 +44,8 @@
 					text: '<span class="glyphicon glyphicon-refresh"></span>',
 					action: function ( e, dt, node, config ) {
 						table.ajax.reload();
-						alert(getEditNum({{num}}));
+						//alert(getEditNum({{num}}));
+						//alert(number);
 						ShowMsg("Succeed to Load Data....... ");
 						
 					}
@@ -100,7 +101,7 @@
 	});
 	$('table').SetEditable(
 	 {
-	 columnsEd: getEditNum({{num}}),
+	 columnsEd: getEditNum(number),
 	 onEdit: function(newData) {
 			//t.row(this).data(newData).draw(false);
 			
@@ -126,6 +127,12 @@
     <tr >
     {% for head in heads%}
         <th ><b>{{head}}</b></th>
+		{% if loop.last %}
+	  <script>
+     var number = {{ loop.length }};
+	 //alert(number);
+	  </script>
+  {% endif %}
     {% endfor %}
 	<th ><b>Operation</b></th>
     </tr>
@@ -135,9 +142,12 @@
     {% for head in heads%}
         <th ><b>{{head}}</b></th>
     {% endfor %}
+	
 	<th ><b>Operation</b></th>
     </tr>
      </tfoot>
 </table>
 </div>
+
+
 {% endblock %}
