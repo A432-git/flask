@@ -5,7 +5,8 @@ from app import app
 import xlrd
 import json
 from redisworks import Root
-import configparser 
+import configparser
+from .dataRedis2 import DataRedis2
 UPLOAD_FOLDER =os.path.join(os.path.dirname(os.path.abspath(__file__)),'Uploads')
 INI = os.path.join(UPLOAD_FOLDER,'test.ini')
 config = configparser.ConfigParser()
@@ -42,6 +43,7 @@ def readExcelToRedis():
                     heads=row
                     posts['heads'] = row
             allPagesDict[sheetName] = posts
+            DataRedis2.initializationRedis(sheetName,posts['body_arr'])
         root[redisKey] = allPagesDict
 def init(force =0):
     if(force == 0):
