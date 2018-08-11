@@ -69,13 +69,13 @@ def dataLab(name):
     if(name=='Home'):
         return render_template("Home.html")
     else:
-        return render_template("data.html",heads = root.lab[name]['heads'],title = name)
+        return render_template("data.html",heads = DataRedis2.root[name]['heads'],title = name)
   
 
 
 @app.route('/ajax/<name>/<action>',methods=['GET','POST'])
 def actionJson(name,action):
-    heads = root.lab[name]['heads']
+    heads = DataRedis2.root[name]['heads']
     values=[]
     content = request.form.get('content')
     print(content)
