@@ -10,28 +10,29 @@ class DataRedis2():
         # self.__dict__.update(_item)
     
     def save(self):
-        list = DataRedis2.root[self.dataName]
+        list = DataRedis2.root[self.dataName]['contents']
         print("adding {}...".format(self.content[0]))
         if(self.content not in list):
             list.append(self.content)
         else:
-            index = list.index(['OBD1098','5400','david'])
-            list[index] = ['OBD1098','5401','cherry']  
-        DataRedis2.root[self.dataName] = list            
+            pass 
+        DataRedis2.root[self.dataName]['contents']= list            
         # DataRedis2.root[self.dataName][self.content[0]] = self.content
 
         
     def delete(self):
-        list = DataRedis2.root[self.dataName]
-        print("deleting {}...".format(self.content[0]))
+        list = DataRedis2.root[self.dataName]['contents']
+        
         if(self.content  in list):
-            list.remove(self.content)  
-            DataRedis2.root[self.dataName] = list        
+            print("deleting {}...".format(self.content[0]))
+            list.remove(self.content) 
+            post = {'heads':DataRedis2.root[self.dataName]['heads'],'contents':list}			
+            DataRedis2.root[self.dataName] = post        
     
     @staticmethod        
-    def queryAll(dataName):
+    def queryAll(dataName,part = 'contents'):
         
-        return DataRedis2.root[dataName]
+        return DataRedis2.root[dataName][part]
     
     @staticmethod        
     def initializationRedis(dataName,dataKey,dataArray):
@@ -44,10 +45,11 @@ class DataRedis2():
     # d = DataRedis2('rig',['OBD10{}'.format(i),'10.109.201.171','Reid'])
     # d.save()
 
-# print(DataRedis2.queryAll('rig'))
+# print(DataRedis2.queryAll('Array'))
 
-# d = DataRedis2('rig',['OBD1098','5401','cherry'])
-# d.delete()
+d = DataRedis2('Array',["JF-D1012", "VNX2 5400", "10.109.226.252", "10.109.226.175", "10.109.226.176", "Luo, Heng", "Dai, David", "Liu, Kai"])
+d.delete()
+print(DataRedis2.queryAll('Array'))
 # print(DataRedis2.queryAll('rig'))
 
 
