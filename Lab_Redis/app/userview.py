@@ -45,10 +45,10 @@ def readExcelToRedis():
                     posts['heads'] = row
             allPagesDict[sheetName] = posts
             DataRedis2.initializationRedis(sheetName,posts['heads'],posts['body_arr'])
-        root[redisKey] = allPagesDict
+        # root[redisKey] = allPagesDict
 def init(force =0):
     if(force == 0):
-        if(root.lab):
+        if(DataRedis2.root['keys']):
             pass
         else:
             readExcelToRedis()
