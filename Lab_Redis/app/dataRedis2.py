@@ -34,9 +34,9 @@ class DataRedis2():
         return DataRedis2.root[dataName]
     
     @staticmethod        
-    def initializationRedis(dataName,dataArray):
+    def initializationRedis(dataName,dataKey,dataArray):
         
-        DataRedis2.root[dataName]=dataArray
+        DataRedis2.root[dataName]={'heads':dataKey,'contents':dataArray}
 
 # dataArray = [[]]
 # DataRedis2.initializationRedis('rig',dataArray)
