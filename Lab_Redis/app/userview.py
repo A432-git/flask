@@ -21,7 +21,8 @@ def readExcelToRedis():
         allPagesDict = {}
         book = xlrd.open_workbook(excelItem)
         sheetNames = book.sheet_names()
-        allPagesDict['keys'] = sheetNames
+        # allPagesDict['keys'] = sheetNames
+        DataRedis2.root['keys'] = sheetNames
         for sheetName in sheetNames:        
             sh = book.sheet_by_name(sheetName)
             num_rows = sh.nrows
@@ -60,7 +61,7 @@ def  before_first_request():
 @app.route('/')
 @app.route('/home/')
 def home():
-    return render_template("UserMain.html",labItems=root.lab['keys'],workItems=root.work['keys'])
+    return render_template("UserMain.html",labItems=DataRedis2.root['keys'])
  
     
 @app.route('/userview/<name>')
@@ -98,7 +99,7 @@ def actionJson(name,action):
         
 @app.route('/ajax/<name>')
 def ajaxJson(name):
-    return jsonify(data = root.lab[name]['body_arr'])
+    return jsonify(data = DataRedis2.root[name]['contents'])
         
 @app.route('/manageByReid')
 def manageByReid():
