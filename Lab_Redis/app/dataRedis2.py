@@ -11,13 +11,15 @@ class DataRedis2():
     
     def save(self):
         list = DataRedis2.root[self.dataName]['contents']
-        print("adding {}...".format(self.content[0]))
+        # print(list)
         if(self.content not in list):
+            print("adding {}...".format(self.content[0]))
             list.append(self.content)
         else:
-            pass 
-        DataRedis2.root[self.dataName]['contents']= list            
-        # DataRedis2.root[self.dataName][self.content[0]] = self.content
+            print("existing {}...".format(self.content[0]))
+             
+        post = {'heads':DataRedis2.root[self.dataName]['heads'],'contents':list}          
+        DataRedis2.root[self.dataName] = post
 
         
     def delete(self):
@@ -26,7 +28,7 @@ class DataRedis2():
         if(self.content  in list):
             print("deleting {}...".format(self.content[0]))
             list.remove(self.content) 
-            post = {'heads':DataRedis2.root[self.dataName]['heads'],'contents':list}			
+            post = {'heads':DataRedis2.root[self.dataName]['heads'],'contents':list}            
             DataRedis2.root[self.dataName] = post        
     
     @staticmethod        
@@ -48,7 +50,7 @@ class DataRedis2():
 # print(DataRedis2.queryAll('Array'))
 
 d = DataRedis2('Array',["JF-D1012", "VNX2 5400", "10.109.226.252", "10.109.226.175", "10.109.226.176", "Luo, Heng", "Dai, David", "Liu, Kai"])
-d.delete()
+d.save()
 print(DataRedis2.queryAll('Array'))
 # print(DataRedis2.queryAll('rig'))
 
