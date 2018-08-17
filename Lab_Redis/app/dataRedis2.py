@@ -17,7 +17,7 @@ class DataRedis2():
             list.append(self.content)
         else:
             print("existing {}...".format(self.content[0]))
-             
+
         post = {'heads':DataRedis2.root[self.dataName]['heads'],'contents':list}          
         DataRedis2.root[self.dataName] = post
 
