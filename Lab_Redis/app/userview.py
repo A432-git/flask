@@ -85,11 +85,12 @@ def actionJson(name,action):
         values.append(it)
     data = dict(zip(heads,values))
     if action == 'create':
-        data = DataRedis2(name,content_array)
-        data.save()
+        dataRedisObj = DataRedis2(name,content_array)
+        dataRedisObj.save()
         return jsonify(content_array)
     elif action == 'update':
-        # print("+++{}+++".format(data.Name))
+        dataRedisObj = DataRedis2(name, content_array)
+        dataRedisObj.save()
         return jsonify(data)
     elif action == 'delete':
         dataRedisObj = DataRedis2(name, content_array)

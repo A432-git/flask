@@ -58,14 +58,14 @@
         
 		$("#example tbody").on("click", "#bEdit", function () {
 			oldData = $('#example').DataTable().row($(this).parents('tr')).data();
-			alert(oldData);
+			//alert(oldData);
 			rowEdit(this);
             
 		});
 	$("#example tbody").on("click", "#bElim", function () {
 		var row = $('#example').DataTable().row($(this).parents('tr'));
 		oldData = $('#example').DataTable().row($(this).parents('tr')).data();
-		alert(oldData);
+		//alert(oldData);
 		$.post("/ajax/{{title}}/delete",
 			{
 				'content':oldData.join('###'),
@@ -81,14 +81,13 @@
 	$("#example tbody").on("click", "#bAcep", function () {
 	    var row = $('#example').DataTable().row($(this).parents('tr'));
 		var newData = rowAcep(this);
-		//alert(oldData);
-		alert(newData);
+		//alert(newData);
 		$.post("/ajax/{{title}}/update",
 			{
 				'content':newData.join('###'),
 			},
 			function(data,status){
-				alert("数据: " + data + "\n状态: " + status);
+				//alert("数据: " + data + "\n状态: " + status);
 				ShowSuccess("Succeed to Edit " + data.Name);
 				row.data(newData).draw();
 			});   
@@ -96,7 +95,7 @@
 		//$('#example').DataTable().row($(this).parents('tr')).data(newData).draw();
 	});
 	$("#example tbody").on("click", "#bCanc", function () {
-	 	alert("canceled");
+	 	//alert("canceled");
 		rowCancel(this);
 	});
 	$('table').SetEditable(
@@ -136,7 +135,7 @@
 				//alert('Succeed');
 				setTimeout(function(){ 
 					$('#myModal').modal('hide');
-				},2000);
+				},1000);
 				table.row.add(data).draw( false );
 				ShowSuccess("Succeed to add "+data[0]);
 				

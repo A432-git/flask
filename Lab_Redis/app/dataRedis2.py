@@ -11,13 +11,15 @@ class DataRedis2():
     
     def save(self):
         list = DataRedis2.root[self.dataName]['contents']
+        list_name = [it[0] for it in list]
         # print(list)
-        if(self.content not in list):
+        if(self.content[0] not in list_name):
             print("adding {}...".format(self.content[0]))
             list.append(self.content)
         else:
-            print("existing {}...".format(self.content[0]))
-
+            print("updating {}...".format(self.content[0]))
+            index = list_name.index(self.content[0])
+            list[index] = self.content
         post = {'heads':DataRedis2.root[self.dataName]['heads'],'contents':list}          
         DataRedis2.root[self.dataName] = post
 
