@@ -79,7 +79,7 @@ def actionJson(name,action):
     heads = DataRedis2.root[name]['heads']
     values=[]
     content = request.form.get('content')
-    print(content)
+    print(f"The operated vaulesis {content}")
     content_array = content.split('###')
     for it in content_array:
         values.append(it)

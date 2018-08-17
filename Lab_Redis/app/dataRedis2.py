@@ -49,9 +49,9 @@ class DataRedis2():
 
 # print(DataRedis2.queryAll('Array'))
 
-d = DataRedis2('Array',["JF-D1012", "VNX2 5400", "10.109.226.252", "10.109.226.175", "10.109.226.176", "Luo, Heng", "Dai, David", "Liu, Kai"])
-d.save()
-print(DataRedis2.queryAll('Array'))
+# d = DataRedis2('Array',["JF-D1012", "VNX2 5400", "10.109.226.252", "10.109.226.175", "10.109.226.176", "Luo, Heng", "Dai, David", "Liu, Kai"])
+# d.save()
+# print(DataRedis2.queryAll('Array'))
 # print(DataRedis2.queryAll('rig'))
 
 

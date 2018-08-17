@@ -57,15 +57,15 @@
         
         
 		$("#example tbody").on("click", "#bEdit", function () {
-			//oldData = $('#example').DataTable().row($(this).parents('tr')).data();
-			//alert(oldData);
+			oldData = $('#example').DataTable().row($(this).parents('tr')).data();
+			alert(oldData);
 			rowEdit(this);
             
 		});
 	$("#example tbody").on("click", "#bElim", function () {
 		var row = $('#example').DataTable().row($(this).parents('tr'));
 		oldData = $('#example').DataTable().row($(this).parents('tr')).data();
-		//alert(oldData);
+		alert(oldData);
 		$.post("/ajax/{{title}}/delete",
 			{
 				'content':oldData.join('###'),
@@ -81,7 +81,7 @@
 	$("#example tbody").on("click", "#bAcep", function () {
 	    var row = $('#example').DataTable().row($(this).parents('tr'));
 		var newData = rowAcep(this);
-		alert(oldData);
+		//alert(oldData);
 		alert(newData);
 		$.post("/ajax/{{title}}/update",
 			{
@@ -96,7 +96,7 @@
 		//$('#example').DataTable().row($(this).parents('tr')).data(newData).draw();
 	});
 	$("#example tbody").on("click", "#bCanc", function () {
-	 
+	 	alert("canceled");
 		rowCancel(this);
 	});
 	$('table').SetEditable(
