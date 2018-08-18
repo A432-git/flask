@@ -72,7 +72,7 @@
 			},
 			function(data,status){
 				//alert("数据: " + data + "\n状态: " + status);
-				ShowSuccess("Succeed to Delete " + data.Name);
+				ShowSuccess("Succeed to Delete " + data[0]);
 				row.remove().draw();
 			});   
 	 
@@ -88,7 +88,7 @@
 			},
 			function(data,status){
 				//alert("数据: " + data + "\n状态: " + status);
-				ShowSuccess("Succeed to Edit " + data.Name);
+				ShowSuccess("Succeed to Edit " + data[0]);
 				row.data(newData).draw();
 			});   
 		

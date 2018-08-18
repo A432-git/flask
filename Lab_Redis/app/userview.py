@@ -91,11 +91,11 @@ def actionJson(name,action):
     elif action == 'update':
         dataRedisObj = DataRedis2(name, content_array)
         dataRedisObj.save()
-        return jsonify(data)
+        return jsonify(content_array)
     elif action == 'delete':
         dataRedisObj = DataRedis2(name, content_array)
         dataRedisObj.delete()
-        return jsonify(data)
+        return jsonify(content_array)
     else:
         return jsonify(data)    
     return jsonify(data)  
