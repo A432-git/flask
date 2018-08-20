@@ -66,22 +66,27 @@
 		var row = $('#example').DataTable().row($(this).parents('tr'));
 		oldData = $('#example').DataTable().row($(this).parents('tr')).data();
 		//alert(oldData);
-		$.post("/ajax/{{title}}/delete",
-			{
-				'content':oldData.join('###'),
-			},
-			function(data,status){
-				//alert("数据: " + data + "\n状态: " + status);
-				ShowSuccess("Succeed to Delete " + data[0]);
-				row.remove().draw();
-			});   
-	 
+		BootstrapDialog.confirm('Are you sure to delete?', function(result){
+            if(result) {
+               $.post("/ajax/{{title}}/delete",
+				{
+					'content':oldData.join('###'),
+				},
+				function(data,status){
+					//alert("数据: " + data + "\n状态: " + status);
+					ShowSuccess("Succeed to Delete " + data[0]);
+					row.remove().draw();
+				});
+            }
+        });
+
 		//$('#example').DataTable().row($(this).parents('tr')).remove().draw();
 	});
 	$("#example tbody").on("click", "#bAcep", function () {
 	    var row = $('#example').DataTable().row($(this).parents('tr'));
 		var newData = rowAcep(this);
 		//alert(newData);
+
 		$.post("/ajax/{{title}}/update",
 			{
 				'content':newData.join('###'),
