@@ -2,7 +2,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 import json
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:@baidu123@localhost/test'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///labmangement.sqlite3'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 db = SQLAlchemy(app)
 
@@ -12,7 +12,7 @@ class Work(db.Model):
     ar_found = db.Column(db.Integer)
     ar_fix = db.Column(db.Integer)
     script = db.Column(db.Integer)
-    case = db.Column(db.Integer)
+    cases = db.Column(db.Integer)
 
     def __init__(self, _item):
         # self.id=_item['id']
@@ -64,20 +64,20 @@ def obj2dict(obj):
         return obj  
 
     
-work = {'name':'jennifer','ar_found':88,'ar_fix':40,'script':50,'case':80}
-admin=Work(work)
+# work = {'name':'cherry','ar_found':88,'ar_fix':40,'script':50,'cases':80}
+# admin=Work(work)
 # print(admin.name)
 # admin.save()
 
 
-uobj= admin.getJson()
-lists = list(uobj.keys())
-print( lists)
-lists.remove('name')
-print(lists)
-print(json.dumps(uobj))
-u2 = json.loads(json.dumps(uobj), cls=userDecode)
-print('Work: ', u2)
+# uobj= admin.getJson()
+# lists = list(uobj.keys())
+# print( lists)
+# lists.remove('name')
+# print(lists)
+# print(json.dumps(uobj))
+# u2 = json.loads(json.dumps(uobj), cls=userDecode)
+# print('Work: ', u2)
 # admin.save()
 
 # db.create_all() # In case user table doesn't exists already. Else remove it.    
@@ -85,15 +85,15 @@ print('Work: ', u2)
 # db.session.save(admin)
 
 # db.session.commit() # This is needed to write the changes to database
-data=[]
+# data=[]
 works = Work.query.all()
 for work in works:
         print(work)
-        # post = dict(zip(['id','name','price'],[ item.id,str(item.name, encoding = "utf-8")  ,str(item.price, encoding = "utf-8") ]))
-        # data.append(post)
-        print(work.getJson().keys())
-        data.append(work.getJson())
-print(data)
+#         # post = dict(zip(['id','name','price'],[ item.id,str(item.name, encoding = "utf-8")  ,str(item.price, encoding = "utf-8") ]))
+#         # data.append(post)
+#         print(work.getJson().keys())
+#         data.append(work.getJson())
+# print(data)
 # item = Item.query.filter_by(name='test4').first()
 # if( not item is None):
     # print(item.name)
