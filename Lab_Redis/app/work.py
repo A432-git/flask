@@ -1,13 +1,17 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 import json
+import threading
 from concurrent.futures import ThreadPoolExecutor
 from concurrent.futures import as_completed
 import random
+import time
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///labmangement.sqlite3'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 db = SQLAlchemy(app)
+lock = threading.RLock()
+
 
 class Work(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -16,30 +20,45 @@ class Work(db.Model):
     ar_fix = db.Column(db.Integer)
     script = db.Column(db.Integer)
     cases = db.Column(db.Integer)
+    version = db.Column(db.Integer)
 
     def __init__(self, _item):
-        # self.id=_item['id']
-        # self.name=_item['name']
-        # self.price=_item['price']
         self.__dict__.update(_item)  
 
     def __repr__(self):
-        return '<Work %r>' % self.name
-    
-        
+        return f"Work {self.name} cases {self.cases} at {self.version}"
+
+    def getVersion(self):
+        lock.acquire()
+        ver = self.version
+        lock.release()
+        return ver
+
     def save(self):
+        # time.sleep(random.randint(0,3))
+        self.__dict__.update({'version': 0})
         db.session.add(self)
         db.session.commit()
-        
-    def update(self):
-        message = "succeed to update "+self.name
-        try:
-            db.session.merge(self)
-            db.session.commit()
-        except:
-            message = "failed to update "+self.name
-        return message
-            
+
+    def update(self,data,version):
+        message = f"succeed to update {self.name} {data['cases']}"
+        lock.acquire()
+        tempWork = Work.query.filter_by(name=self.name).first()
+        if version == tempWork.version:
+            self.version += 1
+            self.__dict__.update(data)
+            try:
+                db.session.merge(self)
+                db.session.commit()
+                lock.release()
+            except :
+                message = f"failed to update {self.name} "
+            return f"{message} in thread {threading.currentThread().ident}"
+        else:
+            lock.release()
+            return f"failed to update {self.name} in thread {threading.currentThread().ident} since others updated!"
+
+
     def getJson(self):
         return json.loads(json.dumps(obj2dict(self)))
     
@@ -61,18 +80,18 @@ def obj2dict(obj):
             'ar_fix':obj.ar_fix,
             'name': obj.name,
             'script':obj.script,
-            'cases':obj.cases
+            'cases':obj.cases,
+            'version':obj.version
         }
     else:
         return obj  
 
-#
-# work = {'name':'cherry','ar_found':88,'ar_fix':40,'script':50,'cases':80}
-# admin=Work(work)
-# print(admin.name)
-# admin.save()
+
 if __name__ == "__main__":
-    # nameList = ['alex_'+str(i) for i in range(100)]
+    # add new
+    # nameList = ['reid_'+str(i) for i in range(5)]
+    # nameList2 = ['alex_'+str(i) for i in range(5)]
+    # nameList.extend(nameList2)
     # with ThreadPoolExecutor(max_workers=100) as executor:
     #     futures = []
     #     for name in nameList:
@@ -81,7 +100,30 @@ if __name__ == "__main__":
     #         futures.append(tempFutures)
     #     for future in as_completed(futures):
     #         pass
-    #
+    #update
+    nameList = ['reid_'+str(i) for i in range(3)]
+
+    with ThreadPoolExecutor(max_workers=100) as executor:
+        temp = Work.query.filter_by(name='reid_0').first()
+        version = temp.getVersion()
+        temp1 = Work.query.filter_by(name='alex_0').first()
+        version1 = temp1.getVersion()
+        futures = [executor.submit(temp.update, {'cases':random.randint(0,100)},version) for i in range(10)]
+        futures1 = [executor.submit(temp1.update, {'cases':random.randint(0,100)},version1) for i in range(10)]
+        futures.extend(futures1)
+        for future in as_completed(futures):
+            print(future.result())
+    # temp = Work.query.filter_by(name='reid_0').first()
+    # dict_json = temp.getJson()
+    # print(dict_json)
+    # temp.update({'cases':110})
+    # print(work.version)
+    # print(work.getJson())
+    # print(work.version)
+    # tempWork.update({'cases':120})
+    works = Work.query.all()
+    for work in works:
+            print(work)
     # work = Work.query.filter_by(name='cherry').first()
     # if( not work is None):
     #     print(work.name)
@@ -107,9 +149,9 @@ if __name__ == "__main__":
 
     # db.session.commit() # This is needed to write the changes to database
     # data=[]
-    works = Work.query.all()
-    for work in works:
-            print(work.getJson())
+    # works = Work.query.all()
+    # for work in works:
+            # print(work.getJson())
     #         # post = dict(zip(['id','name','price'],[ item.id,str(item.name, encoding = "utf-8")  ,str(item.price, encoding = "utf-8") ]))
     #         # data.append(post)
     #         print(work.getJson().keys())
