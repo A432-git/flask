@@ -1,3 +1,4 @@
+
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 import json
@@ -6,6 +7,7 @@ from concurrent.futures import ThreadPoolExecutor
 from concurrent.futures import as_completed
 import random
 import time
+
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///labmangement.sqlite3'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
@@ -23,7 +25,7 @@ class Work(db.Model):
     version = db.Column(db.Integer)
 
     def __init__(self, _item):
-        self.__dict__.update(_item)  
+        self.__dict__.update(_item)
 
     def __repr__(self):
         return f"Work {self.name} cases {self.cases} at {self.version}"
@@ -35,12 +37,32 @@ class Work(db.Model):
         return ver
 
     def save(self):
-        # time.sleep(random.randint(0,3))
-        self.__dict__.update({'version': 0})
-        db.session.add(self)
-        db.session.commit()
+        message = f"Work {self.name}"
+        lock.acquire()
+        ownObj = Work.query.filter_by(name=self.name).first()
+        if ownObj is None:
+            self.__dict__.update({'version': 0})
+            db.session.add(self)
+            db.session.commit()
+            message = f"{message} added successfully"
+        else:
+            message = f"{message} added by others already,please update!"
+        lock.release()
+        return message
 
-    def update(self,data,version):
+    def delete(self):
+        message = f"Work {self.name}"
+        lock.acquire()
+        ownObj = Work.query.filter_by(name=self.name).first()
+        if not ownObj is None:
+            db.session.delete(ownObj)
+            db.session.commit()
+            message = f"{message} deleted successfully"
+        message = f"{message} deleted by others already,please update!"
+        lock.release()
+        return message
+
+    def update(self, data, version):
         message = f"succeed to update {self.name} {data['cases']}"
         lock.acquire()
         tempWork = Work.query.filter_by(name=self.name).first()
@@ -51,17 +73,16 @@ class Work(db.Model):
                 db.session.merge(self)
                 db.session.commit()
                 lock.release()
-            except :
+            except:
                 message = f"failed to update {self.name} "
             return f"{message} in thread {threading.currentThread().ident}"
         else:
             lock.release()
             return f"failed to update {self.name} in thread {threading.currentThread().ident} since others updated!"
 
-
     def getJson(self):
         return json.loads(json.dumps(obj2dict(self)))
-    
+
     @staticmethod
     def getWork(json_str):
         return json.loads(json_str, cls=userDecode)
@@ -71,48 +92,60 @@ class userDecode(json.JSONDecoder):
     def decode(self, s):
         dic = super().decode(s)
         return Work(dic)
-        
-def obj2dict(obj):
 
+
+def obj2dict(obj):
     if (isinstance(obj, Work)):
         return {
-            'ar_found':obj.ar_found,
-            'ar_fix':obj.ar_fix,
+            'ar_found': obj.ar_found,
+            'ar_fix': obj.ar_fix,
             'name': obj.name,
-            'script':obj.script,
-            'cases':obj.cases,
-            'version':obj.version
+            'script': obj.script,
+            'cases': obj.cases,
+            'version': obj.version
         }
     else:
-        return obj  
+        return obj
 
 
 if __name__ == "__main__":
     # add new
-    # nameList = ['reid_'+str(i) for i in range(5)]
-    # nameList2 = ['alex_'+str(i) for i in range(5)]
+    # nameList = ['reid_'+str(i) for i in range(10)]
+    # nameList2 = ['alex_'+str(i) for i in range(10)]
     # nameList.extend(nameList2)
     # with ThreadPoolExecutor(max_workers=100) as executor:
     #     futures = []
     #     for name in nameList:
     #         tempWork = Work({'name':name,'ar_found':random.randint(0,40),'ar_fix':random.randint(0,40),'script':random.randint(0,40),'cases':random.randint(0,40)})
-    #         tempFutures = executor.submit(tempWork.save())
+    #         tempFutures = executor.submit(tempWork.save)
     #         futures.append(tempFutures)
     #     for future in as_completed(futures):
-    #         pass
-    #update
-    nameList = ['reid_'+str(i) for i in range(3)]
+    #         print(future.result())
+    # update
+    # nameList = ['reid_'+str(i) for i in range(3)]
 
-    with ThreadPoolExecutor(max_workers=100) as executor:
-        temp = Work.query.filter_by(name='reid_0').first()
-        version = temp.getVersion()
-        temp1 = Work.query.filter_by(name='alex_0').first()
-        version1 = temp1.getVersion()
-        futures = [executor.submit(temp.update, {'cases':random.randint(0,100)},version) for i in range(10)]
-        futures1 = [executor.submit(temp1.update, {'cases':random.randint(0,100)},version1) for i in range(10)]
-        futures.extend(futures1)
-        for future in as_completed(futures):
-            print(future.result())
+    # with ThreadPoolExecutor(max_workers=100) as executor:
+    #     temp = Work.query.filter_by(name='reid_0').first()
+    #     version = temp.getVersion()
+    #     temp1 = Work.query.filter_by(name='alex_0').first()
+    #     version1 = temp1.getVersion()
+    #     futures = [executor.submit(temp.update, {'cases':random.randint(0,100)},version) for i in range(10)]
+    #     futures1 = [executor.submit(temp1.update, {'cases':random.randint(0,100)},version1) for i in range(10)]
+    #     futures.extend(futures1)
+    #     for future in as_completed(futures):
+    #         print(future.result())
+
+    # delete in mul-threading
+    # with ThreadPoolExecutor(max_workers=100) as executor:
+    #     temp = Work.query.filter_by(name='reid_0').first()
+    #     version = temp.getVersion()
+    #     temp1 = Work.query.filter_by(name='alex_0').first()
+    #     version1 = temp1.getVersion()
+    #     futures = [executor.submit(temp.delete) for i in range(10)]
+    #     futures1 = [executor.submit(temp1.delete) for i in range(10)]
+    #     futures.extend(futures1)
+    #     for future in as_completed(futures):
+    #         print(future.result())
     # temp = Work.query.filter_by(name='reid_0').first()
     # dict_json = temp.getJson()
     # print(dict_json)
@@ -121,9 +154,13 @@ if __name__ == "__main__":
     # print(work.getJson())
     # print(work.version)
     # tempWork.update({'cases':120})
-    works = Work.query.all()
-    for work in works:
-            print(work)
+    # {'ar_found': 32, 'ar_fix': 16, 'name': 'reid_8', 'script': 39,
+    #  # 'cases': 19, 'version': 0}
+    temp = Work.query.filter_by(name='reid_8', ar_fix=16).first()
+    print(temp)
+    # works = Work.query.all()
+    # for work in works:
+    #         print(work.getJson())
     # work = Work.query.filter_by(name='cherry').first()
     # if( not work is None):
     #     print(work.name)
@@ -151,7 +188,7 @@ if __name__ == "__main__":
     # data=[]
     # works = Work.query.all()
     # for work in works:
-            # print(work.getJson())
+    # print(work.getJson())
     #         # post = dict(zip(['id','name','price'],[ item.id,str(item.name, encoding = "utf-8")  ,str(item.price, encoding = "utf-8") ]))
     #         # data.append(post)
     #         print(work.getJson().keys())
@@ -159,12 +196,12 @@ if __name__ == "__main__":
     # print(data)
     # item = Item.query.filter_by(name='test4').first()
     # if( not item is None):
-        # print(item.name)
-        # item.name = 'reid'
-        # item.update()
-        # print(item.name)
+    # print(item.name)
+    # item.name = 'reid'
+    # item.update()
+    # print(item.name)
     # else:
-        # print('not found')
+    # print('not found')
     # db.session.merge(item)
     # db.session.commit()
     # print(item.name)
