@@ -2,10 +2,10 @@
 function ShowTip(tip, type) {
     var $tip = $('#tip');
     if ($tip.length == 0) {
-        $tip = $('<span id="tip" style="font-weight:bold;position:absolute;top:30px;left: 50%;z-index:9999"></span>');
+        $tip = $('<span id="tip" style="font-weight:bold;position:absolute;top:50%;left: 50%;z-index:9999"></span>');
         $('body').append($tip);
     }
-    $tip.stop(true).attr('class', 'alert alert-' + type).text(tip).css('margin-left', -$tip.outerWidth() / 2).fadeIn(100).delay(2000).fadeOut(500);
+    $tip.stop(true).attr('class', 'alert alert-' + type).text(tip).css('margin-left', -$tip.outerWidth() / 2).fadeIn(1000).delay(2000).fadeOut(500);
 }
 
 function ShowMsg(msg) {

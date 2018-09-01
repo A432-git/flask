@@ -105,14 +105,18 @@ function rowAcep(but) {
     if (!ModoEdicion($row)) return;  //Ya está en edición
     //Está en edición. Hay que finalizar la edición
 	var newData = new Array();
+	var oldData = new Array();
     IterarCamposEdit($cols, function($td) {  //itera por la columnas
       var cont = $td.find('input').val(); //lee contenido del input
+      var oldcont = $td.find('div').html();
       $td.html(cont);  //fija contenido y elimina controles
 	  newData.push(cont);
+	  oldData.push(oldcont);
     });
-	//alert(newData)
+	//alert(newData);
+	//alert(oldData);
     backToNormal(but);
-	return newData;
+	return {'new':newData,'old':oldData};
     //params.onEdit(newData);
 }
 function rowCancel(but) {
