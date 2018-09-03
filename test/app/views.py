@@ -18,11 +18,10 @@ def test():
     return render_template("ajax_loading.html")
 
 
-@app.route('/example')
+@app.route('/example', methods=['GET', 'POST'])
 def example():
-    time.sleep(3)
-    return jsonify("I am ajax!")
-    
+    time.sleep(1)
+    return "I am ajax!"
 
 
 
