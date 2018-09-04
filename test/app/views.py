@@ -21,6 +21,8 @@ def test():
 @app.route('/example', methods=['GET', 'POST'])
 def example():
     time.sleep(1)
+    old_content = request.form.get('old')
+    print(f"{old_content}")
     return "I am ajax!"
 
 
