@@ -1,0 +1,25 @@
+<html>
+<head>
+ <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+  $("button").click(function(){
+    //alert("++++++");
+    $("div").html('<p><img src="../static/16.gif" /></p>')
+    $("div").load("/example");
+  });
+});
+</script>
+</head>
+
+<body>
+
+
+<div id="example-placeholder">
+  <p>Placeholding text</p>
+</div>
+<button>改变内容</button>
+
+</body>
+</html>

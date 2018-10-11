@@ -1,0 +1,7 @@
+2018-09-01 17:19:29,213 - _internal.py[line:88] - INFO: 127.0.0.1 - - [01/Sep/2018 17:19:29] "GET / HTTP/1.1" 200 -
+2018-09-01 17:19:29,756 - _internal.py[line:88] - INFO: 127.0.0.1 - - [01/Sep/2018 17:19:29] "GET /userview/Home HTTP/1.1" 200 -
+2018-09-01 17:19:33,639 - _internal.py[line:88] - INFO: 127.0.0.1 - - [01/Sep/2018 17:19:33] "GET /userview/Array HTTP/1.1" 200 -
+2018-09-01 17:19:34,359 - _internal.py[line:88] - INFO: 127.0.0.1 - - [01/Sep/2018 17:19:34] "GET /ajax/Array?_=1535793573871 HTTP/1.1" 200 -
+2018-09-01 17:19:40,631 - dataRedis2.py[line:55] - INFO: deleting JF-D1013...
+2018-09-01 17:19:40,634 - _internal.py[line:88] - INFO: 127.0.0.1 - - [01/Sep/2018 17:19:40] "POST /ajax/Array/delete HTTP/1.1" 200 -
+2018-09-01 17:22:58,682 - _internal.py[line:88] - INFO:  * Detected change in '/home/yangr5/PycharmProjects/flask/Lab_Redis/app/userview.py', reloading

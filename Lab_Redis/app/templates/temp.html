@@ -1,0 +1,22 @@
+<html>
+	<head>
+	<script type="text/javascript">
+		function AddTableRow()
+		{
+    		var Table = document.getElementById("tab");   //取得自定义的表对象
+    		NewRow = Table.insertRow();                        //添加行
+    		NewCell1= NewRow.insertCell();                     //添加列
+			NewCell2=NewRow.insertCell();
+			NewCell1.innerHTML = "<B>New Added Line</B>";          //添加数据
+			NewCell2.innerHTML="<a href='#'>这是空链接</a>";
+		}
+	</script>
+	</head>
+	<body>
+		<table id="tab">
+			<tr><td>1</td></tr>
+			<tr><td>2</td></tr>
+		</table>
+	<input type="button" id="bn" value="add" onclick="AddTableRow()" />
+	</body>
+</html>
