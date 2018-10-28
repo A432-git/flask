@@ -1,206 +1,45 @@
 ﻿{% extends "base.html" %}
 {% block content %}
 <script type=text/javascript>
-	var table;
      $(document).ready(function() {
         $("#div1").fadeIn(200);
-        table = $('#example').DataTable(
+        var table = $('#example').DataTable(
         {
             ajax:"/ajax/{{title}}",
             stateSave: true,
-
-            processing: true,
+			
+            //processing: true,
             type:"POST",
-            "deferRender": true,
-			"columnDefs": [
-
-			  {
-				  "targets": [-1],
-				   "data": [0],
-				  "render": function(data, type, full) {
-					  return colEdicHtml;
-				  }
-			  }
-              ],
-			dom: 'Bfrtip',
-			buttons: [
-				{
-					text: '<span class="glyphicon glyphicon-plus"></span>',
-					action: function ( e, dt, node, config ) {
-						$('#myModal').modal('show')
-
-					}
-				},
-				{
-					text:'<span class="glyphicon glyphicon-download-alt"></span>',
-					extend: 'pdfHtml5',
-					messageTop: 'PDF created according to Table:{{sheetName}}.'
-				},
-				{
-					text:'<span class="glyphicon glyphicon-print"></span>',
-					extend: 'print',
-					messageTop: 'This print was produced using the Print button for DataTables'
-				},
-				{
-					text: '<span class="glyphicon glyphicon-refresh"></span>',
-					action: function ( e, dt, node, config ) {
-						table.ajax.reload();
-						//alert(getEditNum({{num}}));
-						//alert(number);
-						ShowMsg("Succeed to Load Data....... ");
-
-					}
-				},
-
-			],
-
+            "deferRender": true
+            //"initComplete": function () {
+            //var api = this.api();
+            //api.$('td').click( function () {
+               // api.search( this.innerHTML ).draw();
+                //} );
+            //}
         });
-
-
-		$("#example tbody").on("click", "#bEdit", function () {
-			oldData = $('#example').DataTable().row($(this).parents('tr')).data();
-			//alert(oldData);
-			rowEdit(this);
-
-		});
-	$("#example tbody").on("click", "#bElim", function () {
-		var row = $('#example').DataTable().row($(this).parents('tr'));
-		oldData = $('#example').DataTable().row($(this).parents('tr')).data();
-		//alert(oldData);
-		BootstrapDialog.confirm('Are you sure to delete ' +oldData[0]+ '?', function(result){
-            if(result) {
-               $.post("/ajax/{{title}}/delete",
-				{
-					'content':oldData.join('###'),
-				},
-				function(data,status){
-					//alert("数据: " + data + "\n状态: " + status);
-					if(data['code'] ==1){
-						ShowSuccess("Succeed to Delete " + data['data'][0]);
-						row.remove().draw();
-					}else
-					{
-						ShowFailure(data['message']);
-						table.ajax.reload();
-					}
-
-				});
-            }
-        });
-
-		//$('#example').DataTable().row($(this).parents('tr')).remove().draw();
-	});
-	$("#example tbody").on("click", "#bAcep", function () {
-	    var row = $('#example').DataTable().row($(this).parents('tr'));
-		var map = rowAcep(this);
-		newData = map['new'];
-		oldData = map['old'];
-		//alert(newData);
-
-		$.post("/ajax/{{title}}/update",
-			{
-				'content':newData.join('###'),
-				'old':oldData.join('###'),
-			},
-			function(data,status){
-				//alert("数据: " + data + "\n状态: " + status);
-				if(data['code'] ==1){
-					ShowSuccess("Succeed to Edit " + data['data'][0]);
-					row.data(newData).draw();
-				}else
-				{
-					ShowFailure(data['message']);
-					table.ajax.reload();
-				}
-			});
-
-		//$('#example').DataTable().row($(this).parents('tr')).data(newData).draw();
-	});
-	$("#example tbody").on("click", "#bCanc", function () {
-	 	//alert("canceled");
-		rowCancel(this);
-	});
-	$('table').SetEditable(
-	 {
-	 columnsEd: getEditNum(number),
-	 onEdit: function(newData) {
-			//t.row(this).data(newData).draw(false);
-
-	 },
-    onDelete: function(row) {
-	 //row.remove().draw();
-	 //row.remove().draw(false);
-	 alert(' after delete');
-    },
-    onBeforeDelete: function() {
-	  //alert('beforeDelete')
-    },
-
-	 });
-
+        
+        $('#example tbody').on( 'click', 'tr', function () {
+        if ( $(this).hasClass('selected') ) {
+            $(this).removeClass('selected');
+        }
+        else {
+            table.$('tr.selected').removeClass('selected');
+            $(this).addClass('selected');
+        }
+        } );
+         
     } );
-   function test(){
-		var added_data = getInputValues();
-		$.ajax({
-			type: 'post',
-			url: '/ajax/{{title}}/create',
-			dataType: 'json',
-			data:{
-				'content':added_data.join('###'),
-
-			},
-			 error: function(XMLHttpRequest,textStatus,errorThrown){
-				<!--alert("保存失败;"+XMLHttpRequest.responseText);-->
-				<!--alert(XMLHttpRequest.status);-->
-				<!--alert(XMLHttpRequest.readyState);-->
-				<!--alert(textStatus);-->
-			},
-			success: function(data, textStatus){
-				if(data['code'] ==1){
-					setTimeout(function(){
-						$('#myModal').modal('hide');
-					},100);
-					table.row.add(data['data']).draw( false );
-					ShowSuccess("Succeed to add "+data['data'][0]);
-				}
-				else
-				{
-					ShowFailure(data['message']);
-					$('#myModal').modal('hide');
-
-				}
-			}
-		});
-		return false
-		} 
-function getInputValues()
-{
-	var arrays = new Array();
-	$("input[type='text']").each(function () {
-
-		arrays.push($(this).val());
-
-	});
-	//arrays.push('reid');
-	return arrays;
-	
-}
-
+     
      </script>
-<div id="div1" class="container" style="height:auto;border:1px;margin:auto;">
+<div id="div1" class="container" style="position:relative;display:none;height:auto">
+<h2>{{title}} <span class="label label-default"></span></h2>
 <table  border="1"  class="hover" id="example">
    <thead>
     <tr >
     {% for head in heads%}
         <th ><b>{{head}}</b></th>
-		{% if loop.last %}
-	  <script>
-     var number = {{ loop.length }};
-	 //alert(number);
-	  </script>
-  {% endif %}
     {% endfor %}
-	<th ><b>Operation</b></th>
     </tr>
     </thead>
      <tfoot>
@@ -208,48 +47,8 @@ function getInputValues()
     {% for head in heads%}
         <th ><b>{{head}}</b></th>
     {% endfor %}
-	
-	<th ><b>Operation</b></th>
     </tr>
      </tfoot>
 </table>
 </div>
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-		<form class="form-horizontal" action="" method="post" onsubmit="return test()">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
-				</button>
-				<h4 class="modal-title" id="myModalLabel">
-					<span class="glyphicon glyphicon-plus"></span>
-				</h4>
-			</div>
-			
-			
-			 <div class="modal-body" id="add_content">
-				 {% for head in heads%}
-						  <div class="form-group">
-							<label for="name" class="col-sm-2 control-label">{{head}}</label>
-							<div class="col-sm-10">
-							  <input type="text" class="form-control" id="{{head}}" placeholder="Please Input {{head}}">
-							</div>
-						  </div>
-					{% endfor %}
-		
-			</div>
-			  <div class="modal-footer">
-				 
-				<div class="col-sm-offset-2 col-sm-10">
-				<button type="button" class="btn btn-default" data-dismiss="modal">
-								<span class="glyphicon glyphicon-remove"></span>
-							</button>
-				  <button type="submit" class="btn btn-default" > <span class="glyphicon glyphicon-ok"></span></button>
-				</div>
-			</div>
-			</form>
-		</div><!-- /.modal-content -->
-	</div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
 {% endblock %}

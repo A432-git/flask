@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../Jquery/.idea/Jquery.iml" filepath="$PROJECT_DIR$/../Jquery/.idea/Jquery.iml" />
+      <module fileurl="file:///media/yangr5/Ubuntu 16.0/Lab_Redis/.idea/Lab_Redis.iml" filepath="/media/yangr5/Ubuntu 16.0/Lab_Redis/.idea/Lab_Redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/flask.iml" filepath="$PROJECT_DIR$/.idea/flask.iml" />
       <module fileurl="file://$PROJECT_DIR$/../python/.idea/python.iml" filepath="$PROJECT_DIR$/../python/.idea/python.iml" />
     </modules>

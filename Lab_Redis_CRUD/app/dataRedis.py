@@ -37,8 +37,8 @@ class DataRedis():
 
 d = DataRedis('rig',['OBD1097','10.109.201.171','Reid'])
 d.save()
-# d = DataRedis('rig',['OBD1098','10.109.201.172','Reid'])
-# d.save()
+d = DataRedis('rig',['OBD1098','10.109.201.172','Reid'])
+d.save()
 # print(DataRedis.queryAll('rig'))
 # d = DataRedis('rig',['OBD1098','10.109.201.172','Reid'])
 # d.delete()

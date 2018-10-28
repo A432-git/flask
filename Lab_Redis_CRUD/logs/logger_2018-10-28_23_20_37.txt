@@ -1,0 +1,4 @@
+2018-10-28 23:20:37,620 - _internal.py[line:88] - INFO: 127.0.0.1 - - [28/Oct/2018 23:20:37] "GET / HTTP/1.1" 200 -
+2018-10-28 23:20:38,261 - _internal.py[line:88] - INFO: 127.0.0.1 - - [28/Oct/2018 23:20:38] "GET /userview/Home HTTP/1.1" 200 -
+2018-10-28 23:20:43,509 - _internal.py[line:88] - INFO: 127.0.0.1 - - [28/Oct/2018 23:20:43] "GET /userview/Host HTTP/1.1" 200 -
+2018-10-28 23:20:44,619 - _internal.py[line:88] - INFO: 127.0.0.1 - - [28/Oct/2018 23:20:44] "GET /ajax/Host?_=1540740043776 HTTP/1.1" 200 -

@@ -1,0 +1,256 @@
+
+
+<!doctype html>
+
+<meta charset="utf-8">
+<title>replication tes bed</title>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<link rel="stylesheet" href="../static/css/demo.css">
+<script src="../static/js/d3.v4.min.js" charset="utf-8"></script>
+<script src="../static/js/dagre-d3.js"></script>
+
+<style id="css">
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+.node rect {
+  stroke: #333;
+  fill: #fff;
+  stroke-width: 1.5px;
+}
+
+.edgePath path.path {
+  stroke: #333;
+  fill: none;
+  stroke-width: 1.5px;
+}
+
+.arrowhead {
+ stroke: blue;
+ fill: blue;
+ stroke-width: 1.5px;
+}
+
+</style>
+<section>
+Test Bed
+<select id="tb_name" onchange="getTestBed()">
+  {% for item in testbed_type%}
+      <option value={{item}}>{{item}}</option>
+
+  {% endfor %}
+</select>
+    <button type="button" onclick="show_hiden('show')">Add TB </button>
+    <input type="text"  id="hiden"  />
+  </section>
+<svg id="svg" width=960 height=600></svg>
+
+<section>
+Device
+<input type="text"  id="device_name"  />
+<button type="button"  onclick="add_device()">AddDevice </button>
+<button type="button"  onclick="del_device()">DeleteDevice </button>
+</section>
+<section>
+Source
+<select  id="source">
+  <option value="OB-D1468">OB-D1468</option>
+  <option value="OB-D1442">OB-D1442</option>
+  <option value="OB-D1499">OB-D1499</option>
+  <option value="OB-D1097">OB-D1097</option>
+  <option value="OB-D1099">OB-D1099</option>
+  <option value="OB-D1234">OB-D1234</option>
+  <option value="nh-vsa-1">nh-vsa-1</option>
+  <option value="nh-vsa-2">nh-vsa-2</option>
+</select>
+Destiantion
+<select  id="destination">
+  <option value="OB-D1468">OB-D1468</option>
+  <option value="OB-D1442">OB-D1442</option>
+  <option value="OB-D1499">OB-D1499</option>
+  <option value="OB-D1097">OB-D1097</option>
+  <option value="OB-D1099">OB-D1099</option>
+  <option value="OB-D1234">OB-D1234</option>
+  <option value="nh-vsa-1">nh-vsa-1</option>
+  <option value="nh-vsa-2">nh-vsa-2</option>
+</select>
+Relationship
+<select  id="relationship">
+  <option value="sync">sync replication</option>
+  <option value="async">async replication</option>
+  <option value="ndmp">ndmp</option>
+</select>
+<button type="button"  onclick="add_relation()">AddRelation </button>
+<button type="button"  onclick="del_relation()">DeleteRelation </button>
+</section>
+<section>
+
+ <button type="button"  onclick="show()">Save As </button>
+</section>
+<script>
+
+function show_hiden(status)
+{
+    if(status == 'show')
+    {
+        $('#hiden').show();
+    }
+    else
+    {
+        $('#hiden').hide();
+    }
+
+}
+function getTestBed()
+{
+  var selected_value = $('#tb_name option:selected').val();
+  alert(selected_value);
+  $('#hiden').val(selected_value);
+  $.get("/ts/tb/"+selected_value,function(data,status){
+     //alert("数据：" +"\n状态：" + status);
+    relation_list = data['relation'];
+    //svg.selectAll("*").remove();
+    nodes.forEach(function(node){
+        del_device(device = node);
+    });
+    buildBase(relation_list);
+  });
+}
+function show()
+{
+    nodes.forEach(function(node){
+        //alert(node);
+    });
+     relation_list.forEach(function(relation){
+        alert(relation);
+    });
+    var selected_value = $('#hiden').val();
+    $.post("/ts/tb/update/"+selected_value,
+    {
+        'content':JSON.stringify(relation_list),
+    },
+    function(data,status){
+        alert("数据: " + "\n状态: " + status);
+    });
+}
+function buildBase(relation_list){
+    getAllNode(relation_list);
+    nodes.forEach(function(node){
+        g.setNode(node, {labelStyle: "font-weight: bold"});
+    });
+    relation_list.forEach(function(relation){
+        buildRelation(relation);
+    });
+    render(inner, g);
+    centerGraph();
+}
+
+function getAllNode(relation_list){
+    relation_list.forEach(function (relation){
+        nodes.add(relation[0]);
+        nodes.add(relation[1]);
+    });
+}
+
+function buildRelation(relationship){
+    g.setNode(relationship[0], {labelStyle: "font-weight: bold"});
+    g.setNode(relationship[1], {labelStyle: "font-weight: bold"});
+    g.setEdge(relationship[0],relationship[1], {
+		label: relationship[2]
+	});
+}
+
+function add_device(device = $('#device_name').val())
+{
+    g.setNode(device, {labelStyle: "font-weight: bold"});
+    nodes.add(device);
+    render(inner, g);
+	centerGraph();
+}
+
+function del_device(device = $('#device_name').val())
+{
+    g.removeNode(device);
+    nodes.delete(device);
+    render(inner, g);
+	centerGraph();
+}
+
+function add_relation(source = $("#source").val(),destination = $("#destination").val(),relationship = $("#relationship").val()) {
+	buildRelation([source,destination,relationship]);
+	relation_list.push([source,destination,relationship]);
+	nodes.add(source);
+	nodes.add(destination);
+	render(inner, g);
+	centerGraph();
+}
+
+function del_relation(source = $("#source").val(),destination = $("#destination").val(),relationship = $("#relationship").val()) {
+
+	g.removeEdge(source, destination);
+	var i = 0;
+	var index;
+	var temp = [source,destination,relationship];
+	for (i =0;i<relation_list.length;i++)
+	{
+	    if (temp[0] == relation_list[i][0]   )
+	    {
+	        if(temp[1] == relation_list[i][1])
+	        {
+	            index = i;
+	            alert(index);
+	        }
+
+	    }
+
+	}
+	relation_list.splice(index,1);
+	alert(relation_list);
+	//nodes.delete(source);
+	//nodes.delete(destination);
+	render(inner, g);
+	centerGraph();
+}
+function centerGraph()
+{
+    var xCenterOffset = (svg.attr("width") - g.graph().width) / 2;
+    inner.attr("transform", "translate(" + xCenterOffset + ", 20)");
+    svg.attr("height", g.graph().height + 40);
+}
+</script>
+
+<script id="js">
+show_hiden('hide');
+$('#hiden').val($('#tb_name option:selected').val());
+// Create the input graph
+var g = new dagreD3.graphlib.Graph().setGraph({});
+var nodes = new Set([]);
+var relation_list = new Array();
+
+$.get("/ts/tb/"+$('#tb_name option:selected').val(),function(data,status){
+     //alert("数据：" +data['tb']+ "\n状态：" + status);
+    var temp_arr = new Array();
+    relation_list = data['relation'];
+    buildBase(relation_list);
+  });
+// Create the renderer
+        var render = new dagreD3.render();
+
+    // Set up an SVG group so that we can translate the final graph.
+    var svg = d3.select("svg"),
+        inner = svg.append("g");
+
+    // Run the renderer. This is what draws the final graph.
+    buildBase(relation_list);
+    //render(inner, g);
+
+
+
+
+// Center the graph
+
+</script>
+

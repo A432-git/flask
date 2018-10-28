@@ -1,0 +1,63 @@
+*{font-family:Arial, Helvetica, sans-serif;font-size:14px;border:none;}
+     body{text-align:justify;}
+        
+        #footer{
+          position:fixed;
+          background:$fff;
+          bottom:20px;
+          right:10px;
+          width:600px;
+          height:30px;
+          text-align:right;
+        }
+        
+        center {font-size: 300%}
+        .disabled {
+           pointer-events: none;
+           cursor: default;
+        }
+
+div {
+margin:0;
+padding:0;
+}
+.first {
+            width: 20%;
+            float:left;
+            height: 700px;
+             border: 1px solid #3B6273;
+        }
+        .second {
+            width: 40%;
+            float:right;
+            height: 700px;
+             border: 1px solid #3B6273;
+        }
+#popDiv {
+
+     /*就是这个position:fixed起作用，生成相对定位的元素，相对于其正常位置进行定位。*/
+     position:fixed;
+
+     /*这里都是对外边距进行设置*/
+     margin:auto;
+     left:100;
+     right:100;
+     top:0; 
+     bottom:0;
+
+     /*设置div的宽和高*/
+     width:1000px; 
+     height:auto;
+
+     /*设置超出范围后，就隐藏超出的部分*/
+     overflow: hidden;
+
+     /*设置边框*/
+     border: 2px solid #AEBBCA;
+
+     /*设置背景颜色*/
+     background-color: #EEF1F8;
+
+     /*设置鼠标的样式*/
+     cursor: move; 
+     }

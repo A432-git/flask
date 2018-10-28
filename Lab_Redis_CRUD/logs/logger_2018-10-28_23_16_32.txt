@@ -1,0 +1,13 @@
+2018-10-28 23:16:32,284 - redisworks.py[line:157] - ERROR: Unable to get item: root.keys
+2018-10-28 23:16:32,381 - _internal.py[line:88] - INFO: 127.0.0.1 - - [28/Oct/2018 23:16:32] "GET / HTTP/1.1" 200 -
+2018-10-28 23:16:33,299 - _internal.py[line:88] - INFO: 127.0.0.1 - - [28/Oct/2018 23:16:33] "GET /userview/Home HTTP/1.1" 200 -
+2018-10-28 23:16:33,347 - _internal.py[line:88] - INFO: 127.0.0.1 - - [28/Oct/2018 23:16:33] "GET /static/bg.jpg HTTP/1.1" 200 -
+2018-10-28 23:16:33,874 - _internal.py[line:88] - INFO: 127.0.0.1 - - [28/Oct/2018 23:16:33] "GET /static/js/bootstable.js HTTP/1.1" 200 -
+2018-10-28 23:16:33,885 - _internal.py[line:88] - INFO: 127.0.0.1 - - [28/Oct/2018 23:16:33] "GET /static/js/showTip.js HTTP/1.1" 200 -
+2018-10-28 23:16:33,899 - _internal.py[line:88] - INFO: 127.0.0.1 - - [28/Oct/2018 23:16:33] "GET /static/css/style.css HTTP/1.1" 200 -
+2018-10-28 23:16:33,927 - _internal.py[line:88] - INFO: 127.0.0.1 - - [28/Oct/2018 23:16:33] "GET /static/labManagepent.png HTTP/1.1" 200 -
+2018-10-28 23:16:41,378 - _internal.py[line:88] - INFO: 127.0.0.1 - - [28/Oct/2018 23:16:41] "GET /userview/Array HTTP/1.1" 200 -
+2018-10-28 23:16:42,541 - _internal.py[line:88] - INFO: 127.0.0.1 - - [28/Oct/2018 23:16:42] "GET /ajax/Array?_=1540739801655 HTTP/1.1" 200 -
+2018-10-28 23:16:55,996 - _internal.py[line:88] - INFO: 127.0.0.1 - - [28/Oct/2018 23:16:55] "GET /userview/Host HTTP/1.1" 200 -
+2018-10-28 23:16:57,326 - _internal.py[line:88] - INFO: 127.0.0.1 - - [28/Oct/2018 23:16:57] "GET /ajax/Host?_=1540739816332 HTTP/1.1" 200 -
+2018-10-28 23:17:00,707 - _internal.py[line:88] - INFO: 127.0.0.1 - - [28/Oct/2018 23:17:00] "GET /ajax/Host?_=1540739816333 HTTP/1.1" 200 -
