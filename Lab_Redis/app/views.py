@@ -46,11 +46,14 @@ def readExcelToRedis():
 
 def init(force =0):
 
-    if(force == 0):
-        if(root.lab):
+    if force == 0:
+        if root.lab and root.tb.keys:
             pass
         else:
             readExcelToRedis()
+            root.tb.keys = ['test']
+            root.tb.device = ['OB-D1097']
+            root.tb.connection = ['sync', 'async']
     else:
         readExcelToRedis()
 
@@ -68,13 +71,40 @@ def home():
 
 @app.route('/ts/<obj>')
 def external_ts(obj):
-    if obj == 'testset':
-        return render_template(obj+".html")
+    if obj == 'testbed':
+        # root.tb.keys = ['test']
+        # root.tb.device = ['OB-D1097']
+        # root.tb.connection = ['sync','async']
+        return render_template('testbed' + ".html", devices=root.tb.device,connections=root.tb.connection,testbed_type=root.tb.keys)
     else:
-        if root.tb.keys == None:
-            return render_template('testbed'+".html",testbed_type=[])
-        else:
-            return render_template('testbed' + ".html", testbed_type=root.tb.keys)
+        return render_template(obj + ".html")
+
+
+@app.route('/ts/tb/device/<operate>/<device_name>')
+def operate_device(operate,device_name):
+    device_list = []
+    for device in root.tb.device:
+        device_list.append(device)
+    if operate == 'add':
+        device_list.append(device_name)
+
+    else:
+        device_list.remove(device_name)
+    root.tb.device = device_list
+    return jsonify(result = [])
+
+
+@app.route('/ts/tb/connection/<operate>/<connection_name>')
+def operate_relation(operate,connection_name):
+    connection_list = []
+    for relation in root.tb.connection:
+        connection_list.append(relation)
+    if operate == 'add':
+        connection_list.append(connection_name)
+    else:
+        connection_list.remove(connection_name)
+    root.tb.connection = connection_list
+    return jsonify(result = [])
 
 
 @app.route('/ts/tb/<tb_name>')
@@ -148,4 +178,5 @@ def upload():
         fname = secure_filename(f.filename) 
         f.save(os.path.join(UPLOAD_FOLDER, fname))
         init(force =1)
-        return jsonify(status='succeed')
+        # return jsonify(status='succeed')
+        return render_template("Home.html")

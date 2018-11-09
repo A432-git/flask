@@ -2,46 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bcf3f9e-e496-4782-b6d4-210e07e21ce2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/flask.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flask.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/Uploads/AR.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/app/Uploads/AR.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/Uploads/data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/app/Uploads/data.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/Uploads/fping.sh" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/app/Uploads/fping.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/Uploads/test.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/app/Uploads/test.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/dataRedis.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/app/dataRedis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/dataRedis2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/app/dataRedis2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/labmangement.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/app/labmangement.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/mylogging.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/app/mylogging.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/objectLock.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/app/objectLock.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/sqlite_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/app/sqlite_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/static/bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/app/static/bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/static/css/demo.css" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/app/static/css/demo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/app/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/static/js/bootstable.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/app/static/js/bootstable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/static/js/d3.v4.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/app/static/js/d3.v4.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/static/js/dagre-d3.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/app/static/js/dagre-d3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/static/js/showTip.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/app/static/js/showTip.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/static/labManagepent.png" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/app/static/labManagepent.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/templates/Home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/app/templates/Home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/templates/Manage.html" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/app/templates/Manage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/templates/UserMain.html" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/app/templates/UserMain.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/app/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/templates/data.html" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/app/templates/data.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/templates/data_excel.html" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/app/templates/data_excel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/templates/replication_tb.html" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/app/templates/replication_tb.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/templates/style_attrs.html" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/app/templates/style_attrs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/templates/temp.html" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/app/templates/temp.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/userview.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/app/userview.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/work.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/app/work.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/ar.json" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/ar.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/logs/logger_2018-09-01_17_19_29.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/logs/logger_2018-09-01_17_19_29.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/logs/logger_2018-09-01_17_23_02.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/logs/logger_2018-09-01_17_23_02.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_Redis/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis_CRUD/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/reids/Tredis.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/reids/Tredis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/reids/Trediswork.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/reids/Trediswork.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/static/bg.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis/app/static/bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/templates/testbed.html" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis/app/templates/testbed.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab_Redis/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Redis/app/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,21 +17,21 @@
     <session id="-556743449">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="32" />
+          <entry key="project.closed" value="33" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="6" />
           <entry key="project.open.time.11" value="6" />
-          <entry key="project.open.time.12" value="2" />
-          <entry key="project.open.time.13" value="3" />
+          <entry key="project.open.time.12" value="3" />
+          <entry key="project.open.time.13" value="4" />
           <entry key="project.open.time.14" value="3" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.32" value="1" />
           <entry key="project.open.time.7" value="5" />
-          <entry key="project.open.time.8" value="14" />
-          <entry key="project.open.time.9" value="7" />
-          <entry key="project.opened" value="52" />
+          <entry key="project.open.time.8" value="15" />
+          <entry key="project.open.time.9" value="8" />
+          <entry key="project.opened" value="56" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -75,42 +39,42 @@
           <entry key="css" value="1" />
           <entry key="db" value="1" />
           <entry key="gif" value="1" />
-          <entry key="html" value="34" />
+          <entry key="html" value="38" />
           <entry key="jpg" value="1" />
           <entry key="js" value="14" />
-          <entry key="json" value="1" />
+          <entry key="json" value="2" />
           <entry key="png" value="1" />
           <entry key="ps1" value="2" />
-          <entry key="py" value="96" />
-          <entry key="txt" value="6" />
+          <entry key="py" value="114" />
+          <entry key="txt" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="1" />
-          <entry key="HTML" value="34" />
+          <entry key="HTML" value="38" />
           <entry key="Image" value="3" />
-          <entry key="JSON" value="1" />
+          <entry key="JSON" value="2" />
           <entry key="JavaScript" value="14" />
-          <entry key="PLAIN_TEXT" value="9" />
-          <entry key="Python" value="96" />
+          <entry key="PLAIN_TEXT" value="24" />
+          <entry key="Python" value="114" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="7" />
-          <entry key="html" value="2777" />
+          <entry key="html" value="3088" />
           <entry key="js" value="915" />
-          <entry key="py" value="10318" />
+          <entry key="py" value="11444" />
           <entry key="txt" value="421" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="2777" />
+          <entry key="HTML" value="3088" />
           <entry key="JavaScript" value="915" />
           <entry key="PLAIN_TEXT" value="428" />
-          <entry key="Python" value="10318" />
+          <entry key="Python" value="11444" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -119,10 +83,21 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lab_Redis_CRUD/app/userview.py">
+        <entry file="file://$PROJECT_DIR$/../python/Mul_Process/mul_1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="96" column="31" selection-start-line="96" selection-start-column="31" selection-end-line="96" selection-end-column="31" />
+            <state relative-caret-position="1375">
+              <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
+              <folding>
+                <element signature="e#141#173#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Lab_Redis_CRUD/app/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -131,38 +106,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../python/reids/Tredis_json.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../python/reids/Tredis.py">
+        <entry file="file://$PROJECT_DIR$/Lab_Redis_CRUD/app/userview.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+            <state relative-caret-position="25">
+              <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../python/reids/Trediswork.py">
+        <entry file="file://$PROJECT_DIR$/Lab_Redis/app/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+            <state relative-caret-position="375">
+              <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
               <folding>
-                <element signature="e#0#27#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lab_Redis_CRUD/app/dataRedis2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="82" selection-start-line="82" selection-start-column="2" selection-end-line="84" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -171,12 +129,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lab_Redis/app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="64" column="11" selection-start-line="64" selection-start-column="11" selection-end-line="64" selection-end-column="11" />
+            <state relative-caret-position="318">
+              <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#492#1594#0" />
-                <element signature="e#1621#1757#0" />
               </folding>
             </state>
           </provider>
@@ -185,29 +142,51 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Lab_Redis/app/templates/testbed.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lab_Redis_CRUD/app/dataRedis.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="800">
-              <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+            <state relative-caret-position="512">
+              <caret line="228" column="64" lean-forward="true" selection-start-line="228" selection-start-column="64" selection-end-line="228" selection-end-column="64" />
               <folding>
-                <element signature="e#0#12#0" expanded="true" />
+                <element signature="e#1072#1078#0" expanded="true" />
+                <element signature="e#1399#1405#0" expanded="true" />
+                <element signature="e#1827#1833#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lab_Redis_CRUD/app/templates/data.html">
+        <entry file="file://$PROJECT_DIR$/Lab_Redis/app/templates/data.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Lab_Redis/app/templates/Home.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../python/Mul_Process/mul_process.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2775">
-              <caret line="111" column="21" selection-start-line="99" selection-start-column="8" selection-end-line="114" selection-end-column="15" />
+            <state>
+              <folding>
+                <element signature="e#0#22#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../python/threading/run_io.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="21" column="6" selection-start-line="20" selection-end-line="24" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+                <marker date="1541154622023" expanded="true" signature="196:197" ph="..." />
+                <marker date="1541154622023" expanded="true" signature="196:201" ph="..." />
+                <marker date="1541154622023" expanded="true" signature="196:380" ph="..." />
+                <marker date="1541154622023" expanded="true" signature="483:567" ph="..." />
+                <marker date="1541154622023" expanded="true" signature="1430:1442" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -224,13 +203,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>bg</find>
-      <find>lab</find>
-      <find>dia</find>
-      <find>update</find>
       <find>threading.RLock()</find>
       <find>lock</find>
-      <find>print</find>
       <find>allPagesDict</find>
       <find>create</find>
       <find>getEditNum</find>
@@ -247,9 +221,23 @@
       <find>type=&quot;button&quot;</find>
       <find>input</find>
       <find>select</find>
+      <find>run_in_parall</find>
+      <find>print</find>
+      <find>device_list</find>
+      <find>getTestBed</find>
+      <find>alert</find>
+      <find>relation_list</find>
+      <find>buildBase</find>
+      <find>del_node</find>
+      <find>del_device</find>
+      <find>del_connection</find>
+      <find>connection_list</find>
+      <find>relationship</find>
     </findStrings>
     <replaceStrings>
       <replace>lock</replace>
+      <replace>logging.info</replace>
+      <replace>del_node</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -258,8 +246,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Lab_Redis/app/templates/temp.html" />
-        <option value="$PROJECT_DIR$/Lab_Redis/app/templates/base.html" />
         <option value="$PROJECT_DIR$/Lab_Redis/app/sqlite.py" />
         <option value="$PROJECT_DIR$/Lab_Redis/app/sqlite_test.py" />
         <option value="$PROJECT_DIR$/Lab_Redis/app/work.py" />
@@ -305,6 +291,10 @@
         <option value="$PROJECT_DIR$/../python/reids/Trediswork.py" />
         <option value="$PROJECT_DIR$/Lab_Redis/app/dataRedis.py" />
         <option value="$PROJECT_DIR$/Lab_Redis/app/dataRedis2.py" />
+        <option value="$PROJECT_DIR$/../python/threading/run_io.py" />
+        <option value="$PROJECT_DIR$/../python/threading/thread_pool_test.py" />
+        <option value="$PROJECT_DIR$/../python/Mul_Process/processPool_test.py" />
+        <option value="$PROJECT_DIR$/../python/Mul_Process/mul_1.py" />
         <option value="$PROJECT_DIR$/Lab_Redis/app/views.py" />
         <option value="$PROJECT_DIR$/Lab_Redis/app/templates/testbed.html" />
       </list>
@@ -313,7 +303,7 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1481" />
     <option name="y" value="124" />
-    <option name="width" value="1211" />
+    <option name="width" value="1181" />
     <option name="height" value="741" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -338,7 +328,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -362,12 +351,24 @@
               <item name="flask" type="462c0819:PsiDirectoryNode" />
               <item name="Lab_Redis" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flask" type="462c0819:PsiDirectoryNode" />
+              <item name="Lab_Redis" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -376,16 +377,16 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/test/app/static" />
-      <recent name="$PROJECT_DIR$/Lab_Redis" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../python/threading" />
       <recent name="$PROJECT_DIR$/Lab_Redis/app/templates" />
       <recent name="$PROJECT_DIR$/Lab_Redis/app/static/css" />
       <recent name="$PROJECT_DIR$/Lab_Redis/app/static/js" />
       <recent name="$PROJECT_DIR$/test/app/static" />
-      <recent name="$PROJECT_DIR$/Lab_Redis/app" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test/app/static" />
+      <recent name="$PROJECT_DIR$/Lab_Redis" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -400,49 +401,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.dataRedis2">
-    <configuration name="Tredis" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../python/reids" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../python/reids/Tredis.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Trediswork" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../python/reids" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../python/reids/Trediswork.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.mul_1">
     <configuration name="dataRedis" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="flask" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -485,7 +444,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="objectLock" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="mul_1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -493,11 +452,53 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../python/lock" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../python/Mul_Process" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../python/lock/objectLock.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../python/Mul_Process/mul_1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="processPool_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../python/Mul_Process" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../python/Mul_Process/processPool_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run_io" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../python/threading" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../python/threading/run_io.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -507,19 +508,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.objectLock" />
-      <item itemvalue="Python.Trediswork" />
-      <item itemvalue="Python.Tredis" />
       <item itemvalue="Python.dataRedis" />
       <item itemvalue="Python.dataRedis2" />
+      <item itemvalue="Python.run_io" />
+      <item itemvalue="Python.mul_1" />
+      <item itemvalue="Python.processPool_test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.mul_1" />
+        <item itemvalue="Python.processPool_test" />
+        <item itemvalue="Python.run_io" />
         <item itemvalue="Python.dataRedis2" />
         <item itemvalue="Python.dataRedis" />
-        <item itemvalue="Python.Trediswork" />
-        <item itemvalue="Python.Tredis" />
-        <item itemvalue="Python.objectLock" />
       </list>
     </recent_temporary>
   </component>
@@ -688,7 +689,7 @@
       <window_info id="Favorites" order="2" side_tool="true" weight="0.28843337" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32830188" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3836478" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3836478" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -730,211 +731,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="add dagre sample" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../python/data_struct/deque_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="25" column="27" lean-forward="true" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/data_struct/orderdict_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/daily/get_bigger_number.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1250">
-          <caret line="50" column="32" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/data_struct/inherit_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/framework/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11">
-          <caret line="34" column="39" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/data_struct/mutable_obj.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/data_struct/out.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/daily/equal_is.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/data_struct/context_manager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/data_struct/heapq_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/data_struct/dict_caculate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1075">
-          <caret line="43" column="32" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/data_struct/heapq_priority.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="20" selection-start-line="9" selection-start-column="4" selection-end-line="11" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/data_struct/restruct_singleton_factory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="695">
-          <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/data_struct/poker.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1368">
-          <caret line="110" column="40" selection-start-line="110" selection-start-column="40" selection-end-line="110" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/data_struct/total_ordering_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="22" selection-start-line="22" selection-end-line="24" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/daily/test_1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="156" column="20" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/data_struct/fetch_item.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="31" column="80" lean-forward="true" selection-start-line="31" selection-start-column="80" selection-end-line="31" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/data_struct/generator_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/daily/puke.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/daily/Person.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/data_struct/chain_map_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/interview/reversed_num_in_array.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/interview/str_huiwen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1600">
-          <caret line="64" column="11" selection-start-line="64" selection-start-column="11" selection-end-line="64" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/lock/python_lock_async.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lab_Redis_CRUD/app/static/js/d3.v4.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lab_Redis_CRUD/app/static/css/demo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lab_Redis/app/templates/replication_tb_backup.html" />
-    <entry file="file://$PROJECT_DIR$/../python/lock/objectLock.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lab_Redis_CRUD/app/templates/style_attrs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1025">
-          <caret line="41" column="3" selection-start-line="41" selection-end-line="41" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/data_struct/class_method.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/data_struct/defaultdict_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/data_struct/user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="20" column="90" selection-start-line="20" selection-start-column="90" selection-end-line="20" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Lab_Redis_CRUD/app/templates/replication_tb.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -946,9 +742,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -958,18 +751,161 @@
     <entry file="file://$PROJECT_DIR$/Lab_Redis_CRUD/app/static/bg.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file:///media/yangr5/Ubuntu 16.0/Lab_Redis/app/work.py">
+    <entry file="file:///media/yangr5/Ubuntu 16.0/Lab_Redis/app/work.py" />
+    <entry file="file://$PROJECT_DIR$/Lab_Redis_CRUD/app/static/js/bootstable.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="-4350" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lab_Redis_CRUD/app/sqlite_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1200" />
+      </provider>
+    </entry>
+    <entry file="file:///media/yangr5/Ubuntu 16.0/Lab_Redis/app/templates/testbed.html" />
+    <entry file="file:///media/yangr5/Ubuntu 16.0/Lab_Redis/app/views.py" />
+    <entry file="file://$PROJECT_DIR$/../python/reids/Tredis_json.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../python/reids/Tredis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../python/reids/Trediswork.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lab_Redis_CRUD/app/dataRedis2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2000">
+          <caret line="82" selection-start-line="82" selection-start-column="2" selection-end-line="84" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../python/reflect/reflect.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../python/commands/copy_ar_materails.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="50" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lab_Redis_CRUD/app/dataRedis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="775">
+          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lab_Redis_CRUD/app/templates/data.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2775">
+          <caret line="111" column="21" selection-start-line="99" selection-start-column="8" selection-end-line="114" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../python/framework/utils/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="51" column="17" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../python/framework/tb_ts_files/ts.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../python/framework/replication.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-525" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../python/framework/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="34" column="39" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../python/framework/device/device.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-900" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../python/threading/thread_pool_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="775">
+          <caret line="31" column="55" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../python/Mul_Process/log.txt" />
+    <entry file="file://$PROJECT_DIR$/../python/Mul_Process/2018-11-02_22_18_48_11957.txt" />
+    <entry file="file://$PROJECT_DIR$/../python/Mul_Process/2018-11-02_22_20_42_12015.txt" />
+    <entry file="file://$PROJECT_DIR$/../python/Mul_Process/2018-11-02_22_21_03_12038.txt" />
+    <entry file="file://$PROJECT_DIR$/../python/Mul_Process/2018-11-02_22_22_07_12193.txt" />
+    <entry file="file://$PROJECT_DIR$/../python/Mul_Process/2018-11-02_22_23_36_12249.txt" />
+    <entry file="file://$PROJECT_DIR$/../python/Mul_Process/2018-11-02_22_25_28_12501.txt" />
+    <entry file="file://$PROJECT_DIR$/../python/Mul_Process/2018-11-02_22_25_38_12501.txt" />
+    <entry file="file://$PROJECT_DIR$/../python/Mul_Process/2018-11-02_22_28_02_12934.txt" />
+    <entry file="file://$PROJECT_DIR$/../python/Mul_Process/2018-11-02_22_27_42_12934.txt" />
+    <entry file="file://$PROJECT_DIR$/../python/Mul_Process/2018-11-02_22_27_32_12934.txt" />
+    <entry file="file://$PROJECT_DIR$/../python/Mul_Process/2018-11-02_22_30_00_13005.txt" />
+    <entry file="file://$PROJECT_DIR$/../python/Mul_Process/2018-11-02_22_29_39_13005.txt" />
+    <entry file="file://$PROJECT_DIR$/../python/Mul_Process/2018-11-02_22_29_29_13005.txt" />
+    <entry file="file://$PROJECT_DIR$/../python/threading/time_out_only_in_main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#27#55#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lab_Redis_CRUD/app/static/js/bootstable.js">
+    <entry file="file://$PROJECT_DIR$/../python/Mul_Process/processPool_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4350" />
+        <state relative-caret-position="725">
+          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+          <folding>
+            <element signature="e#254#304#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../python/threading/func_timeout.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../python/threading/ownThread.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../python/Mul_Process/mul_1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1375">
+          <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
+          <folding>
+            <element signature="e#141#173#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Lab_Redis_CRUD/app/views.py">
@@ -981,102 +917,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lab_Redis_CRUD/app/templates/data.html">
+    <entry file="file://$PROJECT_DIR$/../python/Mul_Process/mul_process.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2775">
-          <caret line="111" column="21" selection-start-line="99" selection-start-column="8" selection-end-line="114" selection-end-column="15" />
+        <state>
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lab_Redis_CRUD/app/sqlite_test.py">
+    <entry file="file://$PROJECT_DIR$/../python/threading/run_io.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1200" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/reids/Tredis_json.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file:///media/yangr5/Ubuntu 16.0/Lab_Redis/app/templates/testbed.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///media/yangr5/Ubuntu 16.0/Lab_Redis/app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-250">
-          <caret line="69" column="21" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
+        <state relative-caret-position="400">
+          <caret line="21" column="6" selection-start-line="20" selection-end-line="24" selection-end-column="14" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#1619#1755#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/reids/Trediswork.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/reids/Tredis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lab_Redis_CRUD/app/dataRedis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
+            <marker date="1541154622023" expanded="true" signature="196:197" ph="..." />
+            <marker date="1541154622023" expanded="true" signature="196:201" ph="..." />
+            <marker date="1541154622023" expanded="true" signature="196:380" ph="..." />
+            <marker date="1541154622023" expanded="true" signature="483:567" ph="..." />
+            <marker date="1541154622023" expanded="true" signature="1430:1442" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Lab_Redis_CRUD/app/userview.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="96" column="31" selection-start-line="96" selection-start-column="31" selection-end-line="96" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="25">
+          <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lab_Redis_CRUD/app/dataRedis2.py">
+    <entry file="file://$PROJECT_DIR$/Lab_Redis/app/templates/data.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lab_Redis/app/templates/Home.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lab_Redis/app/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="82" selection-start-line="82" selection-start-column="2" selection-end-line="84" selection-end-column="37" />
+        <state relative-caret-position="375">
+          <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
           <folding>
-            <element signature="e#0#27#0" expanded="true" />
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Lab_Redis/app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="64" column="11" selection-start-line="64" selection-start-column="11" selection-end-line="64" selection-end-column="11" />
+        <state relative-caret-position="318">
+          <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#492#1594#0" />
-            <element signature="e#1621#1757#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Lab_Redis/app/templates/testbed.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="512">
+          <caret line="228" column="64" lean-forward="true" selection-start-line="228" selection-start-column="64" selection-end-line="228" selection-end-column="64" />
+          <folding>
+            <element signature="e#1072#1078#0" expanded="true" />
+            <element signature="e#1399#1405#0" expanded="true" />
+            <element signature="e#1827#1833#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

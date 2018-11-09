@@ -43,52 +43,58 @@ Test Bed
 
   {% endfor %}
 </select>
-    <button type="button" onclick="show_hiden('show')">Add TB </button>
-    <input type="text"  id="hiden"  />
+    <button type="button" onclick="show_hiden('show')">Copy TB </button>
+    <input type="text" id="hiden"  />
   </section>
 <svg id="svg" width=960 height=600></svg>
 
 <section>
-Device
-<input type="text"  id="device_name"  />
-<button type="button"  onclick="add_device()">AddDevice </button>
-<button type="button"  onclick="del_device()">DeleteDevice </button>
+Device  &nbsp;&nbsp;Name
+<input type="text" id="device_name"  />&nbsp;
+<button type="button" onclick="add_device()">Add </button>
+<select id="device_list" >
+  {% for item in devices%}
+      <option value={{item}}>{{item}}</option>
+  {% endfor %}
+</select>
+<button type="button" onclick="del_device()">Del </button>
+</section>
+<section>
+Connect  Name
+<input type="text" id="connection_name"  />&nbsp;
+<button type="button" onclick="add_connection()">Add </button>
+ <select id="connection_list">
+  {% for item in connections%}
+      <option value={{item}}>{{item}}</option>
+  {% endfor %}
+</select>
+<button type="button" onclick="del_connection()">Del </button>
 </section>
 <section>
 Source
-<select  id="source">
-  <option value="OB-D1468">OB-D1468</option>
-  <option value="OB-D1442">OB-D1442</option>
-  <option value="OB-D1499">OB-D1499</option>
-  <option value="OB-D1097">OB-D1097</option>
-  <option value="OB-D1099">OB-D1099</option>
-  <option value="OB-D1234">OB-D1234</option>
-  <option value="nh-vsa-1">nh-vsa-1</option>
-  <option value="nh-vsa-2">nh-vsa-2</option>
+<select id="source">
+   {% for item in devices%}
+      <option value={{item}}>{{item}}</option>
+  {% endfor %}
 </select>
-Destiantion
-<select  id="destination">
-  <option value="OB-D1468">OB-D1468</option>
-  <option value="OB-D1442">OB-D1442</option>
-  <option value="OB-D1499">OB-D1499</option>
-  <option value="OB-D1097">OB-D1097</option>
-  <option value="OB-D1099">OB-D1099</option>
-  <option value="OB-D1234">OB-D1234</option>
-  <option value="nh-vsa-1">nh-vsa-1</option>
-  <option value="nh-vsa-2">nh-vsa-2</option>
+Destiantion &nbsp;
+<select id="destination">
+  {% for item in devices%}
+      <option value={{item}}>{{item}}</option>
+  {% endfor %}
 </select>
 Relationship
-<select  id="relationship">
-  <option value="sync">sync replication</option>
-  <option value="async">async replication</option>
-  <option value="ndmp">ndmp</option>
+<select id="relationship">
+  {% for item in connections%}
+      <option value={{item}}>{{item}}</option>
+  {% endfor %}
 </select>
-<button type="button"  onclick="add_relation()">AddRelation </button>
-<button type="button"  onclick="del_relation()">DeleteRelation </button>
+<button type="button" onclick="add_relation()">Add </button>
+<button type="button" onclick="del_relation()">Del </button>
 </section>
 <section>
 
- <button type="button"  onclick="show()">Save As </button>
+ <button type="button" onclick="save()">Save As </button>
 </section>
 <script>
 
@@ -97,6 +103,7 @@ function show_hiden(status)
     if(status == 'show')
     {
         $('#hiden').show();
+        relation_list = [];
     }
     else
     {
@@ -112,14 +119,15 @@ function getTestBed()
   $.get("/ts/tb/"+selected_value,function(data,status){
      //alert("数据：" +"\n状态：" + status);
     relation_list = data['relation'];
+    alert(relation_list);
     //svg.selectAll("*").remove();
     nodes.forEach(function(node){
-        del_device(device = node);
+        del_node(device = node);
     });
     buildBase(relation_list);
   });
 }
-function show()
+function save()
 {
     nodes.forEach(function(node){
         //alert(node);
@@ -165,18 +173,61 @@ function buildRelation(relationship){
 
 function add_device(device = $('#device_name').val())
 {
-    g.setNode(device, {labelStyle: "font-weight: bold"});
-    nodes.add(device);
-    render(inner, g);
-	centerGraph();
+    $.get("/ts/tb/device/add/"+$('#device_name').val(),function(data,status){
+       //alert("状态：" + status);
+       document.getElementById("device_list").options.add(new Option(device,device));
+       document.getElementById("source").options.add(new Option(device,device));
+       document.getElementById("destination").options.add(new Option(device,device));
+    });
 }
 
-function del_device(device = $('#device_name').val())
+function del_device(device = $("#device_list option:selected").val())
 {
+    $.get("/ts/tb/device/delete/"+device,function(data,status){
+        alert("状态：" + status);
+        var index = $("#device_list").get(0).selectedIndex;
+        alert(index);
+        $("#device_list option:selected").remove();
+        $("#source option[value="+device+"]").remove();
+        $("#destination option[value="+device+"]").remove();
+
+
+    });
+     //$("#device_list option:selected").remove();
+}
+
+function del_node(device = $('#device_name').val())
+{
+     //$.get("/ts/tb/device/delete/"+device,function(data,status){
+       //alert("状态：" + status);
+      // $("#device_list option:selected").remove();
+    //});
     g.removeNode(device);
     nodes.delete(device);
     render(inner, g);
 	centerGraph();
+
+
+}
+
+function add_connection(connection = $('#connection_name').val())
+{
+    $.get("/ts/tb/connection/add/"+connection,function(data,status){
+       //alert("状态：" + status);
+       document.getElementById("relationship").options.add(new Option(connection,connection));
+       document.getElementById("connection_list").options.add(new Option(connection,connection));
+    });
+
+}
+
+function del_connection(connection = $('#connection_list option:selected').val())
+{
+    //del from select
+    $.get("/ts/tb/connection/delete/"+connection,function(data,status){
+       alert("状态：" + status);
+       $("#connection_list option:selected").remove();
+       $("#relationship option[value="+connection+"]").remove();
+    });
 }
 
 function add_relation(source = $("#source").val(),destination = $("#destination").val(),relationship = $("#relationship").val()) {
@@ -209,8 +260,6 @@ function del_relation(source = $("#source").val(),destination = $("#destination"
 	}
 	relation_list.splice(index,1);
 	alert(relation_list);
-	//nodes.delete(source);
-	//nodes.delete(destination);
 	render(inner, g);
 	centerGraph();
 }
