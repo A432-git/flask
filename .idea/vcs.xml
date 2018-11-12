@@ -3,6 +3,8 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../Jquery" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bootstrap-flask" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../flask-admin" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../python" vcs="Git" />
   </component>
 </project>

@@ -1,0 +1,30 @@
+2018-11-11 20:45:33,578 - redisworks.py[line:157] - ERROR: Unable to get item: root.keys
+2018-11-11 20:45:33,642 - _internal.py[line:88] - INFO: 127.0.0.1 - - [11/Nov/2018 20:45:33] "GET /ts/tb/test HTTP/1.1" 404 -
+2018-11-11 20:45:34,152 - _internal.py[line:88] - INFO: 127.0.0.1 - - [11/Nov/2018 20:45:34] "GET /favicon.ico HTTP/1.1" 404 -
+2018-11-11 20:45:38,543 - _internal.py[line:88] - INFO: 127.0.0.1 - - [11/Nov/2018 20:45:38] "GET / HTTP/1.1" 200 -
+2018-11-11 20:45:38,888 - _internal.py[line:88] - INFO: 127.0.0.1 - - [11/Nov/2018 20:45:38] "GET /userview/Home HTTP/1.1" 200 -
+2018-11-11 20:45:38,973 - _internal.py[line:88] - INFO: 127.0.0.1 - - [11/Nov/2018 20:45:38] "GET /static/bg.jpg HTTP/1.1" 200 -
+2018-11-11 20:45:39,383 - _internal.py[line:88] - INFO: 127.0.0.1 - - [11/Nov/2018 20:45:39] "GET /static/js/bootstable.js HTTP/1.1" 200 -
+2018-11-11 20:45:39,390 - _internal.py[line:88] - INFO: 127.0.0.1 - - [11/Nov/2018 20:45:39] "GET /static/js/showTip.js HTTP/1.1" 304 -
+2018-11-11 20:45:39,397 - _internal.py[line:88] - INFO: 127.0.0.1 - - [11/Nov/2018 20:45:39] "GET /static/css/style.css HTTP/1.1" 304 -
+2018-11-11 20:45:39,404 - _internal.py[line:88] - INFO: 127.0.0.1 - - [11/Nov/2018 20:45:39] "GET /static/labManagepent.png HTTP/1.1" 200 -
+2018-11-11 20:45:43,284 - _internal.py[line:88] - INFO: 127.0.0.1 - - [11/Nov/2018 20:45:43] "GET /userview/Array HTTP/1.1" 200 -
+2018-11-11 20:45:44,471 - _internal.py[line:88] - INFO: 127.0.0.1 - - [11/Nov/2018 20:45:44] "GET /ajax/Array?_=1541940343509 HTTP/1.1" 200 -
+2018-11-11 20:45:50,242 - _internal.py[line:88] - INFO: 127.0.0.1 - - [11/Nov/2018 20:45:50] "GET /userview/Host HTTP/1.1" 200 -
+2018-11-11 20:45:51,096 - _internal.py[line:88] - INFO: 127.0.0.1 - - [11/Nov/2018 20:45:51] "GET /ajax/Host?_=1541940350408 HTTP/1.1" 200 -
+2018-11-11 20:46:06,818 - dataRedis2.py[line:39] - INFO: updating CentOS...
+2018-11-11 20:46:06,819 - _internal.py[line:88] - INFO: 127.0.0.1 - - [11/Nov/2018 20:46:06] "POST /ajax/Host/update HTTP/1.1" 200 -
+2018-11-11 20:46:20,352 - _internal.py[line:88] - INFO: 127.0.0.1 - - [11/Nov/2018 20:46:20] "GET /ajax/Host?_=1541940350409 HTTP/1.1" 200 -
+2018-11-11 20:46:39,230 - _internal.py[line:88] - INFO: 127.0.0.1 - - [11/Nov/2018 20:46:39] "GET /userview/Array HTTP/1.1" 200 -
+2018-11-11 20:46:40,230 - _internal.py[line:88] - INFO: 127.0.0.1 - - [11/Nov/2018 20:46:40] "GET /ajax/Array?_=1541940399527 HTTP/1.1" 200 -
+2018-11-11 20:48:38,351 - _internal.py[line:88] - INFO: 127.0.0.1 - - [11/Nov/2018 20:48:38] "GET /userview/Virtualization HTTP/1.1" 200 -
+2018-11-11 20:48:39,404 - _internal.py[line:88] - INFO: 127.0.0.1 - - [11/Nov/2018 20:48:39] "GET /ajax/Virtualization?_=1541940518685 HTTP/1.1" 200 -
+2018-11-11 20:48:53,207 - dataRedis2.py[line:55] - INFO: deleting DMYXVH1...
+2018-11-11 20:48:53,208 - _internal.py[line:88] - INFO: 127.0.0.1 - - [11/Nov/2018 20:48:53] "POST /ajax/Virtualization/delete HTTP/1.1" 200 -
+2018-11-11 20:49:02,812 - dataRedis2.py[line:55] - INFO: deleting 96876d1   ...
+2018-11-11 20:49:02,813 - _internal.py[line:88] - INFO: 127.0.0.1 - - [11/Nov/2018 20:49:02] "POST /ajax/Virtualization/delete HTTP/1.1" 200 -
+2018-11-11 20:49:12,502 - dataRedis2.py[line:55] - INFO: deleting ESD-HOST198134 ...
+2018-11-11 20:49:12,503 - _internal.py[line:88] - INFO: 127.0.0.1 - - [11/Nov/2018 20:49:12] "POST /ajax/Virtualization/delete HTTP/1.1" 200 -
+2018-11-11 20:49:35,066 - dataRedis2.py[line:55] - INFO: deleting Private ESXi...
+2018-11-11 20:49:35,067 - _internal.py[line:88] - INFO: 127.0.0.1 - - [11/Nov/2018 20:49:35] "POST /ajax/Virtualization/delete HTTP/1.1" 200 -
+2018-11-11 20:49:44,672 - _internal.py[line:88] - INFO: 127.0.0.1 - - [11/Nov/2018 20:49:44] "GET /ajax/Virtualization?_=1541940518686 HTTP/1.1" 200 -
