@@ -4,7 +4,7 @@
 # @Email   : mat_wu@163.com
 # @File    : myview.py
 # @Software: PyCharm
-from flask_admin import Admin, BaseView, expose
+from flask_admin import BaseView, expose
 
 
 class MyView(BaseView):

@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0bcf3f9e-e496-4782-b6d4-210e07e21ce2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../bootstrap-flask/examples/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bootstrap-flask/examples/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/flask.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flask.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_admin/myapp.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_admin/myapp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_admin/myview.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_admin/myview.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_admin/sample_db.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/flask_admin/sample_db.sqlite" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,13 +25,14 @@
           <entry key="project.open.time.12" value="3" />
           <entry key="project.open.time.13" value="4" />
           <entry key="project.open.time.14" value="3" />
+          <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.32" value="1" />
           <entry key="project.open.time.7" value="5" />
           <entry key="project.open.time.8" value="15" />
           <entry key="project.open.time.9" value="9" />
-          <entry key="project.opened" value="57" />
+          <entry key="project.opened" value="58" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -40,27 +40,27 @@
           <entry key="css" value="1" />
           <entry key="db" value="1" />
           <entry key="gif" value="1" />
-          <entry key="html" value="40" />
+          <entry key="html" value="41" />
           <entry key="jpg" value="1" />
           <entry key="js" value="15" />
           <entry key="json" value="2" />
           <entry key="png" value="1" />
           <entry key="ps1" value="2" />
-          <entry key="py" value="129" />
-          <entry key="rst" value="1" />
+          <entry key="py" value="136" />
+          <entry key="rst" value="2" />
           <entry key="txt" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="1" />
-          <entry key="HTML" value="40" />
+          <entry key="HTML" value="41" />
           <entry key="Image" value="3" />
           <entry key="JSON" value="2" />
           <entry key="JavaScript" value="15" />
           <entry key="PLAIN_TEXT" value="25" />
-          <entry key="Python" value="129" />
-          <entry key="ReST" value="1" />
+          <entry key="Python" value="136" />
+          <entry key="ReST" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -68,7 +68,7 @@
           <entry key="dummy" value="7" />
           <entry key="html" value="3088" />
           <entry key="js" value="915" />
-          <entry key="py" value="11516" />
+          <entry key="py" value="11568" />
           <entry key="txt" value="421" />
         </counts>
       </usages-collector>
@@ -77,7 +77,7 @@
           <entry key="HTML" value="3088" />
           <entry key="JavaScript" value="915" />
           <entry key="PLAIN_TEXT" value="428" />
-          <entry key="Python" value="11516" />
+          <entry key="Python" value="11568" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -85,31 +85,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../flask-admin/examples/auth/app.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sqla/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-174">
-              <caret line="76" column="55" selection-start-line="76" selection-start-column="50" selection-end-line="76" selection-end-column="55" />
+            <state relative-caret-position="275">
+              <caret line="11" column="3" selection-start-line="11" selection-end-line="11" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/flask_admin/myapp.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="124">
+              <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#141#164#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../flask-admin/examples/sqla/__init__.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../flask-admin/examples/sqla/app.py">
+        <entry file="file://$PROJECT_DIR$/flask_admin/myview.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4200">
-              <caret line="168" column="30" selection-start-line="168" selection-start-column="22" selection-end-line="168" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="288">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -126,10 +127,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>rowAcep</find>
-      <find>newData</find>
-      <find>find</find>
-      <find>None</find>
       <find>add_device</find>
       <find>buildRelation</find>
       <find>post</find>
@@ -153,9 +150,13 @@
       <find>db</find>
       <find>SQLAlchemy</find>
       <find>Pet</find>
-      <find>last</find>
       <find>security.login</find>
       <find>login</find>
+      <find>Filter</find>
+      <find>FilterEqual</find>
+      <find>last</find>
+      <find>Post</find>
+      <find>column_searchable_list</find>
     </findStrings>
     <replaceStrings>
       <replace>lock</replace>
@@ -164,7 +165,7 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../flask-admin" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -217,8 +218,8 @@
         <option value="$PROJECT_DIR$/Lab_Redis/app/templates/testbed.html" />
         <option value="$PROJECT_DIR$/../bootstrap-flask/examples/app.py" />
         <option value="$PROJECT_DIR$/flask_admin/templates/index.html" />
-        <option value="$PROJECT_DIR$/flask_admin/myview.py" />
         <option value="$PROJECT_DIR$/../flask-admin/examples/sqla/app.py" />
+        <option value="$PROJECT_DIR$/flask_admin/myview.py" />
         <option value="$PROJECT_DIR$/flask_admin/myapp.py" />
       </list>
     </option>
@@ -251,34 +252,28 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="flask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flask-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="flask" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flask-admin" type="462c0819:PsiDirectoryNode" />
-              <item name="doc" type="462c0819:PsiDirectoryNode" />
+              <item name="flask" type="462c0819:PsiDirectoryNode" />
+              <item name="flask_admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flask-admin" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flask-admin" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="flask" type="462c0819:PsiDirectoryNode" />
+              <item name="sqla" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -287,16 +282,16 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/test/app/static" />
-      <recent name="$PROJECT_DIR$/Lab_Redis" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/flask_admin" />
       <recent name="$PROJECT_DIR$/../python/threading" />
       <recent name="$PROJECT_DIR$/Lab_Redis/app/templates" />
       <recent name="$PROJECT_DIR$/Lab_Redis/app/static/css" />
-      <recent name="$PROJECT_DIR$/Lab_Redis/app/static/js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test/app/static" />
+      <recent name="$PROJECT_DIR$/Lab_Redis" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -311,8 +306,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.app">
+  <component name="RunManager" selected="Python.myapp">
     <configuration name="app (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="flask" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sqla" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sqla/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="app (4)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="flask-admin" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -320,11 +336,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../flask-admin/examples/sqla" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../flask-admin/examples/sqla-custom-inline-forms" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../flask-admin/examples/sqla/app.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../flask-admin/examples/sqla-custom-inline-forms/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="app (5)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="flask-admin" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../flask-admin/examples/tinymongo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../flask-admin/examples/tinymongo/app.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -341,32 +378,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../flask-admin/examples/auth" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../flask-admin/examples/sqla" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../flask-admin/examples/auth/app.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="mul_1" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../python/Mul_Process" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../python/Mul_Process/mul_1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../flask-admin/examples/sqla/app.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -396,41 +412,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="flask" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab_Redis_CRUD" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab_Redis_CRUD/run.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Python.mul_1" />
-      <item itemvalue="Python.run" />
+      <item itemvalue="Python.app (4)" />
+      <item itemvalue="Python.app (5)" />
       <item itemvalue="Python.myapp" />
       <item itemvalue="Python.app" />
       <item itemvalue="Python.app (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.app" />
-        <item itemvalue="Python.app (1)" />
         <item itemvalue="Python.myapp" />
-        <item itemvalue="Python.run" />
-        <item itemvalue="Python.mul_1" />
+        <item itemvalue="Python.app (1)" />
+        <item itemvalue="Python.app" />
+        <item itemvalue="Python.app (5)" />
+        <item itemvalue="Python.app (4)" />
       </list>
     </recent_temporary>
   </component>
@@ -641,16 +636,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="add dagre sample" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../python/reflect/reflect.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/commands/copy_ar_materails.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" column="50" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Lab_Redis_CRUD/app/dataRedis.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="775">
@@ -731,21 +716,12 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/../python/threading/ownThread.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/../python/Mul_Process/mul_1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1375">
           <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
-          <folding>
-            <element signature="e#141#173#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -753,9 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -766,26 +739,12 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/../python/Mul_Process/mul_process.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/../python/threading/run_io.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="21" column="6" selection-start-line="20" selection-end-line="24" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <marker date="1541154622023" expanded="true" signature="196:197" ph="..." />
-            <marker date="1541154622023" expanded="true" signature="196:201" ph="..." />
-            <marker date="1541154622023" expanded="true" signature="196:380" ph="..." />
-            <marker date="1541154622023" expanded="true" signature="483:567" ph="..." />
-            <marker date="1541154622023" expanded="true" signature="1430:1442" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -804,29 +763,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Lab_Redis_CRUD/app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Lab_Redis/app/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1650">
           <caret line="95" selection-start-line="95" selection-end-line="95" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#492#1594#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flask_admin/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -838,33 +780,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../flask-admin/examples/simple/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flask_admin/myview.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/flask_admin/static/t1.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flask_admin/myapp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="31" column="44" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="44" />
-          <folding>
-            <element signature="e#141#164#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Lab_Redis_CRUD/app/static/js/bootstable.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -875,9 +794,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="512">
           <caret line="228" column="64" selection-start-line="228" selection-start-column="64" selection-end-line="228" selection-end-column="64" />
-          <folding>
-            <element signature="e#1072#1078#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -890,22 +806,56 @@
     <entry file="file://$PROJECT_DIR$/../flask-admin/examples/sqla/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../flask-admin/examples/sqla/app.py">
+    <entry file="file://$PROJECT_DIR$/../flask-admin/examples/auth/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4200">
-          <caret line="168" column="30" selection-start-line="168" selection-start-column="22" selection-end-line="168" selection-end-column="30" />
+        <state relative-caret-position="25">
+          <caret line="76" column="55" selection-start-line="76" selection-start-column="50" selection-end-line="76" selection-end-column="55" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../flask-admin/examples/auth/app.py">
+    <entry file="file://$PROJECT_DIR$/../flask-admin/examples/sqla/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-174">
-          <caret line="76" column="55" selection-start-line="76" selection-start-column="50" selection-end-line="76" selection-end-column="55" />
+        <state relative-caret-position="100">
+          <caret line="91" lean-forward="true" selection-start-line="89" selection-end-line="99" selection-end-column="53" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flask_admin/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sqla/README.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sqla/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="3" selection-start-line="11" selection-end-line="11" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flask_admin/myview.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flask_admin/myapp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+          <folding>
+            <element signature="e#141#164#0" expanded="true" />
           </folding>
         </state>
       </provider>
