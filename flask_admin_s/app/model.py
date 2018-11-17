@@ -30,3 +30,23 @@ class Pet(db.Model):
     def __str__(self):
         return self.name
 
+# Customized User model admin
+inline_form_options = {
+    'form_label': "Info item",
+    'form_columns': ['id', 'key', 'value'],
+    'form_args': None,
+    'form_extra_fields': None,
+}
+
+
+class UserInfo(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+
+    key = db.Column(db.String(64), nullable=False)
+    value = db.Column(db.String(64))
+
+    user_id = db.Column(db.Integer(), db.ForeignKey(User.id))
+    user = db.relationship(User, backref='info')
+
+    def __str__(self):
+        return "{} - {}".format(self.key, self.value)

@@ -4,33 +4,21 @@
 # @Email   : mat_wu@163.com
 # @File    : views.py
 # @Software: PyCharm
-from .model import User,Pet
+from .model import User,Pet,inline_form_options, UserInfo
 from app import db, app
 from flask_admin.contrib import sqla
 from flask_admin.contrib.sqla.filters import FilterEqual
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
-
-# Customized User model admin
-inline_form_options = {
-    'form_label': "Info item",
-    'form_columns': ['id', 'key', 'value'],
-    'form_args': None,
-    'form_extra_fields': None,
-}
+from flask_admin import BaseView, expose
+from flask.ext.admin.contrib.fileadmin import FileAdmin
+import os.path as op
 
 
-class UserInfo(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-
-    key = db.Column(db.String(64), nullable=False)
-    value = db.Column(db.String(64))
-
-    user_id = db.Column(db.Integer(), db.ForeignKey(User.id))
-    user = db.relationship(User, backref='info')
-
-    def __str__(self):
-        return "{} - {}".format(self.key, self.value)
+class MyView(BaseView):
+    @expose('/')
+    def index(self):
+        return self.render('index.html')
 
 
 class UserAdmin(sqla.ModelView):
@@ -81,5 +69,10 @@ class UserAdmin(sqla.ModelView):
 
 
 admin = Admin(app, name='SPE DJY', template_mode='bootstrap3')
+admin.add_view(MyView(name='Hello'))
+path = op.join(op.dirname(__file__), 'static')
+admin.add_view(FileAdmin(path, '/static/', name='Static Files'))
+admin.add_view(MyView(name='Hello 1', endpoint='test1', category='Test'))
+admin.add_view(MyView(name='Hello 2', endpoint='test2', category='Test'))
 admin.add_view(UserAdmin(User, db.session,category="Lab"))
 admin.add_view(ModelView(Pet, db.session,category="Lab"))
