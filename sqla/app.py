@@ -249,7 +249,7 @@ class ScreenView(sqla.ModelView):
     column_sortable_list = ['id', 'width', 'height', 'number_of_pixels']
 
     # Flask-admin can automatically detect the relevant filters for hybrid properties.
-    column_filters = ('number_of_pixels', )
+    column_filters = ('number_of_pixels','height' )
 
 
 # Create admin

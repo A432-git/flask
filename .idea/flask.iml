@@ -10,6 +10,7 @@
     <orderEntry type="module" module-name="Jquery" />
     <orderEntry type="module" module-name="Lab_Redis" />
     <orderEntry type="module" module-name="flask-admin" />
+    <orderEntry type="module" module-name="Flask-AppBuilder" />
   </component>
   <component name="TestRunnerService">
     <option name="PROJECT_TEST_RUNNER" value="Unittests" />
