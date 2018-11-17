@@ -5,7 +5,7 @@
 # @File    : app.py
 # @Software: PyCharm
 from app import app
-from flask import Flask
+
 
 
 app.config['FLASK_ADMIN_SWATCH'] = 'cerulean'
