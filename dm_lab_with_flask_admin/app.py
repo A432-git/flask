@@ -1,5 +1,6 @@
 
 from app import app, db
+from app.model import User
 
 from werkzeug.security import generate_password_hash, check_password_hash
 # Create dummy secrey key so we can use sessions
@@ -9,7 +10,6 @@ app.config['SECRET_KEY'] = '123456790'
 app.config['DATABASE_FILE'] = 'sample_db.sqlite'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + app.config['DATABASE_FILE']
 app.config['SQLALCHEMY_ECHO'] = True
-
 
 def build_sample_db():
     """
@@ -48,13 +48,12 @@ def build_sample_db():
 
     db.session.commit()
     return
-
-
 # Flask views
 @app.route('/')
 def index():
     return '<a href="/admin/">Click me to get to Admin!</a>'
 
-if __name__ == '__main__':
 
+if __name__ == '__main__':
+    build_sample_db()
     app.run(debug = True,host='0.0.0.0')

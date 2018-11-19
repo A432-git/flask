@@ -65,7 +65,7 @@ class Host(db.Model):
         return self.name
 
 
-tags = db.Table('tags',db.Model.metadata,
+tags = db.Table('tags',
                            db.Column('testbed_id', db.Integer, db.ForeignKey('testbed.id')),
                            db.Column('rig_id', db.Integer, db.ForeignKey('rig.id'))
                            )
@@ -93,6 +93,8 @@ class Rig (db.Model):
 
     def __str__(self):
         return self.name
+
+
 
 
 
