@@ -1,6 +1,7 @@
 
 from app import app, db
 from app.model import User
+import os
 
 from werkzeug.security import generate_password_hash, check_password_hash
 # Create dummy secrey key so we can use sessions
@@ -55,5 +56,12 @@ def index():
 
 
 if __name__ == '__main__':
-    build_sample_db()
-    app.run(debug = True,host='0.0.0.0')
+    # Build a sample db on the fly, if one does not exist yet.
+    # app_dir = os.path.realpath(os.path.dirname(__file__))
+    app_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'app')
+    database_path = os.path.join(app_dir, app.config['DATABASE_FILE'])
+    if not os.path.exists(database_path):
+        build_sample_db()
+
+    # Start app
+    app.run(debug=True)
