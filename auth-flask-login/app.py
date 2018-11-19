@@ -77,7 +77,7 @@ class Host(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), unique=True)
     operation_system_id = db.Column(db.Integer(), db.ForeignKey(OperationSystem.id))
-    operationSystem = db.relationship(OperationSystem, backref='host')
+    operation_system = db.relationship(OperationSystem, backref='hosts')
     person_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     Owner = db.relationship(User, backref='hosts')
 
@@ -89,21 +89,22 @@ class Rig (db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100),unique=True)
     device_id = db.Column(db.Integer(), db.ForeignKey(Storage.id))
-    device = db.relationship(Storage, backref='rig')
+    device = db.relationship(Storage, backref='rigs')
     person_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     Owner = db.relationship(User, backref='rigs')
 
     def __str__(self):
         return self.name
 
-# class UserInfo(db.Model):
-#     id = db.Column(db.Integer, primary_key=True)
-#
-#     rig_id = db.Column(db.Integer(), db.ForeignKey(Rig.id))
-#     rig = db.relationship('Rig', backref='rig')
-#
-#     def __str__(self):
-#         return "{}".format(self.rig_id)
+
+class TestBed(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), unique=True)
+    person_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    Owner = db.relationship(User, backref='testbeds')
+    rig_id = db.Column(db.Integer(), db.ForeignKey(Rig.id))
+    rigs = db.relationship(Rig, backref='testbeds')
+
 
 # Define login and registration forms (for flask-login)
 class LoginForm(form.Form):
@@ -205,6 +206,17 @@ class MyAdminIndexView(admin.AdminIndexView):
         return redirect(url_for('.index'))
 
 
+class MyUserView(MyModelView):
+    column_exclude_list = ['password', ]
+    column_editable_list = ['first_name', 'last_name','email']
+    form_excluded_columns = ['password']
+    can_delete = False
+    column_searchable_list = ['login', 'email']
+
+
+class MyObjectView(MyModelView):
+    column_searchable_list = ['name']
+
 # Flask views
 @app.route('/')
 def index():
@@ -218,17 +230,15 @@ init_login()
 admin = admin.Admin(app, 'Example: Auth', index_view=MyAdminIndexView(), base_template='my_master.html')
 
 # Add view
-# admin.add_view(MyModelView(User, db.session))
+admin.add_view(MyUserView(User, db.session))
 
-admin.add_view(MyModelView(OperationSystem, db.session,category='proto-type'))
-admin.add_view(MyModelView(Storage, db.session,category='proto-type'))
+admin.add_view(MyObjectView(OperationSystem, db.session,category='Proto-Type'))
+admin.add_view(MyObjectView(Storage, db.session,category='Proto-Type'))
 
-admin.add_view(MyModelView(Host, db.session,category='Lab'))
-admin.add_view(MyModelView(Rig, db.session,category='Lab'))
+admin.add_view(MyObjectView(Host, db.session,category='Lab'))
+admin.add_view(MyObjectView(Rig, db.session,category='Lab'))
+admin.add_view(MyObjectView(TestBed, db.session,category='Test'))
 
-
-# admin.add_view(sqla.ModelView(UserInfo, db.session))
-# admin.add_view(RigAdmin(Rig, db.session))
 
 
 def build_sample_db():
