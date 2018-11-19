@@ -84,7 +84,26 @@ class Host(db.Model):
     def __str__(self):
         return self.name
 
-#Create rig model
+
+
+
+
+
+
+
+tags=db.Table('tags',db.Column('testbed_id',db.Integer,db.ForeignKey('testbed.id')),db.Column('rig_id',db.Integer,db.ForeignKey('rig.id')))
+
+
+class Testbed(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), unique=True)
+    person_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    Owner = db.relationship(User, backref='testbeds')
+    # rig_id = db.Column(db.Integer(), db.ForeignKey(Rig.id))
+    rigs = db.relationship('Rig', secondary=tags)
+
+
+# Create rig model
 class Rig (db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100),unique=True)
@@ -96,15 +115,25 @@ class Rig (db.Model):
     def __str__(self):
         return self.name
 
-
-class TestBed(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), unique=True)
-    person_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-    Owner = db.relationship(User, backref='testbeds')
-    rig_id = db.Column(db.Integer(), db.ForeignKey(Rig.id))
-    rigs = db.relationship(Rig, backref='testbeds')
-
+# class Student(db.Model):
+#     __tablename__ = 'student'
+#     id = db.Column(db.Integer,primary_key=True)
+#     name = db.Column(db.String(30))
+#     course = db.relationship('Course',secondary=tags)
+#
+#     def __repr__(self):
+#         return "name:%r" %self.name
+#
+#
+# class Course(db.Model):
+#
+#     ___tablename__='course'
+#
+#     id = db.Column(db.Integer,primary_key=True)
+#     name = db.Column(db.String(30),unique=True)
+#     #student_id=db.Column(db.Integer,db.ForeignKey('student.id'))
+#     def __repr__(self):
+#         return "name:%r" %self.name
 
 # Define login and registration forms (for flask-login)
 class LoginForm(form.Form):
@@ -236,8 +265,11 @@ admin.add_view(MyObjectView(OperationSystem, db.session,category='Proto-Type'))
 admin.add_view(MyObjectView(Storage, db.session,category='Proto-Type'))
 
 admin.add_view(MyObjectView(Host, db.session,category='Lab'))
+
+admin.add_view(MyObjectView(Testbed, db.session,category='Test'))
 admin.add_view(MyObjectView(Rig, db.session,category='Lab'))
-admin.add_view(MyObjectView(TestBed, db.session,category='Test'))
+# admin.add_view(MyObjectView(Student, db.session,category='Test'))
+# admin.add_view(MyObjectView(Course, db.session,category='Test'))
 
 
 
