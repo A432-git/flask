@@ -22,7 +22,15 @@ app.config['SQLALCHEMY_ECHO'] = True
 db = SQLAlchemy(app)
 
 
-class Device(db.Model):
+class Storage(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), unique=True)
+
+    def __str__(self):
+        return self.name
+
+
+class OperationSystem(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), unique=True)
 
@@ -65,20 +73,23 @@ class User(db.Model):
         return self.username
 
 
-# class Host(db.Model):
-#     id = db.Column(db.Integer, primary_key=True)
-#     name = db.Column(db.String(100), unique=True)
-#     device_id = db.Column(db.Integer(), db.ForeignKey(Device.id))
-#     device = db.relationship(Device, backref='hosts')
-#     person_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-#     Owner = db.relationship(User, backref='user')
+class Host(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), unique=True)
+    operation_system_id = db.Column(db.Integer(), db.ForeignKey(OperationSystem.id))
+    operationSystem = db.relationship(OperationSystem, backref='host')
+    person_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    Owner = db.relationship(User, backref='hosts')
+
+    def __str__(self):
+        return self.name
 
 #Create rig model
 class Rig (db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100),unique=True)
-    device_id = db.Column(db.Integer(), db.ForeignKey(Device.id))
-    device = db.relationship(Device, backref='rig')
+    device_id = db.Column(db.Integer(), db.ForeignKey(Storage.id))
+    device = db.relationship(Storage, backref='rig')
     person_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     Owner = db.relationship(User, backref='rigs')
 
@@ -207,9 +218,15 @@ init_login()
 admin = admin.Admin(app, 'Example: Auth', index_view=MyAdminIndexView(), base_template='my_master.html')
 
 # Add view
-admin.add_view(MyModelView(User, db.session))
-admin.add_view(MyModelView(Rig, db.session))
-admin.add_view(MyModelView(Device, db.session))
+# admin.add_view(MyModelView(User, db.session))
+
+admin.add_view(MyModelView(OperationSystem, db.session,category='proto-type'))
+admin.add_view(MyModelView(Storage, db.session,category='proto-type'))
+
+admin.add_view(MyModelView(Host, db.session,category='Lab'))
+admin.add_view(MyModelView(Rig, db.session,category='Lab'))
+
+
 # admin.add_view(sqla.ModelView(UserInfo, db.session))
 # admin.add_view(RigAdmin(Rig, db.session))
 
