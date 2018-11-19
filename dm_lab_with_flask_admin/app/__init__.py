@@ -6,3 +6,4 @@ db = SQLAlchemy(app)
 
 from .model import *
 from .view import *
+
