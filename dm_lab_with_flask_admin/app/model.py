@@ -60,6 +60,7 @@ class Host(db.Model):
     operation_system = db.relationship(OperationSystem, backref='hosts')
     person_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     Owner = db.relationship(User, backref='hosts')
+    model = db.Column(db.String(100))
 
     def __str__(self):
         return self.name
@@ -90,10 +91,41 @@ class Rig (db.Model):
     device = db.relationship(Storage, backref='rigs')
     person_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     Owner = db.relationship(User, backref='rigs')
+    model = db.Column(db.String(100),default='Unity 550F')
 
     def __str__(self):
         return self.name
 
+
+class IPAssignment(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    ipv4 = db.Column(db.String(100), unique=True)
+    ipv4_mask = db.Column(db.String(100), default='255.255.255.0')
+    ipv4_gateway = db.Column(db.String(100), default='10.109.104.1')
+    ipv6 = db.Column(db.String(100), unique=True)
+    ipv6_mask = db.Column(db.String(100))
+    ipv6_gateway = db.Column(db.String(100))
+
+    person_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    user = db.relationship(User, backref='ips')
+
+    def __str__(self):
+        return f'{self.ipv4}-{self.ipv6}'
+
+
+class DataService(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), unique=True)
+    server_ip = db.Column(db.String(100))
+    credential = db.Column(db.String(300))
+
+
+class Virtualization(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), unique=True)
+    ip = db.Column(db.String(100))
+    credential = db.Column(db.String(300))
+    vcenter = db.Column(db.String(100), default='10.109.118.23')
 
 
 
