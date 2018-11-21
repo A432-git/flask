@@ -58,6 +58,7 @@ def build_sample_db():
 
 
 
+
     db.session.commit()
     return
 # Flask views
