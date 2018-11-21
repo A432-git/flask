@@ -119,10 +119,27 @@ class MyObjectView(MyModelView):
     column_searchable_list = ['name']
 
 
+# Customized Rig model admin
+inline_form_options = {
+    'form_label': "Properties",
+    'form_columns': ['id', 'key', 'value'],
+    'form_args': None,
+    'form_extra_fields': None,
+}
+
+
+class RigView(MyObjectView):
+    inline_models = [(RigInfo, inline_form_options), ]
+
+
+class RigInfoVew(MyObjectView):
+    column_searchable_list = ['rig_id']
+
+
 init_login()
 
 # Create admin
-admin = admin.Admin(app, 'Example: Auth', index_view=MyAdminIndexView(), base_template='my_master.html')
+admin = admin.Admin(app, 'SPE-Data Mobility', index_view=MyAdminIndexView(), base_template='my_master.html')
 
 # Add view
 admin.add_view(MyUserView(User, db.session))
@@ -131,10 +148,12 @@ admin.add_view(MyObjectView(OperationSystem, db.session,category='Proto-Type'))
 admin.add_view(MyObjectView(Storage, db.session,category='Proto-Type'))
 
 admin.add_view(MyObjectView(Host, db.session,category='Lab'))
-admin.add_view(MyObjectView(Rig, db.session,category='Lab'))
+admin.add_view(RigView(Rig, db.session,category='Lab'))
+admin.add_view(RigInfoVew(RigInfo, db.session,category='Lab'))
 admin.add_view(MyModelView(IPAssignment, db.session,category='Lab'))
 admin.add_view(MyObjectView(Virtualization, db.session,category='Lab'))
 admin.add_view(MyObjectView(DataService, db.session,category='Lab'))
+
 admin.add_view(MyObjectView(Testbed, db.session,category='Test'))
 # admin.add_view(MyObjectView(Student, db.session,category='Test'))
 # admin.add_view(MyObjectView(Course, db.session,category='Test'))

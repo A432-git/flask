@@ -92,9 +92,20 @@ class Rig (db.Model):
     person_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     Owner = db.relationship(User, backref='rigs')
     model = db.Column(db.String(100),default='Unity 550F')
+    available = db.Column(db.Boolean)
 
     def __str__(self):
         return self.name
+
+
+class RigInfo(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+
+    key = db.Column(db.String(64), nullable=False)
+    value = db.Column(db.String(64))
+
+    rig_id = db.Column(db.Integer(), db.ForeignKey(Rig.id))
+    rig = db.relationship(Rig, backref='info')
 
 
 class IPAssignment(db.Model):
@@ -105,7 +116,7 @@ class IPAssignment(db.Model):
     ipv6 = db.Column(db.String(100), unique=True)
     ipv6_mask = db.Column(db.String(100))
     ipv6_gateway = db.Column(db.String(100))
-
+    vlan = db.Column(db.Integer)
     person_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     user = db.relationship(User, backref='ips')
 
