@@ -144,6 +144,7 @@ class TestBedView(MyObjectView):
         'rigs',
     ]
 
+
     # setup create & edit forms so that only 'available' pets can be selected
     # def create_form(self):
     #     return self._use_filtered_parent(
@@ -165,6 +166,9 @@ class TestBedView(MyObjectView):
 
 
 class TestBedOrg(admin.BaseView):
+    def is_accessible(self):
+        return login.current_user.is_authenticated
+
     @expose('/')
     def index(self):
         tbs = Testbed.query.all()
