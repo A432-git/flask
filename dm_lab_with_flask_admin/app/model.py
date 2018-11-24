@@ -17,6 +17,14 @@ class OperationSystem(db.Model):
         return self.name
 
 
+class RigConnection(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), unique=True)
+
+    def __str__(self):
+        return self.name
+
+
 # Create user model.
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -78,10 +86,17 @@ class Testbed(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), unique=True)
     person_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-    Owner = db.relationship(User, backref='testbeds')
+    owner = db.relationship(User, backref='testbeds')
     rigs = db.relationship('Rig', secondary=tags)
     # tags = db.relationship('Tag', secondary=post_tags_table)
+    connect_chart = db.Column(db.String(100))
 
+    def __str__(self):
+        return self.name
+
+    def save(self):
+        db.session.add(self)
+        db.session.commit()
 
 # Create rig model
 class Rig (db.Model):

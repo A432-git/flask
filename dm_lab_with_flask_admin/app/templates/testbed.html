@@ -31,129 +31,177 @@ text {
 }
 
 </style>
-<svg id="svg" width=960 height=600></svg>
+<section>
+Test Bed
+<select id="tb_name" onchange="getTestBedOrgChart()">
+  {% for item in testbed_names%}
+      <option value={{item}}>{{item}}</option>
+
+  {% endfor %}
+</select>
+  </section>
+<svg id="svg" width=960 height=200></svg>
 <section>
 Source
 <select id="source">
-  <option value="OB-D1468">OB-D1468</option>
-  <option value="OB-D1442">OB-D1442</option>
-  <option value="OB-D1499">OB-D1499</option>
-  <option value="OB-D1097">OB-D1097</option>
-  <option value="OB-D1099">OB-D1099</option>
-  <option value="OB-D1234">OB-D1234</option>
-  <option value="nh-vsa-1">nh-vsa-1</option>
-  <option value="nh-vsa-2">nh-vsa-2</option>
+  {% for item in rig_names%}
+      <option value={{item}}>{{item}}</option>
+  {% endfor %}
 </select>
 Destiantion
 <select id="destination">
-  <option value="OB-D1468">OB-D1468</option>
-  <option value="OB-D1442">OB-D1442</option>
-  <option value="OB-D1499">OB-D1499</option>
-  <option value="OB-D1097">OB-D1097</option>
-  <option value="OB-D1099">OB-D1099</option>
-  <option value="OB-D1234">OB-D1234</option>
-  <option value="nh-vsa-1">nh-vsa-1</option>
-  <option value="nh-vsa-2">nh-vsa-2</option>
+  {% for item in rig_names%}
+      <option value={{item}}>{{item}}</option>
+  {% endfor %}
 </select>
 Relationship
 <select id="relationship">
-  <option value="sync">sync replication</option>
-  <option value="async ">async replication</option>
-  <option value="ndmp">ndmp</option>
+  {% for item in rig_connect_names%}
+      <option value={{item}}>{{item}}</option>
+  {% endfor %}
 </select>
 </section>
 <section>
-<button class="btn" type="button" onclick="add()">Add </button>
-<button class="btn btn-danger" type="button" onclick="del()">Delete </button>
-<button class="btn btn-primary" type="button" onclick="del()">Save </button>
+<button class="btn" type="button" onclick="add_relation()">Add </button>
+<button class="btn btn-danger" type="button" onclick="del_relation()">Delete </button>
+<button class="btn btn-primary" type="button" onclick="save()">Save </button>
 </section>
 <script>
-function add() {
+
+function buildBase(relation_list){
+    getAllNode(relation_list);
+    nodes.forEach(function(node){
+        g.setNode(node, {labelStyle: "font-weight: bold"});
+    });
+    relation_list.forEach(function(relation){
+        buildRelation(relation);
+    });
+    render(inner, g);
+    centerGraph();
+}
+
+function getAllNode(relation_list){
+    relation_list.forEach(function (relation){
+        nodes.add(relation[0]);
+        nodes.add(relation[1]);
+    });
+}
+
+function del_node(device)
+{
+
+    g.removeNode(device);
+    nodes.delete(device);
+    render(inner, g);
+	centerGraph();
+
+
+}
+
+function buildRelation(relationship){
+    g.setNode(relationship[0], {labelStyle: "font-weight: bold"});
+    g.setNode(relationship[1], {labelStyle: "font-weight: bold"});
+    g.setEdge(relationship[0],relationship[1], {
+		label: relationship[2]
+	});
+}
+
+function centerGraph()
+{
+    var xCenterOffset = (svg.attr("width") - g.graph().width) / 2;
+    inner.attr("transform", "translate(" + xCenterOffset + ", 20)");
+    svg.attr("height", g.graph().height + 40);
+}
+
+function add_relation() {
     source = document.getElementById("source").value;
-	alert(source);
+	<!--alert(source);-->
 	dest = document.getElementById("destination").value;
 	relationship = document.getElementById("relationship").value;
-	g.setEdge(source,dest, {
-		label: relationship
-	});
+	relation_list.push([source,dest,relationship]);
+	nodes.add(source);
+	nodes.add(dest);
+	<!--alert(relationship);-->
+	buildRelation([source,dest,relationship]);
 	render(inner, g);
+	centerGraph();
+}
+
+function del_relation() {
+    source = document.getElementById("source").value;
+	<!--alert(source);-->
+	dest = document.getElementById("destination").value;
+	relationship = document.getElementById("relationship").value;
+	g.removeEdge(source, dest);
+	var i = 0;
+	var index;
+	var temp = [source,dest,relationship];
+	for (i =0;i<relation_list.length;i++)
+	{
+	    if (temp[0] == relation_list[i][0]   )
+	    {
+	        if(temp[1] == relation_list[i][1])
+	        {
+	            index = i;
+	            //alert(index);
+	        }
+
+	    }
+
+	}
+	relation_list.splice(index,1);
+	<!--alert(relation_list);-->
+	render(inner, g);
+	centerGraph();
 }
 
 function del() {
     source = document.getElementById("source").value;
-	alert(source);
+	<!--alert(source);-->
 	g.removeEdge('OB-D1099', 'nh-vsa-1');
 	g.removeNode('nh-vsa-1');
 	render(inner, g);
 }
+
+
+function save() {
+    tb_name = $('#tb_name').val()
+    $.post("/admin/bedorg/save/"+tb_name,
+    {
+        'content':JSON.stringify(relation_list),
+    },
+    function(data,status){
+        <!--alert(JSON.stringify(relation_list));-->
+        <!--alert("数据: " + "\n状态: " + status);-->
+    });
+}
+function getTestBedOrgChart() {
+    tb_name = $('#tb_name option:selected').val();
+    $.get("/admin/bedorg/get/"+tb_name,function(data,status){
+
+        nodes.forEach(function(node){
+            del_node(node);
+        });
+        relation_list = data['relation'];
+        buildBase(data['relation']);
+    });
+}
+
+
 </script>
 
 <script id="js">
 // Create the input graph
 var g = new dagreD3.graphlib.Graph().setGraph({});
 
-// Fill node "OB-D1468" with the color green
-g.setNode("OB-D1468", { labelStyle: "font-weight: bold",style: "fill: #afa" });
-
-// Make the label for node "OB-D1442" bold
-g.setNode("OB-D1442", { labelStyle: "font-weight: bold",style: "fill: #afa" });
-
-// Double the size of the font for node "OB-D1499"
-g.setNode("OB-D1499", { labelStyle:"font-weight: bold" });
-
-g.setNode("OB-D1234", {});
-g.setNode("OB-D1097", {});
-
-g.setNode("OB-D1099", {});
-g.setNode("nh-vsa-1", {});
-g.setNode("nh-vsa-2", {});
-
-// Make the edge from "OB-D1468" to "OB-D1442" red, thick, and dashed
-g.setEdge("OB-D1468", "OB-D1442", {
-  label:"sync replication",
-  style: "stroke: #f66; ",
-});
-
-// Make the label for the edge from "OB-D1499" to "OB-D1442" italic and underlined
-
-
-// Make the edge between A and D smoother.
-// see available options for lineInterpolate here: https://github.com/mbostock/d3/wiki/SVG-Shapes#line_interpolate
-g.setEdge("OB-D1442", "OB-D1097", {
-  label: "async replication"
-});
-
-g.setEdge("OB-D1442", "OB-D1099", {
-	label: "async replication"
-});
-g.setEdge("OB-D1097", "OB-D1234", {
-    label: "async replication"
-});
-
-
-g.setEdge("OB-D1097", "OB-D1499", {
-	label: "async replication"
-});
-g.setEdge("OB-D1099", "nh-vsa-1", {
-	label: "async replication"
-});
-g.setEdge("OB-D1499", "nh-vsa-2", {
-	label: "NDMP"
-})
-
+var nodes = new Set([]);
+var relation_list = new Array();
 // Create the renderer
 var render = new dagreD3.render();
 
 // Set up an SVG group so that we can translate the final graph.
 var svg = d3.select("svg"),
-    inner = svg.append("g");
-
-// Run the renderer. This is what draws the final graph.
-render(inner, g);
-
-// Center the graph
-var xCenterOffset = (svg.attr("width") - g.graph().width) / 1.5;
-inner.attr("transform", "translate(" + xCenterOffset + ", 20)");
-svg.attr("height", g.graph().height + 40);
+inner = svg.append("g");
+getTestBedOrgChart();
 </script>
 {% endblock %}

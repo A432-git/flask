@@ -1,8 +1,9 @@
 
-from flask import  url_for, redirect, request
+from flask import  url_for, redirect, request, jsonify
 from wtforms import form, fields, validators
 import flask_admin as admin
 import flask_login as login
+import json
 from flask_admin.contrib import sqla
 from flask_admin import helpers, expose
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -117,7 +118,7 @@ class MyUserView(MyModelView):
 
 class MyObjectView(MyModelView):
     column_searchable_list = ['name']
-
+    # pass
 
 # Customized Rig model admin
 inline_form_options = {
@@ -136,10 +137,69 @@ class RigInfoVew(MyObjectView):
     column_searchable_list = ['rig_id']
 
 
+class TestBedView(MyObjectView):
+    column_list = [
+        'name',
+        'owner',
+        'rigs',
+    ]
+
+    # setup create & edit forms so that only 'available' pets can be selected
+    # def create_form(self):
+    #     return self._use_filtered_parent(
+    #         super(TestBedView, self).create_form()
+    #     )
+    #
+    # def edit_form(self, obj):
+    #     return self._use_filtered_parent(
+    #         super(TestBedView, self).edit_form(obj)
+    #     )
+    #
+    # def _use_filtered_parent(self, form):
+    #     form.rigs.query_factory = self._get_parent_list
+    #     return form
+    #
+    # def _get_parent_list(self):
+    #     # only show available pets in the form
+    #     return Rig.query.filter_by(available=True).all()
+
+
 class TestBedOrg(admin.BaseView):
     @expose('/')
     def index(self):
-        return self.render('testbed.html')
+        tbs = Testbed.query.all()
+        tbs_names = [tb.name for tb in tbs]
+        rigs = Rig.query.all()
+        rig_names = [rig.name for rig in rigs]
+        # print(rigs)
+        rig_connects = RigConnection.query.all()
+        rig_connect_names = [rig_connect.name for rig_connect in rig_connects]
+
+        return self.render('testbed.html',testbed_names=tbs_names, rig_names=rig_names,
+                           rig_connect_names=rig_connect_names)
+
+    @expose('/save/<tb_name>',methods=['GET', 'POST'])
+    def save(self,tb_name):
+        print(tb_name)
+        content = request.form.get('content')
+        print(content)
+        # print(Testbed.query.filter_by(name=tb_name).first())
+        tb = Testbed.query.filter_by(name=tb_name).first()
+        tb.connect_chart = content
+        tb.save()
+        return 'saved'
+
+    @expose('/get/<tb_name>')
+    def get(self,tb_name):
+        print(tb_name)
+        tb = Testbed.query.filter_by(name=tb_name).first()
+        rigs = tb.rigs
+        rig_names = [rig.name for rig in rigs]
+        if tb.connect_chart is None:
+            relation_sample = []
+        else:
+            relation_sample = json.loads(tb.connect_chart)
+        return jsonify(relation=relation_sample,rig_names=rig_names)
 
 
 init_login()
@@ -151,7 +211,8 @@ admin = admin.Admin(app, 'SPE-Data Mobility', index_view=MyAdminIndexView(), bas
 admin.add_view(MyUserView(User, db.session))
 
 admin.add_view(MyObjectView(OperationSystem, db.session,category='Proto-Type'))
-admin.add_view(MyObjectView(Storage, db.session,category='Proto-Type'))
+admin.add_view(MyObjectView(Storage, db.session, category='Proto-Type'))
+admin.add_view(MyObjectView(RigConnection, db.session, category='Proto-Type'))
 
 admin.add_view(MyObjectView(Host, db.session,category='Lab'))
 admin.add_view(RigView(Rig, db.session,category='Lab'))
@@ -160,10 +221,10 @@ admin.add_view(MyModelView(IPAssignment, db.session,category='Lab'))
 admin.add_view(MyObjectView(Virtualization, db.session,category='Lab'))
 admin.add_view(MyObjectView(DataService, db.session,category='Lab'))
 
-admin.add_view(MyObjectView(Testbed, db.session,category='Test'))
+admin.add_view(TestBedView(Testbed, db.session,category='Test'))
 # admin.add_view(MyObjectView(Student, db.session,category='Test'))
 # admin.add_view(MyObjectView(Course, db.session,category='Test'))
 
-admin.add_view(TestBedOrg(name='BedOrg', endpoint='bedorg'))
+admin.add_view(TestBedOrg(name='BedOrg', endpoint='bedorg',category='Test'))
 
 
