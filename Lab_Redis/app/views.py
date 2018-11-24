@@ -81,7 +81,7 @@ def external_ts(obj):
 
 
 @app.route('/ts/tb/device/<operate>/<device_name>')
-def operate_device(operate,device_name):
+def operate_device(operate, device_name):
     device_list = []
     for device in root.tb.device:
         device_list.append(device)
@@ -135,10 +135,9 @@ def operate_tb(operation,tb_name):
     return jsonify(res)
 
 
-
 @app.route('/data_excel/<cycle_name>')
 def data_excel(cycle_name):
-    return render_template("data_excel.html",heads = root.work[cycle_name]['heads'],title = cycle_name)
+    return render_template("data_excel.html", heads=root.work[cycle_name]['heads'],title = cycle_name)
     
 
 @app.route('/dataExcel/<cycle_name>')
