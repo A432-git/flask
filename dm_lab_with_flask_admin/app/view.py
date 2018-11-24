@@ -136,6 +136,12 @@ class RigInfoVew(MyObjectView):
     column_searchable_list = ['rig_id']
 
 
+class TestBedOrg(admin.BaseView):
+    @expose('/')
+    def index(self):
+        return self.render('testbed.html')
+
+
 init_login()
 
 # Create admin
@@ -157,5 +163,7 @@ admin.add_view(MyObjectView(DataService, db.session,category='Lab'))
 admin.add_view(MyObjectView(Testbed, db.session,category='Test'))
 # admin.add_view(MyObjectView(Student, db.session,category='Test'))
 # admin.add_view(MyObjectView(Course, db.session,category='Test'))
+
+admin.add_view(TestBedOrg(name='BedOrg', endpoint='bedorg'))
 
 
