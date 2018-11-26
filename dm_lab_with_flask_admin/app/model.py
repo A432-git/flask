@@ -87,6 +87,7 @@ class Testbed(db.Model):
     name = db.Column(db.String(100), unique=True)
     person_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     owner = db.relationship(User, backref='testbeds')
+    rig_id = db.Column(db.Integer, db.ForeignKey('rig.id'))
     rigs = db.relationship('Rig', secondary=tags)
     # tags = db.relationship('Tag', secondary=post_tags_table)
     connect_chart = db.Column(db.String(100))
