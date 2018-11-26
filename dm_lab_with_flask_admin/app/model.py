@@ -105,7 +105,7 @@ class Rig (db.Model):
     device_id = db.Column(db.Integer(), db.ForeignKey(Storage.id))
     device = db.relationship(Storage, backref='rigs')
     person_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-    Owner = db.relationship(User, backref='rigs')
+    owner = db.relationship(User, backref='rigs')
     model = db.Column(db.String(100),default='Unity 550F')
     available = db.Column(db.Boolean)
 

@@ -9,6 +9,9 @@ from flask_admin import helpers, expose
 from werkzeug.security import generate_password_hash, check_password_hash
 from app import db,app
 from .model import *
+from flask_admin.model.template import EndpointLinkRowAction, LinkRowAction
+
+
 class LoginForm(form.Form):
     login = fields.StringField(validators=[validators.required()])
     password = fields.PasswordField(validators=[validators.required()])
@@ -144,6 +147,40 @@ class TestBedView(MyObjectView):
         'rigs',
     ]
 
+    column_extra_row_actions = [
+        LinkRowAction('icon-eye-open', './{row_id}'),
+        EndpointLinkRowAction('', 'testbed.index_view')
+    ]
+
+    @expose('/<testbed_id>')
+    def show_chart(self,testbed_id):
+        tb = Testbed.query.filter_by(id=testbed_id).first()
+        rigs = tb.rigs
+        rig_names = [rig.name for rig in rigs]
+        if tb.connect_chart is None:
+            relation_sample = []
+        else:
+            relation_sample = json.loads(tb.connect_chart)
+        rig_connects = RigConnection.query.all()
+        rig_connect_names = [rig_connect.name for rig_connect in rig_connects]
+        return self.render('testbed2.html',  rig_names=rig_names, tb_name=tb.name,
+                           rig_connect_names=rig_connect_names,
+                           relation=relation_sample)
+
+    @expose('/save/<tb_name>', methods=['GET', 'POST'])
+    def save(self, tb_name):
+        print(tb_name)
+        content = request.form.get('content')
+        print(content)
+        # print(Testbed.query.filter_by(name=tb_name).first())
+        tb = Testbed.query.filter_by(name=tb_name).first()
+        tb.connect_chart = content
+        tb.save()
+        return 'saved'
+
+    #
+    # def is_accessible(self):
+    #     return login.current_user.is_authenticated
 
     # setup create & edit forms so that only 'available' pets can be selected
     # def create_form(self):
@@ -209,7 +246,8 @@ class TestBedOrg(admin.BaseView):
 init_login()
 
 # Create admin
-admin = admin.Admin(app, 'SPE-Data Mobility', index_view=MyAdminIndexView(), base_template='my_master.html')
+admin = admin.Admin(app, 'SPE-Data Mobility', index_view=MyAdminIndexView(),
+                     base_template='my_master.html')
 
 # Add view
 admin.add_view(MyUserView(User, db.session))
@@ -229,6 +267,6 @@ admin.add_view(TestBedView(Testbed, db.session,category='Test'))
 # admin.add_view(MyObjectView(Student, db.session,category='Test'))
 # admin.add_view(MyObjectView(Course, db.session,category='Test'))
 
-admin.add_view(TestBedOrg(name='BedOrg', endpoint='bedorg',category='Test'))
+# admin.add_view(TestBedOrg(name='BedOrg', endpoint='bedorg',category='Test'))
 
 
