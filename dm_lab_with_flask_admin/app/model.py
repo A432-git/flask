@@ -89,7 +89,6 @@ class Testbed(db.Model):
     owner = db.relationship(User, backref='testbeds')
     rig_id = db.Column(db.Integer, db.ForeignKey('rig.id'))
     rigs = db.relationship('Rig', secondary=tags)
-    # tags = db.relationship('Tag', secondary=post_tags_table)
     connect_chart = db.Column(db.String(100))
 
     def __str__(self):
@@ -153,7 +152,6 @@ class Virtualization(db.Model):
     ip = db.Column(db.String(100))
     credential = db.Column(db.String(300))
     vcenter = db.Column(db.String(100), default='10.109.118.23')
-
 
 
 

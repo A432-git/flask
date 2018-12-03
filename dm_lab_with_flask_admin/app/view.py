@@ -134,6 +134,23 @@ inline_form_options = {
 
 class RigView(MyObjectView):
     inline_models = [(RigInfo, inline_form_options), ]
+    column_extra_row_actions = [
+        LinkRowAction('icon-eye-open', './{row_id}'),
+        EndpointLinkRowAction('', 'rig.index_view')
+    ]
+
+    @expose('/<rig_id>')
+    def show_chart(self, rig_id):
+        rig = Rig.query.filter_by(id=rig_id).first()
+        tbs = Testbed.query.all()
+        rig_map_tb = []
+        for item in tbs:
+            print(f'tb_name :{item.name}')
+            rigs = item.rigs
+            for checked_rig in rigs:
+                if rig.name == checked_rig.name:
+                    rig_map_tb.append([rig.name,item.name,'Used'])
+        return self.render('rig.html', relation=rig_map_tb)
 
 
 class RigInfoVew(MyObjectView):
