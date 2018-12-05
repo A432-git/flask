@@ -47,13 +47,13 @@ def build_sample_db():
     #     user.password = generate_password_hash(''.join(random.choice(string.ascii_lowercase + string.digits) for i in range(10)))
     #     db.session.add(user)
 
-    for temp in ['Unity','Rockies','VSA']:
+    for temp in ['Unity','Rockies','VSA','VNXe3200']:
         storage = Storage()
         storage.name = temp
         db.session.add(storage)
 
 
-    for temp in ['Linux','Windows']:
+    for temp in ['Linux','Windows','ESXi','vCenter']:
         operation_system = OperationSystem()
         operation_system.name = temp
         db.session.add(operation_system)
