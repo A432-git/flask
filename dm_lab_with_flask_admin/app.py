@@ -62,8 +62,10 @@ def build_sample_db():
         rig_connect = RigConnection()
         rig_connect.name = temp
         db.session.add(rig_connect)
-
+    for s in Storage.query.all():
+        print(f'{s.id}---{s.name}')
     db.session.commit()
+
     return
 
 

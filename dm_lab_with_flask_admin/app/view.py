@@ -55,7 +55,8 @@ def init_login():
 
 # Create customized model view class
 class MyModelView(sqla.ModelView):
-
+    create_modal = True
+    edit_modal = True
     def is_accessible(self):
         return login.current_user.is_authenticated
 
