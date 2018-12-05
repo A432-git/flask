@@ -9,7 +9,10 @@ app.config['SECRET_KEY'] = '123456790'
 
 # Create in-memory database
 app.config['DATABASE_FILE'] = 'sample_db.sqlite'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + app.config['DATABASE_FILE']
+# this is for sqlite
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + app.config['DATABASE_FILE']
+# this is for mysql
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:@Baidu123@localhost:3306/test'
 app.config['SQLALCHEMY_ECHO'] = True
 
 def build_sample_db():
@@ -48,6 +51,7 @@ def build_sample_db():
         storage = Storage()
         storage.name = temp
         db.session.add(storage)
+
 
     for temp in ['Linux','Windows']:
         operation_system = OperationSystem()

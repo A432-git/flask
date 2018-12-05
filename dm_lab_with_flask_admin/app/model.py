@@ -4,9 +4,10 @@ from app import db
 class Storage(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), unique=True)
+    # sub_model = db.Column(db.String(100))
 
     def __str__(self):
-        return self.name
+        return f'{self.name}'
 
 
 class OperationSystem(db.Model):
@@ -32,7 +33,7 @@ class User(db.Model):
     last_name = db.Column(db.String(100))
     login = db.Column(db.String(80), unique=True)
     email = db.Column(db.String(120))
-    password = db.Column(db.String(64))
+    password = db.Column(db.String(100))
 
     def __str__(self):
         return self.login
