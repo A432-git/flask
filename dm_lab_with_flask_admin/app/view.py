@@ -116,7 +116,8 @@ class MyAdminIndexView(admin.AdminIndexView):
 class MyUserView(MyModelView):
     column_exclude_list = ['password', ]
     column_editable_list = ['first_name', 'last_name','email']
-    form_excluded_columns = ['password']
+    #hide the IP at phase I
+    form_excluded_columns = ['password','ips']
     can_delete = False
     column_searchable_list = ['login', 'email']
 
@@ -265,6 +266,11 @@ class TestBedOrg(admin.BaseView):
         return jsonify(relation=relation_sample,rig_names=rig_names)
 
 
+class testSetView(admin.BaseView):
+    @expose('/')
+    def index(self):
+        return self.render('testset.html')
+
 init_login()
 
 # Create admin
@@ -286,6 +292,7 @@ admin.add_view(MyObjectView(Virtualization, db.session,category='Lab'))
 admin.add_view(MyObjectView(DataService, db.session,category='Lab'))
 
 admin.add_view(TestBedView(Testbed, db.session,category='Test'))
+admin.add_view(testSetView(name='Testset', category='Test'))
 # admin.add_view(MyObjectView(Student, db.session,category='Test'))
 # admin.add_view(MyObjectView(Course, db.session,category='Test'))
 
