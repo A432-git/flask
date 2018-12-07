@@ -64,6 +64,13 @@ def build_sample_db():
         db.session.add(rig_connect)
     for s in Storage.query.all():
         print(f'{s.id}---{s.name}')
+    
+    for temp in ['OB-D1468','OB-D1442','OB-D1499','OB-D1453','OB-D1462','OB-D1490','OB-D1476',
+             'OB-D1465','OB-D1434','OB-D1473','OB-D1464','OB-D1471','OB-D1489','OB-D1458',
+             'OB-D1436','OB-D1441','VD-D1192','VD-D1202']:
+        rig = Rig()
+        rig.name = temp
+        db.session.add(rig)
     db.session.commit()
 
     return
