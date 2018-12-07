@@ -1,6 +1,6 @@
 
 from app import app, db
-from app.model import User, Storage, Host, OperationSystem, RigConnection
+from app.model import User, Storage, Host, OperationSystem, RigConnection, Rig
 import os
 
 from werkzeug.security import generate_password_hash, check_password_hash
