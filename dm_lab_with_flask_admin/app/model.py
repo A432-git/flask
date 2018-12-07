@@ -108,7 +108,13 @@ class Rig (db.Model):
     person_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     owner = db.relationship(User, backref='rigs')
     model = db.Column(db.String(100),default='Unity 550F')
-    available = db.Column(db.Boolean)
+    available = db.Column(db.Boolean,default=True)
+    state = db.Column(db.String(30))
+    status = db.Column(db.String(30))
+    io_interface = db.Column(db.Text)
+    iscsi_interfaces = db.Column(db.Text)
+    replication_async_interfaces = db.Column(db.Text)
+    replication_sync_interfaces = db.Column(db.Text)
 
     def __str__(self):
         return self.name
