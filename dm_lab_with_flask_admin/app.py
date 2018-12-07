@@ -83,12 +83,5 @@ def index():
 
 
 if __name__ == '__main__':
-    # Build a sample db on the fly, if one does not exist yet.
-    # app_dir = os.path.realpath(os.path.dirname(__file__))
-    app_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'app')
-    database_path = os.path.join(app_dir, app.config['DATABASE_FILE'])
-    if not os.path.exists(database_path):
-        build_sample_db()
-
     # Start app
     app.run(debug=True)

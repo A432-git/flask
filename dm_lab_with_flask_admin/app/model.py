@@ -41,7 +41,6 @@ class User(db.Model):
     # NOTE: is_authenticated, is_active, and is_anonymous
     # are methods in Flask-Login < 0.3.0
 
-
     @property
     def is_authenticated(self):
         return True
@@ -70,6 +69,7 @@ class Host(db.Model):
     person_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     Owner = db.relationship(User, backref='hosts')
     model = db.Column(db.String(100))
+    ip = db.Column(db.String(20))
 
     def __str__(self):
         return self.name
@@ -78,9 +78,7 @@ class Host(db.Model):
 tags = db.Table('tags',
                            db.Column('testbed_id', db.Integer, db.ForeignKey('testbed.id')),
                            db.Column('rig_id', db.Integer, db.ForeignKey('rig.id'))
-                           )
-
-# tags=db.Table('tags',db.Column('testbed_id',db.Integer,db.ForeignKey('testbed.id')),db.Column('rig_id',db.Integer,db.ForeignKey('rig.id')))
+       )
 
 
 class Testbed(db.Model):

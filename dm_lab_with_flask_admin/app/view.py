@@ -57,6 +57,7 @@ def init_login():
 class MyModelView(sqla.ModelView):
     create_modal = True
     edit_modal = True
+    
     def is_accessible(self):
         return login.current_user.is_authenticated
 
@@ -135,7 +136,6 @@ inline_form_options = {
 
 class RigView(MyObjectView):
     inline_models = [(RigInfo, inline_form_options), ]
-    can_view_details = True
     column_exclude_list = ['io_interface','iscsi_interfaces','replication_async_interfaces','replication_sync_interfaces','state','status']
     column_editable_list = ['model', 'owner', 'device']
     inline_models = [(RigInfo, inline_form_options), ]
@@ -167,6 +167,7 @@ class TestBedView(MyObjectView):
         'owner',
         'rigs',
     ]
+    form_excluded_columns = ['connect_chart', ]
 
     column_extra_row_actions = [
         LinkRowAction('icon-eye-open', './{row_id}'),
@@ -280,7 +281,7 @@ admin.add_view(MyObjectView(RigConnection, db.session, category='Proto-Type'))
 admin.add_view(MyObjectView(Host, db.session,category='Lab'))
 admin.add_view(RigView(Rig, db.session,category='Lab'))
 admin.add_view(RigInfoVew(RigInfo, db.session,category='Lab'))
-admin.add_view(MyModelView(IPAssignment, db.session,category='Lab'))
+# admin.add_view(MyModelView(IPAssignment, db.session,category='Lab'))
 admin.add_view(MyObjectView(Virtualization, db.session,category='Lab'))
 admin.add_view(MyObjectView(DataService, db.session,category='Lab'))
 
