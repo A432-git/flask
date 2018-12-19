@@ -167,6 +167,7 @@ class TestBedView(MyObjectView):
         'name',
         'owner',
         'rigs',
+        'tag'
     ]
     form_excluded_columns = ['connect_chart', ]
 
@@ -271,6 +272,15 @@ class testSetView(admin.BaseView):
     def index(self):
         return self.render('testset.html')
 
+
+class TestToolView(admin.BaseView):
+    def is_accessible(self):
+        return login.current_user.is_authenticated
+
+    @expose('/')
+    def index(self):
+        return self.render('testtool.html')
+
 init_login()
 
 # Create admin
@@ -293,6 +303,7 @@ admin.add_view(MyObjectView(DataService, db.session,category='Lab'))
 
 admin.add_view(TestBedView(Testbed, db.session,category='Test'))
 admin.add_view(testSetView(name='Testset', category='Test'))
+admin.add_view(TestToolView(name='Testtool', category='Test'))
 # admin.add_view(MyObjectView(Student, db.session,category='Test'))
 # admin.add_view(MyObjectView(Course, db.session,category='Test'))
 

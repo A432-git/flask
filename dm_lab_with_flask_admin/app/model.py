@@ -84,6 +84,7 @@ tags = db.Table('tags',
 class Testbed(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), unique=True)
+    tag = db.Column(db.String(100))
     person_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     owner = db.relationship(User, backref='testbeds')
     rig_id = db.Column(db.Integer, db.ForeignKey('rig.id'))
@@ -96,6 +97,7 @@ class Testbed(db.Model):
     def save(self):
         db.session.add(self)
         db.session.commit()
+
 
 # Create rig model
 class Rig (db.Model):
