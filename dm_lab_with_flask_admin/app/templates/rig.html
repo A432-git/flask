@@ -1,0 +1,102 @@
+{% extends 'admin/master.html' %}
+{% block body %}
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<!--<link rel="stylesheet" href="../../static/css/demo.css">-->
+<script src="../../static/js/d3.v4.min.js" charset="utf-8"></script>
+<script src="../../static/js/dagre-d3.js"></script>
+
+<style id="css">
+text {
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
+  font-size: 14px;
+}
+
+.node rect {
+  stroke: #333;
+  fill: #fff;
+  stroke-width: 1.5px;
+}
+
+.edgePath path.path {
+  stroke: #333;
+  fill: none;
+  stroke-width: 1.5px;
+}
+
+.arrowhead {
+ stroke: blue;
+ fill: blue;
+ stroke-width: 1.5px;
+}
+
+</style>
+<svg id="svg" width=960 height=200></svg>
+
+
+<section>
+
+<a class="btn btn-default" href="{{ url_for('rig.index_view') }}">Return</a>
+</section>
+<script>
+
+function buildBase(relation_list){
+    getAllNode(relation_list);
+    nodes.forEach(function(node){
+        g.setNode(node, {labelStyle: "font-weight: bold"});
+    });
+    relation_list.forEach(function(relation){
+        buildRelation(relation);
+    });
+    render(inner, g);
+    centerGraph();
+}
+
+function getAllNode(relation_list){
+    relation_list.forEach(function (relation){
+        nodes.add(relation[0]);
+        nodes.add(relation[1]);
+    });
+}
+
+
+function buildRelation(relationship){
+    g.setNode(relationship[0], {labelStyle: "font-weight: bold"});
+    g.setNode(relationship[1], {labelStyle: "font-weight: bold"});
+    g.setEdge(relationship[0],relationship[1], {
+		label: relationship[2]
+	});
+}
+
+function centerGraph()
+{
+    var xCenterOffset = (svg.attr("width") - g.graph().width) / 2;
+    inner.attr("transform", "translate(" + xCenterOffset + ", 20)");
+    svg.attr("height", g.graph().height + 40);
+}
+
+function getTestBedOrgChart() {
+    relation_list = {{relation|tojson}};
+    buildBase(relation_list);
+}
+
+
+</script>
+
+<script id="js">
+// Create the input graph
+var g = new dagreD3.graphlib.Graph().setGraph({});
+
+var nodes = new Set([]);
+var relation_list = new Array();
+// Create the renderer
+var render = new dagreD3.render();
+
+// Set up an SVG group so that we can translate the final graph.
+var svg = d3.select("svg"),
+inner = svg.append("g");
+getTestBedOrgChart();
+
+
+</script>
+{% endblock %}
