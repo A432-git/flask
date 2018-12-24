@@ -22,6 +22,29 @@ def index():
     return '<a href="/admin/">Click me to get to SPE Data Mobility Admin!</a>'
 
 
+@app.route('/rest_for_jia/<obj_name>/<name>/<obj_property>/<obj_value>', methods=['get', 'post'])
+def rest_for_jia(obj_name, name, obj_property, obj_value):
+    try:
+        module = __import__(f'app.model')
+        obj_name = obj_name[0].upper() + obj_name[1:]
+        reflected_class = getattr(module, obj_name)()
+        obj = reflected_class.query.filter_by(name=name).first()
+        if not obj:
+            raise AttributeError('record not exist')
+        setattr(obj, obj_property, obj_value)
+        db.session.commit()
+        return "succeed"
+    except AttributeError:
+        return 'Fail'
+
+
+
+
+
+
+
+
+
 if __name__ == '__main__':
     # Start app
     app.run(debug=True)
