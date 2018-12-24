@@ -29,9 +29,13 @@ def rest_for_jia(obj_name, name, obj_property, obj_value):
         obj_name = obj_name[0].upper() + obj_name[1:]
         reflected_class = getattr(module, obj_name)()
         obj = reflected_class.query.filter_by(name=name).first()
-        if not obj:
+        if obj:
+            if hasattr(obj, obj_property):
+                setattr(obj, obj_property, obj_value)
+            else:
+                raise AttributeError('property not exist')
+        else:
             raise AttributeError('record not exist')
-        setattr(obj, obj_property, obj_value)
         db.session.commit()
         return "succeed"
     except AttributeError:
