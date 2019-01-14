@@ -1,5 +1,5 @@
 from app import app, db
-from app.model import User, Storage, Host, OperationSystem, RigConnection, Rig
+from app.model import User, Storage, Host, OperationSystem, RigConnection, Rig, HostUage
 import os
 
 from werkzeug.security import generate_password_hash
@@ -41,6 +41,11 @@ def build_sample_db():
         operation_system = OperationSystem()
         operation_system.name = temp
         db.session.add(operation_system)
+
+    for temp in ['FC', 'CIFS', 'NFS', 'ISCSI', 'VMWARE', 'Command']:
+        host_usage = HostUage()
+        host_usage.name = temp
+        db.session.add(host_usage)
 
     for temp in ['IMT', 'Metro-Sync', 'Async', 'SanCopy', 'Move']:
         rig_connect = RigConnection()

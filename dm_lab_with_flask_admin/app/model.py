@@ -26,6 +26,13 @@ class RigConnection(db.Model):
         return self.name
 
 
+class HostUsage(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), unique=True)
+
+    def __str__(self):
+        return self.name
+
 # Create user model.
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -68,28 +75,35 @@ class Host(db.Model):
     operation_system = db.relationship(OperationSystem, backref='hosts')
     person_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     Owner = db.relationship(User, backref='hosts')
-    model = db.Column(db.String(100))
+    usage_id = db.Column(db.Integer(), db.ForeignKey(HostUsage.id))
+    usage = db.relationship(HostUsage,backref='hosts')
     ip = db.Column(db.String(20))
 
     def __str__(self):
         return self.name
 
 
-tags = db.Table('tags',
+rig_tags = db.Table('rig_tags',
                            db.Column('testbed_id', db.Integer, db.ForeignKey('testbed.id')),
                            db.Column('rig_id', db.Integer, db.ForeignKey('rig.id'))
+       )
+
+host_tags = db.Table('host_tags',
+                           db.Column('testbed_id', db.Integer, db.ForeignKey('testbed.id')),
+                           db.Column('host_id', db.Integer, db.ForeignKey('host.id'))
        )
 
 
 class Testbed(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), unique=True)
-    tag = db.Column(db.String(100))
     person_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     owner = db.relationship(User, backref='testbeds')
     rig_id = db.Column(db.Integer, db.ForeignKey('rig.id'))
-    rigs = db.relationship('Rig', secondary=tags)
-    connect_chart = db.Column(db.String(100))
+    rigs = db.relationship('Rig', secondary=rig_tags)
+    host_id = db.Column(db.Integer, db.ForeignKey('host.id'))
+    hosts = db.relationship('Host', secondary=host_tags)
+    connect_chart = db.Column(db.String(300))
 
     def __str__(self):
         return self.name
@@ -159,8 +173,4 @@ class Virtualization(db.Model):
     ip = db.Column(db.String(100))
     credential = db.Column(db.String(300))
     vcenter = db.Column(db.String(100), default='10.109.118.23')
-
-
-
-
 

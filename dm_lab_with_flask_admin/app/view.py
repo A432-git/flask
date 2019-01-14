@@ -1,5 +1,4 @@
-
-from flask import  url_for, redirect, request, jsonify
+from flask import url_for, redirect, request, jsonify
 from wtforms import form, fields, validators
 import flask_admin as admin
 import flask_login as login
@@ -7,7 +6,7 @@ import json
 from flask_admin.contrib import sqla
 from flask_admin import helpers, expose
 from werkzeug.security import generate_password_hash, check_password_hash
-from app import db,app
+from app import db, app
 from .model import *
 from flask_admin.model.template import EndpointLinkRowAction, LinkRowAction
 
@@ -24,8 +23,8 @@ class LoginForm(form.Form):
 
         # we're comparing the plaintext pw with the the hash from the db
         if not check_password_hash(user.password, self.password.data):
-        # to compare plain text passwords use
-        # if user.password != self.password.data:
+            # to compare plain text passwords use
+            # if user.password != self.password.data:
             raise validators.ValidationError('Invalid password')
 
     def get_user(self):
@@ -57,7 +56,7 @@ def init_login():
 class MyModelView(sqla.ModelView):
     create_modal = True
     edit_modal = True
-    
+
     def is_accessible(self):
         return login.current_user.is_authenticated
 
@@ -115,9 +114,9 @@ class MyAdminIndexView(admin.AdminIndexView):
 
 class MyUserView(MyModelView):
     column_exclude_list = ['password', ]
-    column_editable_list = ['first_name', 'last_name','email']
-    #hide the IP at phase I
-    form_excluded_columns = ['password','ips']
+    column_editable_list = ['first_name', 'last_name', 'email']
+    # hide the IP at phase I
+    form_excluded_columns = ['password', 'ips']
     can_delete = False
     column_searchable_list = ['login', 'email']
 
@@ -125,6 +124,7 @@ class MyUserView(MyModelView):
 class MyObjectView(MyModelView):
     column_searchable_list = ['name']
     # pass
+
 
 # Customized Rig model admin
 inline_form_options = {
@@ -137,13 +137,15 @@ inline_form_options = {
 
 class RigView(MyObjectView):
     inline_models = [(RigInfo, inline_form_options), ]
-    column_exclude_list = ['io_interface','iscsi_interfaces','replication_async_interfaces','replication_sync_interfaces','state','status']
+    column_exclude_list = ['io_interface', 'iscsi_interfaces', 'replication_async_interfaces',
+                           'replication_sync_interfaces', 'state', 'status']
     column_editable_list = ['model', 'owner', 'device']
     inline_models = [(RigInfo, inline_form_options), ]
     column_extra_row_actions = [
         LinkRowAction('icon-eye-open', './{row_id}'),
         EndpointLinkRowAction('', 'rig.index_view')
     ]
+
     @expose('/<rig_id>')
     def show_chart(self, rig_id):
         rig = Rig.query.filter_by(id=rig_id).first()
@@ -154,7 +156,7 @@ class RigView(MyObjectView):
             rigs = item.rigs
             for checked_rig in rigs:
                 if rig.name == checked_rig.name:
-                    rig_map_tb.append([rig.name,item.name,'Used'])
+                    rig_map_tb.append([rig.name, item.name, 'Used'])
         return self.render('rig.html', relation=rig_map_tb)
 
 
@@ -167,7 +169,6 @@ class TestBedView(MyObjectView):
         'name',
         'owner',
         'rigs',
-        'tag'
     ]
     form_excluded_columns = ['connect_chart', ]
 
@@ -177,17 +178,23 @@ class TestBedView(MyObjectView):
     ]
 
     @expose('/<testbed_id>')
-    def show_chart(self,testbed_id):
+    def show_chart(self, testbed_id):
         tb = Testbed.query.filter_by(id=testbed_id).first()
         rigs = tb.rigs
         rig_names = [rig.name for rig in rigs]
+        hosts = tb.hosts
+        host_names = [host.name for host in hosts]
+        rig_names.extend(host_names)
         if tb.connect_chart is None:
             relation_sample = []
         else:
             relation_sample = json.loads(tb.connect_chart)
         rig_connects = RigConnection.query.all()
         rig_connect_names = [rig_connect.name for rig_connect in rig_connects]
-        return self.render('testbed2.html',  rig_names=rig_names, tb_name=tb.name,
+        host_usages = HostUsage.query.all()
+        host_usage_names = [host_usage.name for host_usage in host_usages]
+        rig_connect_names.extend(host_usage_names)
+        return self.render('testbed2.html', rig_names=rig_names, tb_name=tb.name,
                            rig_connect_names=rig_connect_names,
                            relation=relation_sample)
 
@@ -240,11 +247,11 @@ class TestBedOrg(admin.BaseView):
         rig_connects = RigConnection.query.all()
         rig_connect_names = [rig_connect.name for rig_connect in rig_connects]
 
-        return self.render('testbed.html',testbed_names=tbs_names, rig_names=rig_names,
+        return self.render('testbed.html', testbed_names=tbs_names, rig_names=rig_names,
                            rig_connect_names=rig_connect_names)
 
-    @expose('/save/<tb_name>',methods=['GET', 'POST'])
-    def save(self,tb_name):
+    @expose('/save/<tb_name>', methods=['GET', 'POST'])
+    def save(self, tb_name):
         print(tb_name)
         content = request.form.get('content')
         print(content)
@@ -255,7 +262,7 @@ class TestBedOrg(admin.BaseView):
         return 'saved'
 
     @expose('/get/<tb_name>')
-    def get(self,tb_name):
+    def get(self, tb_name):
         print(tb_name)
         tb = Testbed.query.filter_by(name=tb_name).first()
         rigs = tb.rigs
@@ -264,7 +271,7 @@ class TestBedOrg(admin.BaseView):
             relation_sample = []
         else:
             relation_sample = json.loads(tb.connect_chart)
-        return jsonify(relation=relation_sample,rig_names=rig_names)
+        return jsonify(relation=relation_sample, rig_names=rig_names)
 
 
 class testSetView(admin.BaseView):
@@ -273,10 +280,7 @@ class testSetView(admin.BaseView):
         return self.render('testset.html')
 
 
-class TestToolView(admin.BaseView):
-    def is_accessible(self):
-        return login.current_user.is_authenticated
-
+class testToolView(admin.BaseView):
     @expose('/')
     def index(self):
         return self.render('testtool.html')
@@ -285,25 +289,26 @@ init_login()
 
 # Create admin
 admin = admin.Admin(app, 'SPE-Data Mobility', index_view=MyAdminIndexView(),
-                     base_template='my_master.html')
+                    base_template='my_master.html')
 
 # Add view
 admin.add_view(MyUserView(User, db.session))
 
-admin.add_view(MyObjectView(OperationSystem, db.session,category='Proto-Type'))
+admin.add_view(MyObjectView(OperationSystem, db.session, category='Proto-Type'))
 admin.add_view(MyObjectView(Storage, db.session, category='Proto-Type'))
 admin.add_view(MyObjectView(RigConnection, db.session, category='Proto-Type'))
+admin.add_view(MyObjectView(HostUsage, db.session, category='Proto-Type'))
 
-admin.add_view(MyObjectView(Host, db.session,category='Lab'))
-admin.add_view(RigView(Rig, db.session,category='Lab'))
-admin.add_view(RigInfoVew(RigInfo, db.session,category='Lab'))
+admin.add_view(MyObjectView(Host, db.session, category='Lab'))
+admin.add_view(RigView(Rig, db.session, category='Lab'))
+admin.add_view(RigInfoVew(RigInfo, db.session, category='Lab'))
 # admin.add_view(MyModelView(IPAssignment, db.session,category='Lab'))
-admin.add_view(MyObjectView(Virtualization, db.session,category='Lab'))
-admin.add_view(MyObjectView(DataService, db.session,category='Lab'))
+admin.add_view(MyObjectView(Virtualization, db.session, category='Lab'))
+admin.add_view(MyObjectView(DataService, db.session, category='Lab'))
 
-admin.add_view(TestBedView(Testbed, db.session,category='Test'))
+admin.add_view(TestBedView(Testbed, db.session, category='Test'))
 admin.add_view(testSetView(name='Testset', category='Test'))
-admin.add_view(TestToolView(name='Testtool', category='Test'))
+admin.add_view(testToolView(name='Testtool', category='Test'))
 # admin.add_view(MyObjectView(Student, db.session,category='Test'))
 # admin.add_view(MyObjectView(Course, db.session,category='Test'))
 
