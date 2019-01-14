@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bcf3f9e-e496-4782-b6d4-210e07e21ce2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dm_lab_with_flask_admin/app/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/dm_lab_with_flask_admin/app/model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dm_lab_with_flask_admin/app/view.py" beforeDir="false" afterPath="$PROJECT_DIR$/dm_lab_with_flask_admin/app/view.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dm_lab_with_flask_admin/data/spe_djy_lab.sqlite" beforeDir="false" />
@@ -50,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dm_lab_with_flask_admin/app/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2005">
-              <caret line="90" column="26" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
+            <state relative-caret-position="700">
+              <caret line="84" column="22" lean-forward="true" selection-start-line="84" selection-start-column="22" selection-end-line="84" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -62,17 +63,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dm_lab_with_flask_admin/app/view.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="300" lean-forward="true" selection-start-line="300" selection-end-line="300" />
+            <state relative-caret-position="582">
+              <caret line="121" column="22" selection-start-line="121" selection-start-column="22" selection-end-line="121" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dm_lab_with_flask_admin/prepare_db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="47" column="33" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
+            <state relative-caret-position="514">
+              <caret line="57" column="21" lean-forward="true" selection-start-line="54" selection-start-column="4" selection-end-line="60" selection-end-column="28" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -183,16 +184,17 @@
         <option value="$PROJECT_DIR$/dm_lab_with_flask_admin/app.py" />
         <option value="$PROJECT_DIR$/sqla/app.py" />
         <option value="$PROJECT_DIR$/dm_lab_with_flask_admin/app/templates/testset.html" />
+        <option value="$PROJECT_DIR$/dm_lab_with_flask_admin/prepare_db.py" />
         <option value="$PROJECT_DIR$/dm_lab_with_flask_admin/app/view.py" />
         <option value="$PROJECT_DIR$/dm_lab_with_flask_admin/app/model.py" />
-        <option value="$PROJECT_DIR$/dm_lab_with_flask_admin/prepare_db.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="2560" />
-    <option name="height" value="1337" />
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="x" value="163" />
+    <option name="y" value="26" />
+    <option name="width" value="2073" />
+    <option name="height" value="1246" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -233,14 +235,7 @@
               <item name="flask" type="b2602c69:ProjectViewProjectNode" />
               <item name="flask" type="462c0819:PsiDirectoryNode" />
               <item name="dm_lab_with_flask_admin" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flask" type="462c0819:PsiDirectoryNode" />
-              <item name="dm_lab_with_flask_admin" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -396,8 +391,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.app" />
         <item itemvalue="Python.prepare_db" />
+        <item itemvalue="Python.app" />
         <item itemvalue="Python.app (1)" />
         <item itemvalue="Python.run" />
         <item itemvalue="Python.model" />
@@ -611,7 +606,14 @@
       <option name="project" value="LOCAL" />
       <updated>1545229142569</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="add tag for tb and test toolkit">
+      <created>1547463282381</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1547463282381</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TodoView">
@@ -624,15 +626,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="194" width="2073" height="1246" extended-state="0" />
+    <frame x="1036" y="0" width="1524" height="1440" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4980695" visible="true" weight="0.15962672" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4980695" visible="true" weight="0.21856086" />
       <window_info id="Structure" order="1" sideWeight="0.5019305" side_tool="true" weight="0.24958263" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.28843337" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32695812" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49814126" visible="true" weight="0.284153" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32648402" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49814126" visible="true" weight="0.23744293" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -870,25 +872,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dm_lab_with_flask_admin/app/view.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="300" lean-forward="true" selection-start-line="300" selection-end-line="300" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dm_lab_with_flask_admin/app/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2005">
-          <caret line="90" column="26" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
+        <state relative-caret-position="582">
+          <caret line="121" column="22" selection-start-line="121" selection-start-column="22" selection-end-line="121" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dm_lab_with_flask_admin/prepare_db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="47" column="33" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
+        <state relative-caret-position="514">
+          <caret line="57" column="21" lean-forward="true" selection-start-line="54" selection-start-column="4" selection-end-line="60" selection-end-column="28" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dm_lab_with_flask_admin/app/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="84" column="22" lean-forward="true" selection-start-line="84" selection-start-column="22" selection-end-line="84" selection-end-column="22" />
         </state>
       </provider>
     </entry>

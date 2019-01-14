@@ -33,6 +33,7 @@ class HostUsage(db.Model):
     def __str__(self):
         return self.name
 
+
 # Create user model.
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -41,6 +42,7 @@ class User(db.Model):
     login = db.Column(db.String(80), unique=True)
     email = db.Column(db.String(120))
     password = db.Column(db.String(100))
+    phone = db.Column(db.String(20))
 
     def __str__(self):
         return self.login
@@ -70,17 +72,17 @@ class User(db.Model):
 
 class Host(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), unique=True)
+    name = db.Column(db.String(100))
     operation_system_id = db.Column(db.Integer(), db.ForeignKey(OperationSystem.id))
     operation_system = db.relationship(OperationSystem, backref='hosts')
     person_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     Owner = db.relationship(User, backref='hosts')
     usage_id = db.Column(db.Integer(), db.ForeignKey(HostUsage.id))
     usage = db.relationship(HostUsage,backref='hosts')
-    ip = db.Column(db.String(20))
+    ip = db.Column(db.String(20), unique=True)
 
     def __str__(self):
-        return self.name
+        return self.ip
 
 
 rig_tags = db.Table('rig_tags',

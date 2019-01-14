@@ -1,5 +1,5 @@
 from app import app, db
-from app.model import User, Storage, Host, OperationSystem, RigConnection, Rig, HostUage
+from app.model import User, Storage, Host, OperationSystem, RigConnection, Rig, HostUsage
 import os
 
 from werkzeug.security import generate_password_hash
@@ -43,7 +43,7 @@ def build_sample_db():
         db.session.add(operation_system)
 
     for temp in ['FC', 'CIFS', 'NFS', 'ISCSI', 'VMWARE', 'Command']:
-        host_usage = HostUage()
+        host_usage = HostUsage()
         host_usage.name = temp
         db.session.add(host_usage)
 
@@ -51,8 +51,14 @@ def build_sample_db():
         rig_connect = RigConnection()
         rig_connect.name = temp
         db.session.add(rig_connect)
-    for s in Storage.query.all():
-        print(f'{s.id}---{s.name}')
+
+    for temp in ['10.109.80.121','10.109.143.181','10.109.140.167','10.109.82.56',
+                    '10.109.82.168','10.109.140.113','10.244.128.114','10.244.128.115',
+                     '10.141.56.216','10.109.143.184','10.109.82.132','10.141.56.188']:
+        host = Host()
+        host.ip = temp
+
+        db.session.add(host)
 
     for temp in ['OB-D1468', 'OB-D1442', 'OB-D1499', 'OB-D1453', 'OB-D1462', 'OB-D1490', 'OB-D1476',
                  'OB-D1465', 'OB-D1434', 'OB-D1473', 'OB-D1464', 'OB-D1471', 'OB-D1489', 'OB-D1458',

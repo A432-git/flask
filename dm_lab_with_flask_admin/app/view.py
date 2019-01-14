@@ -114,11 +114,13 @@ class MyAdminIndexView(admin.AdminIndexView):
 
 class MyUserView(MyModelView):
     column_exclude_list = ['password', ]
-    column_editable_list = ['first_name', 'last_name', 'email']
+    column_editable_list = ['first_name', 'last_name', 'email', 'phone']
     # hide the IP at phase I
-    form_excluded_columns = ['password', 'ips']
+    form_excluded_columns = ['password']
     can_delete = False
-    column_searchable_list = ['login', 'email']
+    can_edit = False
+    can_create = False
+    column_searchable_list = ['login', 'email', 'phone']
 
 
 class MyObjectView(MyModelView):
