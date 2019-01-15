@@ -135,6 +135,17 @@ class Rig (db.Model):
     def __str__(self):
         return self.name
 
+    def get_json(self):
+        return {
+            'name': self.name,
+            'state': self.state,
+            'status': self.status,
+            'io_interface': self.io_interface,
+            'iscsi_interfaces': self.iscsi_interfaces,
+            'replication_async_interfaces': self.replication_async_interfaces,
+            'replication_sync_interfaces': self.replication_sync_interfaces
+        }
+
 
 class RigInfo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
