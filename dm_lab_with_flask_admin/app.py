@@ -42,4 +42,4 @@ def rest_for_jia(obj_name, name, obj_property, obj_value):
 
 if __name__ == '__main__':
     # Start app
-    app.run(debug=True, host='0.0.0.0')
+    app.run(debug=False, host='0.0.0.0')
