@@ -305,7 +305,7 @@ admin.add_view(MyObjectView(Host, db.session, category='Lab'))
 admin.add_view(RigView(Rig, db.session, category='Lab'))
 admin.add_view(RigInfoVew(RigInfo, db.session, category='Lab'))
 # admin.add_view(MyModelView(IPAssignment, db.session,category='Lab'))
-admin.add_view(MyObjectView(Virtualization, db.session, category='Lab'))
+# admin.add_view(MyObjectView(Virtualization, db.session, category='Lab'))
 admin.add_view(MyObjectView(DataService, db.session, category='Lab'))
 
 admin.add_view(TestBedView(Testbed, db.session, category='Test'))
