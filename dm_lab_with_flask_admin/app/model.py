@@ -157,7 +157,7 @@ class Rig (db.Model):
             'state': self.state,
             'status': self.status,
             'available':self.available,
-            'io_interfaces': self.io_interface,
+            'io_interfaces': self.io_interfaces,
             'iscsi_interfaces': self.iscsi_interfaces,
             'replication_async_interfaces': self.replication_async_interfaces,
             'replication_sync_interfaces': self.replication_sync_interfaces
