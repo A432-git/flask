@@ -8,7 +8,17 @@ from flask import jsonify
 def index():
     return '<a href="/admin/">Click me to get to SPE Data Mobility Admin!</a>'
 
+@app.route('/api/get/<obj_name>')
+def rest_getlist(obj_name):
+    module = __import__(f'app.model')
+    obj_name = obj_name[0].upper() + obj_name[1:]
+    reflected_class = getattr(module, obj_name)()
+    objs = reflected_class.query.all()
+    obj_names = [obj.name for obj in objs]
 
+    return jsonify(obj_names)
+    
+    
 @app.route('/api/get/<obj_name>/<name>')
 def rest_get(obj_name, name):
     module = __import__(f'app.model')
