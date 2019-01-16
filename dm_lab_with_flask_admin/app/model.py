@@ -106,6 +106,7 @@ class Testbed(db.Model):
     host_id = db.Column(db.Integer, db.ForeignKey('host.id'))
     hosts = db.relationship('Host', secondary=host_tags)
     connect_chart = db.Column(db.String(300))
+    tags = db.Column(db.String(20))
 
     def __str__(self):
         return self.name
@@ -113,7 +114,13 @@ class Testbed(db.Model):
     def save(self):
         db.session.add(self)
         db.session.commit()
-
+    
+    def get_json(self):
+        return {
+            'name': self.name,
+            'tags': self.tags,
+            'connect_chart': self.connect_chart,
+        }
 
 # Create rig model
 class Rig (db.Model):
