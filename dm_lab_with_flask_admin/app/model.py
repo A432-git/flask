@@ -80,10 +80,19 @@ class Host(db.Model):
     usage_id = db.Column(db.Integer(), db.ForeignKey(HostUsage.id))
     usage = db.relationship(HostUsage,backref='hosts')
     ip = db.Column(db.String(20), unique=True)
+    available = db.Column(db.Boolean(),default=True)
+    # tag = db.Column(db.String(20))
 
     def __str__(self):
         return self.ip
 
+    def get_json(self):
+        return {
+            'name': self.name,
+            'usage': self.usage.name,
+            'ip' : self.ip,
+            'available': self.available,
+        }
 
 rig_tags = db.Table('rig_tags',
                            db.Column('testbed_id', db.Integer, db.ForeignKey('testbed.id')),
@@ -134,7 +143,7 @@ class Rig (db.Model):
     available = db.Column(db.Boolean,default=True)
     state = db.Column(db.String(30))
     status = db.Column(db.String(30))
-    io_interface = db.Column(db.Text)
+    io_interfaces = db.Column(db.Text)
     iscsi_interfaces = db.Column(db.Text)
     replication_async_interfaces = db.Column(db.Text)
     replication_sync_interfaces = db.Column(db.Text)
@@ -147,7 +156,8 @@ class Rig (db.Model):
             'name': self.name,
             'state': self.state,
             'status': self.status,
-            'io_interface': self.io_interface,
+            'available':self.available,
+            'io_interfaces': self.io_interface,
             'iscsi_interfaces': self.iscsi_interfaces,
             'replication_async_interfaces': self.replication_async_interfaces,
             'replication_sync_interfaces': self.replication_sync_interfaces
