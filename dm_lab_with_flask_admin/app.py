@@ -48,7 +48,13 @@ def rest_set(obj_name, name, obj_property, obj_value):
         obj = reflected_class.query.filter_by(name=name).first()
         if obj:
             if hasattr(obj, obj_property):
-                setattr(obj, obj_property, obj_value)
+                if obj_property == 'available':
+                    if obj_value == 'true' or obj_value == 'True':
+                        setattr(obj, obj_property, True)
+                    else:
+                        setattr(obj, obj_property, False)
+                else:
+                    setattr(obj, obj_property, obj_value)
             else:
                 raise AttributeError('property not exist')
         else:

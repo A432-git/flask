@@ -139,7 +139,7 @@ inline_form_options = {
 
 class RigView(MyObjectView):
     inline_models = [(RigInfo, inline_form_options), ]
-    column_exclude_list = ['io_interface', 'iscsi_interfaces', 'replication_async_interfaces',
+    column_exclude_list = ['io_interfaces', 'iscsi_interfaces', 'replication_async_interfaces',
                            'replication_sync_interfaces', 'state', 'status']
     column_editable_list = ['model', 'owner', 'device']
     inline_models = [(RigInfo, inline_form_options), ]

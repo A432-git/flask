@@ -17,6 +17,9 @@ class OperationSystem(db.Model):
     def __str__(self):
         return self.name
 
+    def __repr__(self):
+        return self.name
+
 
 class RigConnection(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -88,10 +91,11 @@ class Host(db.Model):
 
     def get_json(self):
         return {
-            'name': self.name,
+            'name': repr(self.name),
             'usage': self.usage.name,
             'ip' : self.ip,
-            'available': self.available,
+            'available': repr(self.available),
+            'operation_system': repr(self.operation_system),
         }
 
 rig_tags = db.Table('rig_tags',
@@ -128,6 +132,8 @@ class Testbed(db.Model):
         return {
             'name': self.name,
             'tags': self.tags,
+            'rigs': [rig.name for rig in self.rigs],
+            'hosts': [host.name for host in self.hosts],
             'connect_chart': self.connect_chart,
         }
 
