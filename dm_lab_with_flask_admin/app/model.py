@@ -1,6 +1,7 @@
 from app import db
 import json
 
+
 class Storage(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), unique=True)
@@ -60,7 +61,7 @@ class User(db.Model):
         return self.login
 
     def __repr__(self):
-        return json.dumps({'name': self.name})
+        return json.dumps({'name': self.login})
 
     # Flask-Login integration
     # NOTE: is_authenticated, is_active, and is_anonymous
@@ -103,14 +104,7 @@ class Host(db.Model):
         return self.ip
 
     def __repr__(self):
-        return json.dumps({
-            'name': repr(self.name),
-            'usage': repr(self.usage),
-            'ip': repr(self.ip),
-            'available': repr(self.available),
-            'operation_system': str(self.operation_system),
-
-        })
+        return json.dumps(self.get_json())
 
     def get_json(self):
         return {
@@ -153,14 +147,7 @@ class Testbed(db.Model):
 
     def __repr__(self):
 
-        return json.dumps({
-            'name': self.name,
-            'tags': self.tags,
-            'rigs': [repr(rig) for rig in self.rigs],
-            'hosts': [repr(host) for host in self.hosts],
-            'connect_chart': self.connect_chart,
-
-        })
+        return json.dumps(self.get_json())
 
     def get_json(self):
         return {
@@ -193,17 +180,7 @@ class Rig (db.Model):
 
     def __repr__(self):
 
-        return json.dumps({
-            'name': repr(self.name),
-            'state': repr(self.state),
-            'status': repr(self.status),
-            'available': repr(self.available),
-            'io_interfaces': repr(self.io_interfaces),
-            'iscsi_interfaces': repr(self.iscsi_interfaces),
-            'replication_async_interfaces': repr(self.replication_async_interfaces),
-            'replication_sync_interfaces': repr(self.replication_sync_interfaces)
-
-        })
+        return json.dumps(self.get_json())
 
     def get_json(self):
         
