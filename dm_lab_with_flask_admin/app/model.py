@@ -1,5 +1,5 @@
 from app import db
-
+import json
 
 class Storage(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -8,6 +8,9 @@ class Storage(db.Model):
 
     def __str__(self):
         return f'{self.name}'
+
+    def __repr__(self):
+        return json.dumps({'name': self.name})
 
 
 class OperationSystem(db.Model):
@@ -18,7 +21,7 @@ class OperationSystem(db.Model):
         return self.name
 
     def __repr__(self):
-        return self.name
+        return json.dumps({'name': self.name})
 
 
 class RigConnection(db.Model):
@@ -28,6 +31,9 @@ class RigConnection(db.Model):
     def __str__(self):
         return self.name
 
+    def __repr__(self):
+        return json.dumps({'name': self.name})
+
 
 class HostUsage(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -35,6 +41,9 @@ class HostUsage(db.Model):
 
     def __str__(self):
         return self.name
+
+    def __repr__(self):
+        return json.dumps({'name': self.name})
 
 
 # Create user model.
@@ -49,6 +58,10 @@ class User(db.Model):
 
     def __str__(self):
         return self.login
+
+    def __repr__(self):
+        return json.dumps({'name': self.name})
+
     # Flask-Login integration
     # NOTE: is_authenticated, is_active, and is_anonymous
     # are methods in Flask-Login < 0.3.0
@@ -89,11 +102,21 @@ class Host(db.Model):
     def __str__(self):
         return self.ip
 
+    def __repr__(self):
+        return json.dumps({
+            'name': repr(self.name),
+            'usage': repr(self.usage),
+            'ip': repr(self.ip),
+            'available': repr(self.available),
+            'operation_system': str(self.operation_system),
+
+        })
+
     def get_json(self):
         return {
             'name': repr(self.name),
-            'usage': self.usage.name,
-            'ip' : self.ip,
+            'usage': repr(self.usage),
+            'ip': repr(self.ip),
             'available': repr(self.available),
             'operation_system': repr(self.operation_system),
         }
@@ -127,14 +150,25 @@ class Testbed(db.Model):
     def save(self):
         db.session.add(self)
         db.session.commit()
-    
+
+    def __repr__(self):
+
+        return json.dumps({
+            'name': self.name,
+            'tags': self.tags,
+            'rigs': [repr(rig) for rig in self.rigs],
+            'hosts': [repr(host) for host in self.hosts],
+            'connect_chart': self.connect_chart,
+
+        })
+
     def get_json(self):
         return {
             'name': self.name,
             'tags': self.tags,
-            'rigs': [rig.name for rig in self.rigs],
-            'hosts': [host.name for host in self.hosts],
-            'connect_chart': self.connect_chart,
+            'rigs': [repr(rig) for rig in self.rigs],
+            'hosts': [repr(host) for host in self.hosts],
+            'connect_chart': repr(self.connect_chart),
         }
 
 # Create rig model
@@ -157,16 +191,31 @@ class Rig (db.Model):
     def __str__(self):
         return self.name
 
+    def __repr__(self):
+
+        return json.dumps({
+            'name': repr(self.name),
+            'state': repr(self.state),
+            'status': repr(self.status),
+            'available': repr(self.available),
+            'io_interfaces': repr(self.io_interfaces),
+            'iscsi_interfaces': repr(self.iscsi_interfaces),
+            'replication_async_interfaces': repr(self.replication_async_interfaces),
+            'replication_sync_interfaces': repr(self.replication_sync_interfaces)
+
+        })
+
     def get_json(self):
+        
         return {
-            'name': self.name,
-            'state': self.state,
-            'status': self.status,
-            'available':self.available,
-            'io_interfaces': self.io_interfaces,
-            'iscsi_interfaces': self.iscsi_interfaces,
-            'replication_async_interfaces': self.replication_async_interfaces,
-            'replication_sync_interfaces': self.replication_sync_interfaces
+            'name': repr(self.name),
+            'state': repr(self.state),
+            'status': repr(self.status),
+            'available': repr(self.available),
+            'io_interfaces': repr(self.io_interfaces),
+            'iscsi_interfaces': repr(self.iscsi_interfaces),
+            'replication_async_interfaces': repr(self.replication_async_interfaces),
+            'replication_sync_interfaces': repr(self.replication_sync_interfaces)
         }
 
 
