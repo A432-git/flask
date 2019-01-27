@@ -3,6 +3,17 @@ from app import app, db
 from flask import jsonify
 
 
+def props(obj):
+    pr = {}
+    for name in dir(obj):
+        value = getattr(obj, name)
+        if not name.startswith('_') and not callable(value) \
+                and not name.startswith('meta') and not name.startswith('query'):
+            # print(f"name:{name}")
+            pr[name] = repr(value)
+    return pr
+
+
 # Flask views
 @app.route('/')
 def index():
@@ -25,8 +36,8 @@ def rest_get(obj_name, name):
     obj_name = obj_name[0].upper() + obj_name[1:]
     reflected_class = getattr(module, obj_name)()
     obj = reflected_class.query.filter_by(name=name).first()
-
-    return jsonify(obj.get_json())
+    print(props(obj))
+    return jsonify(props(obj))
 
 
 @app.route('/api/get/<obj_name>/<name>/<obj_property>')

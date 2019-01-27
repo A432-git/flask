@@ -104,16 +104,14 @@ class Host(db.Model):
         return self.ip
 
     def __repr__(self):
-        return json.dumps(self.get_json())
-
-    def get_json(self):
-        return {
+        return json.dumps({
             'name': repr(self.name),
             'usage': repr(self.usage),
             'ip': repr(self.ip),
             'available': repr(self.available),
             'operation_system': repr(self.operation_system),
-        }
+        })
+
 
 rig_tags = db.Table('rig_tags',
                            db.Column('testbed_id', db.Integer, db.ForeignKey('testbed.id')),
@@ -147,16 +145,14 @@ class Testbed(db.Model):
 
     def __repr__(self):
 
-        return json.dumps(self.get_json())
-
-    def get_json(self):
-        return {
+        return json.dumps({
             'name': self.name,
             'tags': self.tags,
-            'rigs': [repr(rig) for rig in self.rigs],
-            'hosts': [repr(host) for host in self.hosts],
+            'rigs': repr(self.rigs),
+            'hosts': repr(self.hosts),
             'connect_chart': repr(self.connect_chart),
-        }
+        })
+
 
 # Create rig model
 class Rig (db.Model):
@@ -180,11 +176,7 @@ class Rig (db.Model):
 
     def __repr__(self):
 
-        return json.dumps(self.get_json())
-
-    def get_json(self):
-        
-        return {
+        return json.dumps({
             'name': repr(self.name),
             'state': repr(self.state),
             'status': repr(self.status),
@@ -193,7 +185,7 @@ class Rig (db.Model):
             'iscsi_interfaces': repr(self.iscsi_interfaces),
             'replication_async_interfaces': repr(self.replication_async_interfaces),
             'replication_sync_interfaces': repr(self.replication_sync_interfaces)
-        }
+        })
 
 
 class RigInfo(db.Model):
@@ -204,6 +196,12 @@ class RigInfo(db.Model):
 
     rig_id = db.Column(db.Integer(), db.ForeignKey(Rig.id))
     rig = db.relationship(Rig, backref='info')
+
+    def __repr__(self):
+        return json.dumps({
+            self.key: self.value
+
+        })
 
 
 class IPAssignment(db.Model):
