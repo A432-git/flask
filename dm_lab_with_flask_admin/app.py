@@ -1,5 +1,5 @@
 
-from app import app, db
+from app import *
 from flask import jsonify
 
 
@@ -26,7 +26,6 @@ def rest_getlist(obj_name):
     reflected_class = getattr(module, obj_name)()
     objs = reflected_class.query.all()
     obj_names = [obj.name for obj in objs]
-
     return jsonify(obj_names)
     
     
@@ -38,7 +37,7 @@ def rest_get(obj_name, name):
     obj = reflected_class.query.filter_by(name=name).first()
     print(props(obj))
     return jsonify(props(obj))
-
+    # return repr(obj)
 
 @app.route('/api/get/<obj_name>/<name>/<obj_property>')
 def rest_getone(obj_name, name, obj_property):
