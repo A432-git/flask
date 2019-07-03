@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0bcf3f9e-e496-4782-b6d4-210e07e21ce2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flask_report/templates/dt.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/html_parse/1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/html_parse/html_parse.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dm_lab_with_flask_admin/data/spe_djy_lab.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/dm_lab_with_flask_admin/data/spe_djy_lab.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/async/1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/async/1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/work/utility/file_utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/work/utility/file_utility.py" afterDir="false" />
-    </list>
+    <list default="true" id="0bcf3f9e-e496-4782-b6d4-210e07e21ce2" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -655,7 +647,14 @@
       <option name="project" value="LOCAL" />
       <updated>1558110835547</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="add test case report in flask">
+      <created>1562114422143</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1562114422143</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TodoView">
@@ -695,7 +694,6 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add add delete into" />
     <MESSAGE value="single thread CRUD for table" />
     <MESSAGE value="enhance single thread CRUD for table for delete/update show info[0]" />
     <MESSAGE value="added confirm before delete" />
@@ -720,7 +718,8 @@
     <MESSAGE value="add missing s for io_interfaces" />
     <MESSAGE value="remove the additional files" />
     <MESSAGE value="automatic update lab management tool" />
-    <option name="LAST_COMMIT_MESSAGE" value="automatic update lab management tool" />
+    <MESSAGE value="add test case report in flask" />
+    <option name="LAST_COMMIT_MESSAGE" value="add test case report in flask" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/flask_admin_s/app/model.py">
