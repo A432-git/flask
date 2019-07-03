@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Case Status</title>
+    <link rel="shortcut icon" type="image/ico" href="http://www.datatables.net/favicon.ico">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+	<style type="text/css" class="init">
+
+       td.details-control {
+            background:  no-repeat center center;
+            cursor: pointer;
+        }
+        tr.shown td.details-control {
+            background:  no-repeat center center;
+        }
+
+    </style>
+
+</head>
+<body>
+<script>
+    /* Formatting function for row details - modify as you need */
+function format ( d ) {
+    // `d` is the original data object for the row
+    var content = '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:120px;">'+'replace_str_future'+
+    '</table>';
+    text = "";
+    for (i = 0; i < d.cycles.length; i++) {
+        text += '<tr>'+
+            '<td><b>'+d.cycles[i].name+'</b></td>'+
+            '<td>'+d.cycles[i].result+'</td>'+
+        '</tr>';
+        }
+    var updated_content = content.replace("replace_str_future", text);
+    return updated_content;
+}
+
+$(document).ready(function() {
+    var table = $('#example').DataTable( {
+        "ajax": "/ajax/get_tc_status",
+        "columns": [
+            {
+                "className":      'details-control',
+                "orderable":      false,
+                "data":           null,
+                "defaultContent": "<i class='fas fa-angle-down' style='font-size:24px'></i>"
+            },
+            { "data": "Test_Name",
+            "render": function (data, type, row, meta) {
+                        if(row.Populated > 2){
+                            return data = "<font color=red bgcolor=black>" + data + "</font>";
+                        }else{
+                            return data = "<font color=green>" + data + "</font>";
+                        }
+                    }
+            },
+            { "data": "Result" },
+            { "data": "Populated",
+            "render": function (data, type, row, meta) {
+                        if(data > 2){
+                            return data = row.Populated +'<i class="fa fa-male"></i>';
+                        }else{
+                            return data = row.Populated + '<i class="fa fa-female"></i>';
+                        }
+                    }
+            },
+            { "data": "Tags" },
+            { "data": "Linked AR" },
+            { "data": "Open AR" },
+            { "data": "TBV in PIE" },
+            { "data": "Last Run" }
+        ],
+        "columnDefs": [ {
+            "targets": 3,
+            "createdCell": function (td, cellData, rowData, row, col) {
+              if ( cellData < 4 ) {
+                $(td).css('background-color', 'grey')
+              }
+            }
+          } ],
+
+        "order": [[1, 'asc']]
+    } );
+
+    // Add event listener for opening and closing details
+    $('#example tbody').on('click', 'td.details-control', function () {
+        var tr = $(this).closest('tr');
+        var row = table.row( tr );
+
+        if ( row.child.isShown() ) {
+            // This row is already open - close it
+            row.child.hide();
+            tr.removeClass('shown');
+        }
+        else {
+            // Open this row
+            row.child( format(row.data()) ).show();
+            tr.addClass('shown');
+        }
+    } );
+} );
+</script>
+<table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Test_Name</th>
+                <th>Result</th>
+                <th>Populated</th>
+                <th>Tags</th>
+                <th>Linked AR</th>
+                <th>Open AR</th>
+                <th>TBV in PIE</th>
+                <th>Last Run</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th></th>
+                <th>Test_Name</th>
+                <th>Result</th>
+                <th>Populated</th>
+                <th>Tags</th>
+                <th>Linked AR</th>
+                <th>Open AR</th>
+                <th>TBV in PIE</th>
+                <th>Last Run</th>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
