@@ -85,6 +85,7 @@ class MyModelView(sqla.ModelView):
     can_view_details = True
     details_modal = True
 
+
 class UserView(MyModelView):
     column_editable_list = ['email', 'first_name', 'last_name']
     column_searchable_list = column_editable_list
