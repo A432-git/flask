@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="../static/js/table_edit.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.jsjquery.dataTables.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css"/>
+     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css"/>
+     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"/>
+
+    	<link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://cdn.bootcss.com/datatables/1.10.19/css/jquery.dataTables_themeroller.css" rel="stylesheet" type="text/css"></link>
+	<link href="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.css" rel="stylesheet" type="text/css" />
+	<link href="{{ url_for('static', filename='css/select2.css') }}" rel="stylesheet" type="text/css" />
+	<link href="https://cdn.bootcss.com/yadcf/0.9.4-beta.28/jquery.dataTables.yadcf.css" rel="stylesheet" type="text/css" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shCore.css" rel="stylesheet" type="text/css" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+	<link href="resources/css/main.css" rel="stylesheet" type="text/css" />
+
+	<script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.js"></script>
+	<script src="{{ url_for('static', filename='js/select2.js') }}"></script>
+
+</head>
+<body>
+<script>
+    $(document).ready(function() {
+    'use strict';
+    oTable = $('#example').DataTable( {
+        "ajax": '/ajax/data'
+    } ).yadcf([{
+
+        column_number: 0
+
+    }, {
+
+        column_number: 1,
+
+        filter_type: "text"
+
+    }, {
+
+        column_number: 2,
+
+        filter_type: "auto_complete"
+
+    }, {
+
+        column_number: 3,
+
+        filter_type: "range_number_slider"
+
+    }, {
+
+        column_number: 4
+
+    }], 'footer');
+
+});
+
+
+</script>
+<table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+
+        <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

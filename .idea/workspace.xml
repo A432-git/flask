@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0bcf3f9e-e496-4782-b6d4-210e07e21ce2" name="Default Changelist" comment="add test case report in flask">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Flask-Admin-Dashboard-master/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/Flask-Admin-Dashboard-master/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_flask/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo_flask/app.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo_flask/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+            <state relative-caret-position="8576">
+              <caret line="412" column="40" lean-forward="true" selection-start-line="412" selection-start-column="40" selection-end-line="412" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -25,15 +25,19 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo_flask/templates/ydacf.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="21" column="67" lean-forward="true" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
+            <state relative-caret-position="156">
+              <caret line="11" column="89" lean-forward="true" selection-start-line="7" selection-end-line="21" selection-end-column="77" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo_flask/templates/ydacf_2.html">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/demo_flask/templates/datatables.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="967">
+              <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -41,14 +45,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>first</find>
       <find>rig_name</find>
       <find>json</find>
       <find>getTestBedOrgChart</find>
@@ -78,6 +81,7 @@
       <find>mul</find>
       <find>MyAdminIndexView</find>
       <find>static</find>
+      <find>example</find>
     </findStrings>
     <replaceStrings>
       <replace>lock</replace>
@@ -94,7 +98,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/flask_admin_learn/myview.py" />
         <option value="$PROJECT_DIR$/flask_admin_learn/app.py" />
         <option value="$PROJECT_DIR$/flask_admin_learn/app/app.py" />
         <option value="$PROJECT_DIR$/flask_admin_learn/app/myview.py" />
@@ -145,10 +148,11 @@
         <option value="$PROJECT_DIR$/hello_flask/requirements.txt" />
         <option value="$PROJECT_DIR$/demo_flask/templates/ydacf.html" />
         <option value="$PROJECT_DIR$/demo_flask/app.py" />
+        <option value="$PROJECT_DIR$/demo_flask/templates/datatables.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="333" />
     <option name="y" value="23" />
     <option name="width" value="1587" />
@@ -176,7 +180,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -195,17 +198,11 @@
               <item name="demo_flask" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="flask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flask" type="462c0819:PsiDirectoryNode" />
-              <item name="demo_flask" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -654,14 +651,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="333" y="23" width="1587" height="1057" extended-state="0" />
+    <frame x="0" y="23" width="1920" height="1057" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4980695" visible="true" weight="0.20967741" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4980695" visible="true" weight="0.17259692" />
       <window_info id="Structure" order="1" sideWeight="0.5019305" side_tool="true" weight="0.24958263" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.28843337" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32563257" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49548388" visible="true" weight="0.44224423" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49548388" visible="true" weight="0.44224423" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39933994" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -708,27 +706,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="add test case report in flask" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dm_lab_with_flask_admin/app/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-466">
-          <caret line="159" column="47" selection-start-line="159" selection-start-column="47" selection-end-line="159" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/args_kwargs/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/work/utility/log_utility.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-387">
-          <caret line="43" column="23" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../python/decorator/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -971,26 +948,45 @@
     <entry file="file://$PROJECT_DIR$/demo_flask/templates/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo_flask/templates/ydacf_2.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/demo_flask/static/css/main.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/demo_flask/static/js/shCore.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo_flask/templates/ydacf.html">
+    <entry file="file://$PROJECT_DIR$/test/app/templates/ajax_loading.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="21" column="67" lean-forward="true" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
+        <state relative-caret-position="-258" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/app/templates/datatable.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="7" lean-forward="true" selection-end-line="556" selection-end-column="7" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/demo_flask/templates/ydacf_2.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/demo_flask/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+        <state relative-caret-position="8576">
+          <caret line="412" column="40" lean-forward="true" selection-start-line="412" selection-start-column="40" selection-end-line="412" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo_flask/templates/ydacf.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="11" column="89" lean-forward="true" selection-start-line="7" selection-end-line="21" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo_flask/templates/datatables.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="967">
+          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
         </state>
       </provider>
     </entry>
