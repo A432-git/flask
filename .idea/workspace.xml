@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0bcf3f9e-e496-4782-b6d4-210e07e21ce2" name="Default Changelist" comment="add test case report in flask">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_flask/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo_flask/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_flask/static/css/select2.css" beforeDir="false" afterPath="$PROJECT_DIR$/demo_flask/static/css/select2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_flask/templates/ydacf.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo_flask/templates/ydacf.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +17,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo_flask/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8576">
-              <caret line="412" column="40" lean-forward="true" selection-start-line="412" selection-start-column="40" selection-end-line="412" selection-end-column="40" />
+            <state relative-caret-position="9061">
+              <caret line="412" column="40" selection-start-line="412" selection-start-column="40" selection-end-line="412" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -25,17 +26,40 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo_flask/templates/ydacf.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="11" column="89" lean-forward="true" selection-start-line="7" selection-end-line="21" selection-end-column="77" />
+            <state relative-caret-position="-1244">
+              <caret line="8" column="107" selection-start-line="8" selection-start-column="107" selection-end-line="8" selection-end-column="107" />
             </state>
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo_flask/static/js/dom_source_select2_example.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-107" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo_flask/static/js/select2.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1925" />
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/demo_flask/static/css/select2.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="87" column="14" selection-start-line="87" selection-start-column="14" selection-end-line="87" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo_flask/templates/datatables.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="967">
-              <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+            <state relative-caret-position="763">
+              <caret line="61" selection-start-line="61" selection-end-line="61" />
             </state>
           </provider>
         </entry>
@@ -98,7 +122,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/flask_admin_learn/app.py" />
         <option value="$PROJECT_DIR$/flask_admin_learn/app/app.py" />
         <option value="$PROJECT_DIR$/flask_admin_learn/app/myview.py" />
         <option value="$PROJECT_DIR$/../Flask-AppBuilder/examples/quickhowto/run.py" />
@@ -146,16 +169,16 @@
         <option value="$PROJECT_DIR$/Flask-Admin-Dashboard-master/app.py" />
         <option value="$PROJECT_DIR$/hello_flask/hello.py" />
         <option value="$PROJECT_DIR$/hello_flask/requirements.txt" />
-        <option value="$PROJECT_DIR$/demo_flask/templates/ydacf.html" />
         <option value="$PROJECT_DIR$/demo_flask/app.py" />
         <option value="$PROJECT_DIR$/demo_flask/templates/datatables.html" />
+        <option value="$PROJECT_DIR$/demo_flask/templates/ydacf.html" />
+        <option value="$PROJECT_DIR$/demo_flask/static/css/select2.css" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="333" />
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1587" />
+    <option name="width" value="1920" />
     <option name="height" value="1057" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -196,7 +219,14 @@
               <item name="flask" type="b2602c69:ProjectViewProjectNode" />
               <item name="flask" type="462c0819:PsiDirectoryNode" />
               <item name="demo_flask" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flask" type="462c0819:PsiDirectoryNode" />
+              <item name="demo_flask" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -651,15 +681,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1057" extended-state="6" />
+    <frame x="0" y="23" width="1920" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4980695" visible="true" weight="0.17259692" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4980695" visible="true" weight="0.23579395" />
       <window_info id="Structure" order="1" sideWeight="0.5019305" side_tool="true" weight="0.24958263" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.28843337" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32563257" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49548388" visible="true" weight="0.44224423" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49548388" weight="0.44224423" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39933994" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -706,24 +736,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="add test case report in flask" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../python/decorator/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/request/lab_maintain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1696">
-          <caret line="111" column="49" lean-forward="true" selection-start-line="111" selection-start-column="49" selection-end-line="111" selection-end-column="49" />
-          <folding>
-            <element signature="e#195#210#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/work/utility/lun_utility.py" />
     <entry file="file://$PROJECT_DIR$/../python/sqlite/spe_djy_lab.sqlite">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -969,24 +981,41 @@
     <entry file="file://$PROJECT_DIR$/demo_flask/templates/ydacf_2.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/demo_flask/templates/datatables.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="763">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/demo_flask/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8576">
-          <caret line="412" column="40" lean-forward="true" selection-start-line="412" selection-start-column="40" selection-end-line="412" selection-end-column="40" />
+        <state relative-caret-position="9061">
+          <caret line="412" column="40" selection-start-line="412" selection-start-column="40" selection-end-line="412" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo_flask/templates/ydacf.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="11" column="89" lean-forward="true" selection-start-line="7" selection-end-line="21" selection-end-column="77" />
+        <state relative-caret-position="-1244">
+          <caret line="8" column="107" selection-start-line="8" selection-start-column="107" selection-end-line="8" selection-end-column="107" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo_flask/templates/datatables.html">
+    <entry file="file://$PROJECT_DIR$/demo_flask/static/js/dom_source_select2_example.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="967">
-          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+        <state relative-caret-position="-107" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo_flask/static/js/select2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1925" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo_flask/static/css/select2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="87" column="14" selection-start-line="87" selection-start-column="14" selection-end-line="87" selection-end-column="14" />
         </state>
       </provider>
     </entry>
