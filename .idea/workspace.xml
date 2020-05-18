@@ -1,186 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0bcf3f9e-e496-4782-b6d4-210e07e21ce2" name="Default Changelist" comment="add test case report in flask">
+    <list default="true" id="0bcf3f9e-e496-4782-b6d4-210e07e21ce2" name="Default Changelist" comment="add k8s-flask-mysql">
+      <change afterPath="$PROJECT_DIR$/../python/interview/dynamic_program/assign_apple.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/interview/dynamic_program/longest_valid_parenthese.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/interview/str/captial_letter_count.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/interview/str/collection_counter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/interview/str/fu_shu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/interview/str/print_module.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/interview/str/print_module_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/interview/str/product_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/interview/str/str_re.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/interview/str/test_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm10.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm100.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm11.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm12.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm13.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm14.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm15.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm16.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm17.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm18.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm19.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm20.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm21.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm22.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm23.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm24.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm25.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm26.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm27.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm28.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm29.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm30.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm31.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm32.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm33.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm34.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm35.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm36.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm37.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm38.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm39.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm40.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm41.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm42.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm43.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm44.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm45.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm46.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm47.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm48.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm49.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm50.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm51.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm52.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm53.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm54.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm55.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm56.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm57.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm58.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm59.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm6.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm60.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm61.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm62.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm63.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm64.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm65.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm66.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm67.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm68.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm69.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm7.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm70.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm71.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm72.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm73.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm74.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm75.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm76.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm77.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm78.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm79.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm8.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm80.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm81.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm82.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm83.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm84.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm85.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm86.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm87.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm88.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm89.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm9.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm90.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm91.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm92.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm93.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm94.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm95.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm96.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm97.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm98.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm99.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/log/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/log/concurrent_log/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/log/concurrent_log/src/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/log/logger/concurrent_log.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/log/logger/log.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/log/logger/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/solution_usecase/logs/log-2020-04-08_20_53_35.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/tu_share/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/utils/loguru_utility.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/utils/retry_utility.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/utils/test/test_loguru.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/utils/test/test_retry.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/flask.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flask.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_flask/static/css/select2.css" beforeDir="false" afterPath="$PROJECT_DIR$/demo_flask/static/css/select2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_flask/templates/ydacf.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo_flask/templates/ydacf.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/interview/dynamic_program/longest_number_in_str.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/interview/dynamic_program/longest_number_in_str.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/interview/str_huiwen.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/interview/str/str_huiwen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/interview/str_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/interview/str/str_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/interview/手机按键映射.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/interview/手机按键映射.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/log/myapp.log" beforeDir="false" afterPath="$PROJECT_DIR$/../python/log/myapp.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/singleton/singleton/mysingleton.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/singleton/singleton/mysingleton.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/singleton/singleton/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/singleton/singleton/test.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo_flask/app.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9061">
-              <caret line="412" column="40" selection-start-line="412" selection-start-column="40" selection-end-line="412" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo_flask/templates/ydacf.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1244">
-              <caret line="8" column="107" selection-start-line="8" selection-start-column="107" selection-end-line="8" selection-end-column="107" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo_flask/static/js/dom_source_select2_example.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-107" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo_flask/static/js/select2.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1925" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/demo_flask/static/css/select2.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="87" column="14" selection-start-line="87" selection-start-column="14" selection-end-line="87" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo_flask/templates/datatables.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="763">
-              <caret line="61" selection-start-line="61" selection-end-line="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>rig_name</find>
-      <find>json</find>
-      <find>getTestBedOrgChart</find>
-      <find>403</find>
-      <find>ips</find>
-      <find>IPAssignment</find>
-      <find>second</find>
-      <find>column_extra_row_actions</find>
-      <find>_get_err_msgs</find>
-      <find>BaseException</find>
-      <find>_get_ids</find>
-      <find>_Record</find>
-      <find>when_property</find>
-      <find>rig_names</find>
-      <find>Component</find>
-      <find>online</find>
-      <find>mail</find>
-      <find>orders</find>
-      <find>todo</find>
-      <find>MAIN</find>
-      <find>HOME</find>
-      <find>box</find>
-      <find>base</find>
-      <find>index</find>
-      <find>access_control</find>
-      <find>my</find>
-      <find>mul</find>
-      <find>MyAdminIndexView</find>
-      <find>static</find>
-      <find>example</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>lock</replace>
-      <replace>logging.info</replace>
-      <replace>del_node</replace>
-    </replaceStrings>
-    <dirStrings>
-      <dir>$PROJECT_DIR$/../python/sqlite</dir>
-    </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/hello-python-kubernetes" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/flask_admin_learn/app/app.py" />
-        <option value="$PROJECT_DIR$/flask_admin_learn/app/myview.py" />
-        <option value="$PROJECT_DIR$/../Flask-AppBuilder/examples/quickhowto/run.py" />
-        <option value="$PROJECT_DIR$/flask_admin_test/__init__.py" />
-        <option value="$PROJECT_DIR$/flask_admin_test/app/__init__.py" />
-        <option value="$PROJECT_DIR$/flask_admin_test/app/myapp.py" />
-        <option value="$PROJECT_DIR$/flask_admin/myapp.py" />
-        <option value="$PROJECT_DIR$/flask_admin/__init__.py" />
-        <option value="$PROJECT_DIR$/sqla/__init__.py" />
-        <option value="$PROJECT_DIR$/user_pet/app/app.py" />
-        <option value="$PROJECT_DIR$/user_pet/run.py" />
-        <option value="$PROJECT_DIR$/user_pet/app/__init__.py" />
-        <option value="$PROJECT_DIR$/user_pet/app/myapp.py" />
-        <option value="$PROJECT_DIR$/flask-appbuilder/app.py" />
-        <option value="$PROJECT_DIR$/../python/example/__init__.py" />
-        <option value="$PROJECT_DIR$/../python/example/my_test.py" />
-        <option value="$PROJECT_DIR$/flask_admin_s/__init__.py" />
-        <option value="$PROJECT_DIR$/flask_admin_s/model.py" />
-        <option value="$PROJECT_DIR$/flask_admin_s/app.py" />
-        <option value="$PROJECT_DIR$/flask_admin_s/app/__init__.py" />
-        <option value="$PROJECT_DIR$/flask_admin_s/app/model.py" />
-        <option value="$PROJECT_DIR$/flask_admin_s/app/views.py" />
-        <option value="$PROJECT_DIR$/dm_lab_with_flask_admin/app/templates/rig.html" />
-        <option value="$PROJECT_DIR$/dm_lab_with_flask_admin/app/templates/index.html" />
-        <option value="$PROJECT_DIR$/sqla/app.py" />
-        <option value="$PROJECT_DIR$/dm_lab_with_flask_admin/app/templates/testset.html" />
-        <option value="$PROJECT_DIR$/dm_lab_with_flask_admin/prepare_db.py" />
-        <option value="$PROJECT_DIR$/dm_lab_with_flask_admin/app/view.py" />
-        <option value="$PROJECT_DIR$/dm_lab_with_flask_admin/app/__init__.py" />
-        <option value="$PROJECT_DIR$/dm_lab_with_flask_admin/app/model.py" />
-        <option value="$PROJECT_DIR$/../python/leetcode/2_sum.py" />
-        <option value="$PROJECT_DIR$/../python/request/rig.py" />
-        <option value="$PROJECT_DIR$/../python/request/lab_maintain.py" />
-        <option value="$PROJECT_DIR$/dm_lab_with_flask_admin/app.py" />
-        <option value="$PROJECT_DIR$/../python/sqlite/sqlite_db_spe_djy.py" />
-        <option value="$PROJECT_DIR$/../python/request/sqlite_db_spe_djy.py" />
-        <option value="$PROJECT_DIR$/../python/work/__init__.py" />
-        <option value="$PROJECT_DIR$/../python/work/lab_maintain.py" />
-        <option value="$PROJECT_DIR$/../python/sqlite/sqlite.py" />
-        <option value="$PROJECT_DIR$/../python/work/sqlite_db_spe_djy.py" />
-        <option value="$PROJECT_DIR$/flask_report/templates/Condor_overall_status.html" />
-        <option value="$PROJECT_DIR$/flask_report/app.py" />
-        <option value="$PROJECT_DIR$/flask_report/templates/dt.html" />
-        <option value="$PROJECT_DIR$/Flask-Admin-Dashboard-master/templates/admin/index.html" />
-        <option value="$PROJECT_DIR$/Flask-Admin-Dashboard-master/app.py" />
-        <option value="$PROJECT_DIR$/hello_flask/hello.py" />
-        <option value="$PROJECT_DIR$/hello_flask/requirements.txt" />
-        <option value="$PROJECT_DIR$/demo_flask/app.py" />
-        <option value="$PROJECT_DIR$/demo_flask/templates/datatables.html" />
-        <option value="$PROJECT_DIR$/demo_flask/templates/ydacf.html" />
-        <option value="$PROJECT_DIR$/demo_flask/static/css/select2.css" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1920" />
-    <option name="height" value="1057" />
-  </component>
+  <component name="ProjectId" id="1ZIuxpyHRtGjUhFQ0MxdjeiaOQv" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state>
@@ -198,77 +169,32 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="flask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flask" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flask" type="462c0819:PsiDirectoryNode" />
-              <item name="demo_flask" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flask" type="462c0819:PsiDirectoryNode" />
-              <item name="demo_flask" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flask" type="462c0819:PsiDirectoryNode" />
-              <item name="demo_flask" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/flask_redis_kubernetes/kubernetes" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/demo_flask/static" />
-      <recent name="$PROJECT_DIR$/demo_flask/templates" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/../python/work" />
-      <recent name="$PROJECT_DIR$/../python/sqlite" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/flask_docker_compose" />
       <recent name="$PROJECT_DIR$/../python/sqlite" />
       <recent name="$PROJECT_DIR$/../python/request" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/flask_admin_s/app" />
-      <recent name="$PROJECT_DIR$/user_pet" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/flask_redis_kubernetes/kubernetes" />
+      <recent name="$PROJECT_DIR$/flask_redis_kubernetes" />
+      <recent name="$PROJECT_DIR$/flask_docker_compose_extend/app" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/flask_docker_compose" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Python.app (3)">
+  <component name="RunManager" selected="Python.main (1)">
     <configuration name="app (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="flask" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -277,11 +203,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Flask-Admin-Dashboard-master" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flask_docker_compose" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Flask-Admin-Dashboard-master/app.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask_docker_compose/app.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -298,11 +224,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flask-appbuilder" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_flask" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask-appbuilder/app.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_flask/app.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -311,7 +237,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="app (3)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="flask" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -319,11 +245,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/demo_flask" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/hello-python-kubernetes/app" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo_flask/app.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hello-python-kubernetes/app/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -332,7 +258,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="flask" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -340,11 +266,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flask_report" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flask_docker/app" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask_report/app.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask_docker/app/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -353,7 +279,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="hello" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="main_1_bak" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="flask" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -361,11 +287,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/hello_flask" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flask_redis_kubernetes" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hello_flask/hello.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask_redis_kubernetes/main_1_bak.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -376,18 +302,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.app (1)" />
-      <item itemvalue="Python.app" />
       <item itemvalue="Python.app (2)" />
-      <item itemvalue="Python.hello" />
-      <item itemvalue="Python.app (3)" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.main_1_bak" />
+      <item itemvalue="Python.main (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.app (3)" />
+        <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.main_1_bak" />
         <item itemvalue="Python.app (1)" />
-        <item itemvalue="Python.hello" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.app (2)" />
-        <item itemvalue="Python.app" />
       </list>
     </recent_temporary>
   </component>
@@ -668,7 +594,21 @@
       <option name="project" value="LOCAL" />
       <updated>1562114797021</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="add docker-k8s-flask">
+      <created>1589809267935</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1589809267935</updated>
+    </task>
+    <task id="LOCAL-00040" summary="add k8s-flask-mysql">
+      <created>1589809781094</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1589809781094</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TodoView">
@@ -680,36 +620,11 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1057" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4980695" visible="true" weight="0.23579395" />
-      <window_info id="Structure" order="1" sideWeight="0.5019305" side_tool="true" weight="0.24958263" />
-      <window_info id="Favorites" order="2" side_tool="true" weight="0.28843337" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32563257" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49548388" weight="0.44224423" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39933994" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32816538" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4996115" weight="0.32632464" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32893288" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5045161" side_tool="true" weight="0.23652366" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-  </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.js" />
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="single thread CRUD for table" />
-    <MESSAGE value="enhance single thread CRUD for table for delete/update show info[0]" />
     <MESSAGE value="added confirm before delete" />
     <MESSAGE value="Add sqlite db in flask" />
     <MESSAGE value="enhance sqlite db in flask for threading" />
@@ -733,292 +648,43 @@
     <MESSAGE value="remove the additional files" />
     <MESSAGE value="automatic update lab management tool" />
     <MESSAGE value="add test case report in flask" />
-    <option name="LAST_COMMIT_MESSAGE" value="add test case report in flask" />
+    <MESSAGE value="add docker-k8s-flask" />
+    <MESSAGE value="add k8s-flask-mysql" />
+    <option name="LAST_COMMIT_MESSAGE" value="add k8s-flask-mysql" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../python/sqlite/spe_djy_lab.sqlite">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/work/spe_djy_lab.sqlite">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/sqlite/sqlite_db_spe_djy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/work/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/../python/test_device_rest/TestDevice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6486">
-          <caret line="288" column="22" selection-start-line="288" selection-start-column="13" selection-end-line="288" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/work/sqlite_db_spe_djy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="73" column="40" selection-start-line="73" selection-start-column="40" selection-end-line="73" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flask_report/resource/data_2.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="289" selection-start-column="277" selection-end-column="289" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lab_Report_Redis/app/templates/data_excel.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-335" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LabManagement_v4/app/templates/Manage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-370" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LabManagement_v4/app/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-815" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LabManagement_v4/app/templates/data.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flask_report/templates/Condor_overall_status.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="90" selection-start-line="3" selection-start-column="90" selection-end-line="3" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/work/lab_maintain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2208">
-          <caret line="98" column="15" selection-start-line="98" selection-start-column="15" selection-end-line="98" selection-end-column="15" />
-          <folding>
-            <element signature="e#195#210#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flask_report/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Flask-Admin-Dashboard-master/flask_admin">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Flask-Admin-Dashboard-master/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-304" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Flask-Admin-Dashboard-master/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Flask-Admin-Dashboard-master/templates/security/_macros.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Flask-Admin-Dashboard-master/templates/admin/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10626">
-          <caret line="462" column="26" selection-start-line="462" selection-start-column="26" selection-end-line="462" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dm_lab_with_flask_admin/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/venv/lib/python3.7/site-packages/flask_admin/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10281">
-          <caret line="458" column="8" selection-start-line="458" selection-start-column="8" selection-end-line="458" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dm_lab_with_flask_admin/app/view.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1242">
-          <caret line="64" column="22" selection-start-line="64" selection-start-column="6" selection-end-line="64" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flask-appbuilder/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dm_lab_with_flask_admin/app/templates/my_master.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dm_lab_with_flask_admin/app/templates/admin/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Flask-Admin-Dashboard-master/templates/admin/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10396">
-          <caret line="452" column="11" selection-start-line="452" selection-start-column="11" selection-end-line="452" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hello_flask/hello.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="36" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="38" />
-          <folding>
-            <element signature="e#188#197#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/framework/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="33" column="39" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Flask-Admin-Dashboard-master/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2300">
-          <caret line="109" column="8" selection-start-line="109" selection-start-column="8" selection-end-line="109" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hello_flask/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flask_admin_s/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="20" column="4" selection-start-line="20" selection-end-line="21" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo_flask/templates/custom_search.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flask_report/templates/bg.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flask_report/templates/row_details.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1081">
-          <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Flask-Admin-Dashboard-master/templates/my_master.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="31" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Flask-Admin-Dashboard-master/templates/admin/custom_index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/sqlite/sqlite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="29" selection-start-line="21" selection-start-column="3" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python/sqlite/test.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flask_report/templates/dt.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="789">
-          <caret line="104" column="4" selection-start-line="41" selection-end-line="104" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo_flask/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo_flask/static/css/main.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo_flask/static/js/shCore.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/app/templates/ajax_loading.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-258" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/app/templates/datatable.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="7" lean-forward="true" selection-end-line="556" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo_flask/templates/ydacf_2.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo_flask/templates/datatables.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="763">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo_flask/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9061">
-          <caret line="412" column="40" selection-start-line="412" selection-start-column="40" selection-end-line="412" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo_flask/templates/ydacf.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1244">
-          <caret line="8" column="107" selection-start-line="8" selection-start-column="107" selection-end-line="8" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo_flask/static/js/dom_source_select2_example.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-107" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo_flask/static/js/select2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1925" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo_flask/static/css/select2.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="87" column="14" selection-start-line="87" selection-start-column="14" selection-end-line="87" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
+  <component name="WindowStateProjectService">
+    <state x="324" y="23" key="CommitChangelistDialog2" timestamp="1589809780812">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="324" y="23" key="CommitChangelistDialog2/0.23.1920.1057@0.23.1920.1057" timestamp="1589809780812" />
+    <state width="930" height="352" key="GridCell.Tab.0.bottom" timestamp="1589809740024">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="930" height="352" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1589809740024" />
+    <state width="930" height="352" key="GridCell.Tab.0.center" timestamp="1589809740023">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="930" height="352" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1589809740023" />
+    <state width="930" height="352" key="GridCell.Tab.0.left" timestamp="1589809740022">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="930" height="352" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1589809740022" />
+    <state width="930" height="352" key="GridCell.Tab.0.right" timestamp="1589809740023">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="930" height="352" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1589809740023" />
+    <state x="118" y="23" key="SettingsEditor" timestamp="1589807811247">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="118" y="23" key="SettingsEditor/0.23.1920.1057@0.23.1920.1057" timestamp="1589807811247" />
+    <state x="260" y="104" key="Vcs.Push.Dialog.v2" timestamp="1589809791839">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="260" y="104" key="Vcs.Push.Dialog.v2/0.23.1920.1057@0.23.1920.1057" timestamp="1589809791839" />
+    <state x="903" y="23" width="1173" height="1972" key="search.everywhere.popup" timestamp="1589723486972">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="903" y="23" width="1173" height="1972" key="search.everywhere.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1589723486972" />
   </component>
   <component name="masterDetails">
     <states>
