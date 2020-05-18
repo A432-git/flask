@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Yet Another DataTables Column Filter (yadcf) Showcase</title>
+
+    <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://cdn.bootcss.com/datatables/1.10.19/css/jquery.dataTables_themeroller.css" rel="stylesheet" type="text/css"></link>
+	<link href="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.css" rel="stylesheet" type="text/css" />
+	<link href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css" rel="stylesheet" type="text/css" />
+	<link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" type="text/css" />
+
+	    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+<script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+	<script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.js"></script>
+
+<style>
+     thead, th {text-align: left;}
+</style>
+
+	<!--<script type="text/javascript" src="{{ url_for('static', filename='js/ajax_source_example.js' )}}"></script>-->
+	<script type="text/javascript" src="{{ url_for('static', filename='js/fnReloadAjax.js' )}}"></script>
+
+	<script>
+	$(document).ready(function () {
+	'use strict';
+
+	oTable = $('#entrys_table').dataTable({
+        "ajax": '/ajax/get_dm_array',
+    })
+});
+
+	</script>
+  </head>
+
+  <body>
+
+
+
+  	<div class="container_wrapper">
+
+  		<div class="container">
+
+	  		<div id="entrys_table_manual_wrapper">
+				<table cellpadding="0" cellspacing="0" border="0" class="display responsive nowrap" id="entrys_table" width="100%">
+					<thead>
+						<tr>
+							<th>Name</th>
+			                <th>ID</th>
+			                <th>CSIP</th>
+			                <th>Model</th>
+			                <th>Image</th>
+			                <th>Tags</th>
+			                <th>Encryptionstatus</th>
+			                <th>Exempt</th>
+			                <th>Totalcapacity</th>
+			                <th>Diskcount</th>
+			                <th>Bounddiskcount</th>
+			                <th>Reserved_for</th>
+			                <th>Responsiblemanager</th>
+			                <th>Reservation_dateends</th>
+						</tr>
+					</thead>
+					<tfoot>
+			            <tr>
+			                <th>Name</th>
+			                <th>ID</th>
+			                <th>CSIP</th>
+			                <th>Model</th>
+                            <th>Image</th>
+			                <th>Tags</th>
+			                <th>Encryptionstatus</th>
+			                <th>Exempt</th>
+			                <th>Totalcapacity</th>
+			                <th>Diskcount</th>
+			                <th>Bounddiskcount</th>
+			                <th>Reserved_for</th>
+			                <th>Responsiblemanager</th>
+			                <th>Reservation_dateends</th>
+			            </tr>
+			        </tfoot>
+				</table>
+			</div>
+		</div>
+	</div>
+
+
+
+  </body>
+</html>

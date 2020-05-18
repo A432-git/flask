@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: flasktest
+  name: flasktest
+spec:
+  selector:
+    matchLabels:
+      app: flasktest
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: flasktest
+    spec:
+      containers:
+      - image: flaskk8s:v2
+        name: flaskweb
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5001

@@ -1,0 +1,155 @@
+
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>强大的响应式jQuery消息通知框和信息提示框插件|DEMO_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/demo.css') }}"/>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/default.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/Lobibox.min.css') }}"/>
+	<!--[if IE]>
+		<script src="http://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="htmleaf-container">
+		<header class="htmleaf-header">
+			<h1>强大的响应式jQuery消息通知框和信息提示框插件 <span>A Responsive jQuery notification plugin</span></h1>
+			<div class="htmleaf-links">
+				<a class="htmleaf-icon icon-htmleaf-home-outline" href="http://www.htmleaf.com/" title="jQuery之家" target="_blank"><span> jQuery之家</span></a>
+				<a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" href="http://www.htmleaf.com/jQuery/Lightbox-Dialog/201506011947.html" title="返回下载页" target="_blank"><span> 返回下载页</span></a>
+			</div>
+		</header>
+		<div class="htmleaf-content bgcolor-3">
+
+		<div class="container-fluid">
+            <div class="container-content">
+
+                <!--Notifications-->
+                <div id="notifications">
+                    <!--Examples-->
+                    <div id="lobibox-notification-examples">
+                        <h3>Examples</h3>
+                        <!--Basic notifications-->
+                        <fieldset>
+                            <legend>Basic notifications <small class="text-muted"><small>Can be closed by clicking on it</small></small></legend>
+                            <div class="bs-example">
+                                <button id="basicInfo" class="btn btn-info">Info</button>
+                                <button id="basicWarning" class="btn btn-warning">Warning</button>
+                                <button id="basicError" class="btn btn-danger">Error</button>
+                                <button id="basicSuccess" class="btn btn-success">Success</button>
+                            </div>
+                        </fieldset>
+                        <!--With image-->
+                        <fieldset>
+                            <legend>With image</legend>
+                            <div class="bs-example">
+                                <button id="basicInfoImage" class="btn btn-info">Info</button>
+                                <button id="basicWarningImage" class="btn btn-warning">Warning</button>
+                                <button id="basicErrorImage" class="btn btn-danger">Error</button>
+                                <button id="basicSuccessImage" class="btn btn-success">Success</button>
+                            </div>
+                        </fieldset>
+                        <!--Disable sound-->
+                        <fieldset>
+                            <legend>Disable sound</legend>
+                            <div class="bs-example">
+                                <button id="basicInfoNoSound" class="btn btn-info">Info</button>
+                                <button id="basicWarningNoSound" class="btn btn-warning">Warning</button>
+                                <button id="basicErrorNoSound" class="btn btn-danger">Error</button>
+                                <button id="basicSuccessNoSound" class="btn btn-success">Success</button>
+                            </div>
+                        </fieldset>
+                        <!--Custom title-->
+                        <fieldset>
+                            <legend>Custom title</legend>
+                            <div class="bs-example">
+                                <button id="basicInfoCustomTitle" class="btn btn-info">Info</button>
+                                <button id="basicWarningCustomTitle" class="btn btn-warning">Warning</button>
+                                <button id="basicErrorCustomTitle" class="btn btn-danger">Error</button>
+                                <button id="basicSuccessCustomTitle" class="btn btn-success">Success</button>
+                            </div>
+                        </fieldset>
+                        <!--Without icon and image-->
+                        <fieldset>
+                            <legend>Without icon and image</legend>
+                            <div class="bs-example">
+                                <button id="basicInfoNoIcon" class="btn btn-info">Info</button>
+                                <button id="basicWarningNoIcon" class="btn btn-warning">Warning</button>
+                                <button id="basicErrorNoIcon" class="btn btn-danger">Error</button>
+                                <button id="basicSuccessNoIcon" class="btn btn-success">Success</button>
+                            </div>
+                        </fieldset>
+                        <!--Increase delay time-->
+                        <fieldset>
+                            <legend>Increase delay time</legend>
+                            <div class="bs-example">
+                                <button id="basicInfoCustomDelay" class="btn btn-info">Info</button>
+                                <button id="basicWarningCustomDelay" class="btn btn-warning">Warning</button>
+                                <button id="basicErrorCustomDelay" class="btn btn-danger">Error</button>
+                                <button id="basicSuccessCustomDelay" class="btn btn-success">Success</button>
+                            </div>
+                        </fieldset>
+                        <!--Sticky-->
+                        <fieldset>
+                            <legend>Sticky (without delay)</legend>
+                            <div class="bs-example">
+                                <button id="basicInfoNoDelay" class="btn btn-info">Info</button>
+                                <button id="basicWarningNoDelay" class="btn btn-warning">Warning</button>
+                                <button id="basicErrorNoDelay" class="btn btn-danger">Error</button>
+                                <button id="basicSuccessNoDelay" class="btn btn-success">Success</button>
+                            </div>
+                        </fieldset>
+
+
+                        <!--Change Animation-->
+
+                        <h2>Large Notifications</h2>
+                        <!--Basic examples-->
+                        <fieldset>
+                            <p>Large notifications</p>
+                            <ul>
+                                <li>are sticky</li>
+                                <li>can be closed only by clicking close button</li>
+                                <li>does not have delay</li>
+                                <li>are larger in width</li>
+                            </ul>
+                            <div class="bs-example">
+                                <button id="largeInfoBasic" class="btn btn-info">Info</button>
+                                <button id="largeWarningBasic" class="btn btn-warning">Warning</button>
+                                <button id="largeErrorBasic" class="btn btn-danger">Error</button>
+                                <button id="largeSuccessBasic" class="btn btn-success">Success</button>
+                            </div>
+                        </fieldset>
+
+
+
+                        <h2>Mini notifications</h2>
+                        <p>For mini notifications icon and image is shown on small size and title is disabled by default. Although you can enable it by giving <code>title</code> parameter when initializing.</p>
+                        <!--Basic example-->
+                        <fieldset>
+                            <div class="bs-example">
+                                <button id="miniInfoAnimation" class="btn btn-info">Info</button>
+                                <button id="miniWarningAnimation" class="btn btn-warning">Warning</button>
+                                <button id="miniErrorAnimation" class="btn btn-danger">Error</button>
+                                <button id="miniSuccessAnimation" class="btn btn-success">Success</button>
+                            </div>
+                        </fieldset>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/lobibox.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/demo.js') }}"></script>
+</body>
+</html>
