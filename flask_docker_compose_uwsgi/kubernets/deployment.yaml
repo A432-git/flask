@@ -1,0 +1,27 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask_reids_kubernetes
+spec:
+  selector:
+    matchLabels:
+      app: flask_reids_kubernetes
+      app: redis
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: flask_reids_kubernetes
+    spec:
+      containers:
+      - name: flask_reids_kubernetes
+        image: flask_docker_compose_uwsgi_web:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5000
+      - name: redis
+          image: redis:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 6379
