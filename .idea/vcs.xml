@@ -9,6 +9,7 @@
     <mapping directory="$PROJECT_DIR$/hello-python" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/hello-python-kubernetes" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/k8s-flask-mysql" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../k8s" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../python" vcs="Git" />
   </component>
 </project>

@@ -1,142 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:pip" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:pip" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:hello_flask" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="0bcf3f9e-e496-4782-b6d4-210e07e21ce2" name="Default Changelist" comment="add k8s-flask-mysql">
-      <change afterPath="$PROJECT_DIR$/../python/interview/dynamic_program/assign_apple.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/interview/dynamic_program/longest_valid_parenthese.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/interview/str/captial_letter_count.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/interview/str/collection_counter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/interview/str/fu_shu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/interview/str/print_module.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/interview/str/print_module_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/interview/str/product_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/interview/str/str_re.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/interview/str/test_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm10.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm100.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm11.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm12.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm13.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm14.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm15.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm16.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm17.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm18.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm19.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm20.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm21.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm22.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm23.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm24.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm25.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm26.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm27.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm28.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm29.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm30.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm31.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm32.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm33.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm34.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm35.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm36.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm37.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm38.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm39.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm40.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm41.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm42.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm43.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm44.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm45.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm46.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm47.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm48.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm49.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm5.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm50.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm51.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm52.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm53.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm54.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm55.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm56.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm57.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm58.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm59.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm6.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm60.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm61.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm62.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm63.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm64.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm65.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm66.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm67.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm68.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm69.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm7.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm70.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm71.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm72.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm73.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm74.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm75.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm76.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm77.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm78.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm79.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm8.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm80.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm81.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm82.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm83.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm84.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm85.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm86.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm87.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm88.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm89.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm9.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm90.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm91.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm92.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm93.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm94.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm95.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm96.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm97.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm98.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/jinja2/output/bm99.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/log/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/log/concurrent_log/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/log/concurrent_log/src/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/log/logger/concurrent_log.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/log/logger/log.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/log/logger/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/solution_usecase/logs/log-2020-04-08_20_53_35.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/tu_share/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/utils/loguru_utility.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/utils/retry_utility.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/utils/test/test_loguru.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/utils/test/test_retry.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-python-kubernetes/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/hello-python-k8s/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-python-kubernetes/app/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/hello-python-k8s/app/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-python-kubernetes/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/hello-python-k8s/app/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-python-kubernetes/app/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hello-python-k8s/app/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-python-kubernetes/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/hello-python-k8s/docker/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-python-kubernetes/kubernetes/deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/hello-python-k8s/kubernetes/deployment.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/interview/dynamic_program/longest_number_in_str.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/interview/dynamic_program/longest_number_in_str.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/interview/str_huiwen.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/interview/str/str_huiwen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/interview/str_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/interview/str/str_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/interview/手机按键映射.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/interview/手机按键映射.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/log/myapp.log" beforeDir="false" afterPath="$PROJECT_DIR$/../python/log/myapp.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/singleton/singleton/mysingleton.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/singleton/singleton/mysingleton.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/singleton/singleton/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/singleton/singleton/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_cmcc_2/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_cmcc_2/app/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_cmcc_2/app/model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_cmcc_2/app/sample_db.sqlite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_cmcc_2/app/static/test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_cmcc_2/app/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_cmcc_2/app/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/page_mode_test/test_selenium.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/py_test/test_class_fixture.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/py_test/test_fixture_true.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/py_test/test_mul_objects.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/py_test/test_parameter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/py_test/test_suite.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/re_test/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/selenium/t_cmcc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/str_test/str_replcase.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/tmp/test_list_dict.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/tmp/txt.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/utils/test/test_log.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/flask.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flask.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dm_lab_with_flask_admin/data/spe_djy_lab.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/dm_lab_with_flask_admin/data/spe_djy_lab.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_admin_simple/myapp.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_admin_simple/myapp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_admin_simple/sample_db.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/flask_admin_simple/sample_db.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_admin_simple/static/t1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_docker_compose_uwsgi/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_docker_compose_uwsgi/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_docker_compose_uwsgi/kubernets/deployment.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sqla/sample_db.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/sqla/sample_db.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../k8s/.idea/k8s.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../k8s/.idea/k8s.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../k8s/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../k8s/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../k8s/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../k8s/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../k8s/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../k8s/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/README_en.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/getLatestIstio.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/images.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/images/about.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/images/k8s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/images/k8s_credentials.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/images/k8s_win.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/images/mirror.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/images/mirror_win.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/images/resource.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/images/resource_win.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/kubernetes-dashboard.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/load_images.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/load_images.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/sample/apple.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/sample/banana.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/sample/ingress.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/.idea/python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../python/.idea/python.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/for.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/for.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/itchat/itchat.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/../python/itchat/itchat.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/itchat/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/itchat/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/py_test/test_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/py_test/test_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/py_test/test_exception.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/py_test/test_exception.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/selenium/t_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/selenium/t_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/tu_share/stock_in_db/StockCollection.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/tu_share/stock_in_db/StockCollection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/tu_share/stock_in_db/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/tu_share/stock_in_db/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/utils/log_utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/utils/log_utility.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/utils/loguru_utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/utils/loguru_utility.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/utils/retry_utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/utils/retry_utility.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/utils/test/test_loguru.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/utils/test/test_loguru.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/utils/test/test_retry.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/utils/test/test_retry.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +128,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/hello-python-kubernetes" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../python" />
   </component>
   <component name="ProjectId" id="1ZIuxpyHRtGjUhFQ0MxdjeiaOQv" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -178,48 +154,28 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/flask_redis_kubernetes/kubernetes" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/cmcc_example/templates" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cmcc_example/templates" />
+      <recent name="$PROJECT_DIR$/cmcc_example/static" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/flask_redis_kubernetes/kubernetes" />
+      <recent name="$PROJECT_DIR$/flask_redis_kubernetes" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/flask_cmcc" />
+      <recent name="$PROJECT_DIR$/cmcc_example/static/js" />
       <recent name="$PROJECT_DIR$/flask_docker_compose" />
       <recent name="$PROJECT_DIR$/../python/sqlite" />
       <recent name="$PROJECT_DIR$/../python/request" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/flask_admin_s/app" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/flask_redis_kubernetes/kubernetes" />
-      <recent name="$PROJECT_DIR$/flask_redis_kubernetes" />
-      <recent name="$PROJECT_DIR$/flask_docker_compose_extend/app" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/flask_docker_compose" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main (1)">
-    <configuration name="app (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="flask" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flask_docker_compose" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask_docker_compose/app.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="app (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.multi-part">
+    <configuration name="app (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="flask" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -240,7 +196,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="flask" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -248,11 +204,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/hello-python-kubernetes/app" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flask_cmcc" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hello-python-kubernetes/app/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask_cmcc/app.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -261,7 +217,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="app_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="flask" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -269,11 +225,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flask_docker/app" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flask_cmcc" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask_docker/app/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask_cmcc/app_2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -282,19 +238,40 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main_1_bak" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="flask" />
+    <configuration name="multi-part" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flask_redis_kubernetes" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../python/request" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask_redis_kubernetes/main_1_bak.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../python/request/multi-part.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="request_flask" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../python/request" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask_cmcc/request_flask.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -304,22 +281,23 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.app" />
+      <item itemvalue="Python.app_2" />
+      <item itemvalue="Python.request_flask" />
       <item itemvalue="Python.app (1)" />
-      <item itemvalue="Python.app (2)" />
-      <item itemvalue="Python.main" />
-      <item itemvalue="Python.main_1_bak" />
-      <item itemvalue="Python.main (1)" />
+      <item itemvalue="Python.multi-part" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main (1)" />
-        <item itemvalue="Python.main_1_bak" />
+        <item itemvalue="Python.multi-part" />
+        <item itemvalue="Python.request_flask" />
+        <item itemvalue="Python.app_2" />
+        <item itemvalue="Python.app" />
         <item itemvalue="Python.app (1)" />
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.app (2)" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -615,8 +593,21 @@
     <servers />
   </component>
   <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="docker-compose.yml" />
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.js" />
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added confirm before delete" />
@@ -647,38 +638,34 @@
     <option name="LAST_COMMIT_MESSAGE" value="add k8s-flask-mysql" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="324" y="23" key="CommitChangelistDialog2" timestamp="1589809780812">
+    <state x="642" y="360" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601630697438">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="324" y="23" key="CommitChangelistDialog2/0.23.1920.1057@0.23.1920.1057" timestamp="1589809780812" />
-    <state width="930" height="352" key="GridCell.Tab.0.bottom" timestamp="1589809740024">
+    <state x="642" y="360" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1920.1057@0.23.1920.1057" timestamp="1601630697438" />
+    <state width="1899" height="290" key="GridCell.Tab.0.bottom" timestamp="1608734311279">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="930" height="352" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1589809740024" />
-    <state width="930" height="352" key="GridCell.Tab.0.center" timestamp="1589809740023">
+    <state width="1899" height="290" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1608734311279" />
+    <state width="1899" height="290" key="GridCell.Tab.0.center" timestamp="1608734311279">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="930" height="352" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1589809740023" />
-    <state width="930" height="352" key="GridCell.Tab.0.left" timestamp="1589809740022">
+    <state width="1899" height="290" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1608734311279" />
+    <state width="1899" height="290" key="GridCell.Tab.0.left" timestamp="1608734311278">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="930" height="352" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1589809740022" />
-    <state width="930" height="352" key="GridCell.Tab.0.right" timestamp="1589809740023">
+    <state width="1899" height="290" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1608734311278" />
+    <state width="1899" height="290" key="GridCell.Tab.0.right" timestamp="1608734311279">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="930" height="352" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1589809740023" />
-    <state x="118" y="23" key="SettingsEditor" timestamp="1589807811247">
+    <state width="1899" height="290" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1608734311279" />
+    <state x="856" y="199" key="SettingsEditor" timestamp="1606393120454">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="118" y="23" key="SettingsEditor/0.23.1920.1057@0.23.1920.1057" timestamp="1589807811247" />
-    <state x="260" y="104" key="Vcs.Push.Dialog.v2" timestamp="1589809791839">
+    <state x="856" y="199" key="SettingsEditor/0.23.1920.1057@0.23.1920.1057" timestamp="1606393120454" />
+    <state x="944" y="261" width="670" height="676" key="search.everywhere.popup" timestamp="1602515756091">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="260" y="104" key="Vcs.Push.Dialog.v2/0.23.1920.1057@0.23.1920.1057" timestamp="1589809791839" />
-    <state x="903" y="23" width="1173" height="1972" key="search.everywhere.popup" timestamp="1589723486972">
-      <screen x="0" y="23" width="1920" height="1057" />
-    </state>
-    <state x="903" y="23" width="1173" height="1972" key="search.everywhere.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1589723486972" />
+    <state x="944" y="261" width="670" height="676" key="search.everywhere.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1602515756091" />
   </component>
   <component name="masterDetails">
     <states>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Case Status</title>
+    <link rel="shortcut icon" type="image/ico" href="http://www.datatables.net/favicon.ico">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" type="text/css" />
+	<style type="text/css" class="init">
+       td.details-control {
+            background:  url({{ url_for('static', filename='details_open.png') }}) no-repeat center center;
+            cursor: pointer;
+        }
+        tr.shown td.details-control {
+            background: url({{ url_for('static', filename='details_close.png') }}) no-repeat center center;
+        }
+
+    </style>
+
+</head>
+<body>
+<script>
+    /* Formatting function for row details - modify as you need */
+function format ( d ) {
+    // `d` is the original data object for the row
+    var content = '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:120px;">'+'replace_str_future'+
+    '</table>';
+    text = "";
+    for (i = 0; i < d.cycles.length; i++) {
+        text += '<tr>'+
+            '<td><b>'+d.cycles[i].name+'</b></td>'+
+            '<td>'+d.cycles[i].result+'</td>'+
+        '</tr>';
+        }
+    var updated_content = content.replace("replace_str_future", text);
+    return updated_content;
+}
+
+$(document).ready(function() {
+    var table = $('#example').DataTable( {
+        "ajax": "/ajax/get_tc_status",
+        "columns": [
+            {
+                "className":      'details-control',
+                "orderable":      false,
+                "data":           null,
+                "defaultContent": ''
+            },
+            { "data": "Test_Name"},
+            { "data": "Result" ,
+            "render": function (data, type, row, meta) {
+                        var passed_count = row.Populated - row.Failed;
+                        return data = data + "("+passed_count + '/'+row.Populated +')';
+                    }
+            },
+            { "data": "Failed",
+            "title":"Failed Count"
+            },
+            { "data": "Tags" },
+            { "data": "Linked AR" },
+            { "data": "Open AR" },
+            { "data": "TBV in PIE" },
+            { "data": "Last Run" }
+        ],
+        "columnDefs": [ {
+            "targets": 1,
+            "createdCell": function (td, cellData, rowData, row, col) {
+            <!--No Run-->
+              if (rowData.Result != 'Passed' && rowData.Result != 'Failed') {
+                $(td).css('background-color', 'grey');
+              }
+              <!--all pass-->
+              else if ( rowData.Failed == 0 ) {
+                $(td).css('background-color', '#00FF00')
+              }
+              <!--all fail-->
+              else if ( rowData.Failed == rowData.Populated ) {
+                $(td).css('background-color', 'red')
+              }
+              <!--part pass finally-->
+              else if (rowData.Result == 'Passed') {
+                $(td).css('background-color', '#33FF99')
+              }
+              <!--become failed-->
+              else if (rowData.Result == 'Failed' && rowData.Become_Failed == 1) {
+                $(td).css('background-color', 'yellow')
+              }
+              <!---->
+              else if(rowData.Result == 'Failed' && rowData.Become_Failed == 0){
+                $(td).css('background-color', 'pink')
+              }
+              <!--else if(rowData.Result != 'Passed' && rowData.Failed == 0){-->
+                <!--$(td).css('background-color', 'grey')-->
+              <!--}-->
+            }
+          } ],
+
+        "order": [[2, 'asc']]
+    } );
+
+    // Add event listener for opening and closing details
+    $('#example tbody').on('click', 'td.details-control', function () {
+        var tr = $(this).closest('tr');
+        var row = table.row( tr );
+
+        if ( row.child.isShown() ) {
+            // This row is already open - close it
+            row.child.hide();
+            tr.removeClass('shown');
+        }
+        else {
+            // Open this row
+            row.child( format(row.data()) ).show();
+            tr.addClass('shown');
+        }
+    } );
+} );
+</script>
+  	<div class="container_wrapper">
+
+  		<div class="container">
+
+	  		<div id="entrys_table_manual_wrapper">
+<table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Test_Name</th>
+                <th>Result</th>
+                <th>Failed</th>
+                <th>Tags</th>
+                <th>Linked AR</th>
+                <th>Open AR</th>
+                <th>TBV in PIE</th>
+                <th>Last Run</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th></th>
+                <th>Test_Name</th>
+                <th>Result</th>
+                <th>Failed</th>
+                <th>Tags</th>
+                <th>Linked AR</th>
+                <th>Open AR</th>
+                <th>TBV in PIE</th>
+                <th>Last Run</th>
+            </tr>
+        </tfoot>
+    </table>
+    </div>
+        </div>
+    </div>
+
+</body>
+</html>

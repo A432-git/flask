@@ -9,7 +9,7 @@ from flask_admin import Admin
 from myview import MyView
 from flask_sqlalchemy import SQLAlchemy
 from flask_admin.contrib.sqla import ModelView
-from flask.ext.admin.contrib.fileadmin import FileAdmin
+from flask_admin.contrib.fileadmin import FileAdmin
 import os.path as op
 from flask_admin.contrib import sqla
 from flask_admin.contrib.sqla.filters import FilterEqual
