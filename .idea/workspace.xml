@@ -43,76 +43,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bcf3f9e-e496-4782-b6d4-210e07e21ce2" name="Default Changelist" comment="add k8s-flask-mysql">
-      <change afterPath="$PROJECT_DIR$/flask_cmcc_2/app.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask_cmcc_2/app/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask_cmcc_2/app/model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask_cmcc_2/app/sample_db.sqlite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask_cmcc_2/app/static/test.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask_cmcc_2/app/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask_cmcc_2/app/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/page_mode_test/test_selenium.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/py_test/test_class_fixture.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/py_test/test_fixture_true.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/py_test/test_mul_objects.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/py_test/test_parameter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/py_test/test_suite.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/re_test/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/selenium/t_cmcc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/str_test/str_replcase.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/tmp/test_list_dict.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/tmp/txt.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/utils/test/test_log.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/flask.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flask.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="0bcf3f9e-e496-4782-b6d4-210e07e21ce2" name="Default Changelist" comment="add requests update by flask">
+      <change afterPath="$PROJECT_DIR$/flask-admin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_tc_execution/README.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_tc_execution/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_tc_execution/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_tc_execution/case_execution.sqlite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_tc_execution/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_tc_execution/templates/admin/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dm_lab_with_flask_admin/data/spe_djy_lab.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/dm_lab_with_flask_admin/data/spe_djy_lab.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_admin_simple/myapp.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_admin_simple/myapp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_admin_simple/sample_db.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/flask_admin_simple/sample_db.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_admin_simple/static/t1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_docker_compose_uwsgi/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_docker_compose_uwsgi/app/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_docker_compose_uwsgi/kubernets/deployment.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sqla/sample_db.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/sqla/sample_db.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../k8s/.idea/k8s.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../k8s/.idea/k8s.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../k8s/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../k8s/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../k8s/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../k8s/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../k8s/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../k8s/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/README_en.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/getLatestIstio.ps1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/images.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/images/about.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/images/k8s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/images/k8s_credentials.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/images/k8s_win.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/images/mirror.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/images/mirror_win.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/images/resource.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/images/resource_win.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/kubernetes-dashboard.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/load_images.ps1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/load_images.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/sample/apple.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/sample/banana.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../k8s/k8s-for-docker-desktop-1.16.5/sample/ingress.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/.idea/python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../python/.idea/python.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/for.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/for.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/itchat/itchat.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/../python/itchat/itchat.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/itchat/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/itchat/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/py_test/test_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/py_test/test_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/py_test/test_exception.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/py_test/test_exception.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/selenium/t_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/selenium/t_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/tu_share/stock_in_db/StockCollection.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/tu_share/stock_in_db/StockCollection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/tu_share/stock_in_db/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/tu_share/stock_in_db/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/utils/log_utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/utils/log_utility.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/utils/loguru_utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/utils/loguru_utility.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/utils/retry_utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/utils/retry_utility.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/utils/test/test_loguru.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/utils/test/test_loguru.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/utils/test/test_retry.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/utils/test/test_retry.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_cmcc/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_cmcc/app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_cmcc_2/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_cmcc_2/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_cmcc_2/app/sample_db.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/flask_cmcc_2/app/sample_db.sqlite" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +72,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../python" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ZIuxpyHRtGjUhFQ0MxdjeiaOQv" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -155,17 +99,10 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/cmcc_example/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/cmcc_example/templates" />
-      <recent name="$PROJECT_DIR$/cmcc_example/static" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/flask_redis_kubernetes/kubernetes" />
-      <recent name="$PROJECT_DIR$/flask_redis_kubernetes" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/flask_cmcc" />
       <recent name="$PROJECT_DIR$/cmcc_example/static/js" />
@@ -173,8 +110,15 @@
       <recent name="$PROJECT_DIR$/../python/sqlite" />
       <recent name="$PROJECT_DIR$/../python/request" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/cmcc_example/templates" />
+      <recent name="$PROJECT_DIR$/cmcc_example/static" />
+      <recent name="$PROJECT_DIR$/flask_redis_kubernetes/kubernetes" />
+      <recent name="$PROJECT_DIR$/flask_redis_kubernetes" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.multi-part">
+  <component name="RunManager" selected="Python.app (4)">
     <configuration name="app (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="flask" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -183,11 +127,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_flask" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sqla" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_flask/app.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sqla/app.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -196,7 +140,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="app (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="flask" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -204,11 +148,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flask_cmcc" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flask_admin_s" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask_cmcc/app.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask_admin_s/app.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -217,7 +161,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="app_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="app (3)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="flask" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -225,11 +169,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flask_cmcc" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flask-admin/examples/simple" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask_cmcc/app_2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask-admin/examples/simple/app.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -238,19 +182,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="multi-part" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="python" />
+    <configuration name="app (4)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="flask" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../python/request" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flask_tc_execution" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../python/request/multi-part.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask_tc_execution/app.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -259,19 +203,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="request_flask" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="python" />
+    <configuration name="run_server" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="flask" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../python/request" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flask-admin/examples/sqla" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask_cmcc/request_flask.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask-admin/examples/sqla/run_server.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -281,19 +225,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.app" />
-      <item itemvalue="Python.app_2" />
-      <item itemvalue="Python.request_flask" />
+      <item itemvalue="Python.app (3)" />
+      <item itemvalue="Python.run_server" />
+      <item itemvalue="Python.app (2)" />
       <item itemvalue="Python.app (1)" />
-      <item itemvalue="Python.multi-part" />
+      <item itemvalue="Python.app (4)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.multi-part" />
-        <item itemvalue="Python.request_flask" />
-        <item itemvalue="Python.app_2" />
-        <item itemvalue="Python.app" />
+        <item itemvalue="Python.app (4)" />
         <item itemvalue="Python.app (1)" />
+        <item itemvalue="Python.app (2)" />
+        <item itemvalue="Python.run_server" />
+        <item itemvalue="Python.app (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -589,7 +533,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589809781094</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="add requests update by flask">
+      <created>1612267006989</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1612267006989</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -610,7 +561,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added confirm before delete" />
     <MESSAGE value="Add sqlite db in flask" />
     <MESSAGE value="enhance sqlite db in flask for threading" />
     <MESSAGE value="enhance sqlite CRUD safe in mul-threading" />
@@ -635,37 +585,59 @@
     <MESSAGE value="add test case report in flask" />
     <MESSAGE value="add docker-k8s-flask" />
     <MESSAGE value="add k8s-flask-mysql" />
-    <option name="LAST_COMMIT_MESSAGE" value="add k8s-flask-mysql" />
+    <MESSAGE value="add requests update by flask" />
+    <option name="LAST_COMMIT_MESSAGE" value="add requests update by flask" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="642" y="360" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601630697438">
+    <state width="1899" height="290" key="GridCell.Tab.0.bottom" timestamp="1612277474527">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="642" y="360" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1920.1057@0.23.1920.1057" timestamp="1601630697438" />
-    <state width="1899" height="290" key="GridCell.Tab.0.bottom" timestamp="1608734311279">
+    <state width="1899" height="290" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1612277474527" />
+    <state width="1899" height="290" key="GridCell.Tab.0.center" timestamp="1612277474526">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1899" height="290" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1608734311279" />
-    <state width="1899" height="290" key="GridCell.Tab.0.center" timestamp="1608734311279">
+    <state width="1899" height="290" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1612277474526" />
+    <state width="1899" height="290" key="GridCell.Tab.0.left" timestamp="1612277474526">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1899" height="290" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1608734311279" />
-    <state width="1899" height="290" key="GridCell.Tab.0.left" timestamp="1608734311278">
+    <state width="1899" height="290" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1612277474526" />
+    <state width="1899" height="290" key="GridCell.Tab.0.right" timestamp="1612277474526">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1899" height="290" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1608734311278" />
-    <state width="1899" height="290" key="GridCell.Tab.0.right" timestamp="1608734311279">
-      <screen x="0" y="23" width="1920" height="1057" />
-    </state>
-    <state width="1899" height="290" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1608734311279" />
+    <state width="1899" height="290" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1612277474526" />
     <state x="856" y="199" key="SettingsEditor" timestamp="1606393120454">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="856" y="199" key="SettingsEditor/0.23.1920.1057@0.23.1920.1057" timestamp="1606393120454" />
-    <state x="944" y="261" width="670" height="676" key="search.everywhere.popup" timestamp="1602515756091">
+    <state x="560" y="291" key="Vcs.Push.Dialog.v2" timestamp="1612267010121">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="944" y="261" width="670" height="676" key="search.everywhere.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1602515756091" />
+    <state x="560" y="291" key="Vcs.Push.Dialog.v2/0.23.1920.1057@0.23.1920.1057" timestamp="1612267010121" />
+    <state x="625" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1612273559780">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="625" y="258" width="670" height="676" key="search.everywhere.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1612273559780" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/flask_tc_execution/app.py</url>
+          <line>100</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/flask_tc_execution/app.py</url>
+          <line>119</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/flask_tc_execution/app.py</url>
+          <line>117</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="masterDetails">
     <states>

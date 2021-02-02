@@ -6,6 +6,7 @@
     <mapping directory="$PROJECT_DIR$/../Jquery" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bootstrap-flask" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../flask-admin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/flask-admin" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/hello-python" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/hello-python-kubernetes" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/k8s-flask-mysql" vcs="Git" />

@@ -67,11 +67,11 @@ class CaseAdmin(sqla.ModelView):
 admin = Admin(
     app,
     name='CMII-研一测试',
-    index_view=AdminIndexView(
-        name='主页',
-        template='index.html',
-        url='/admin'
-    )
+    # index_view=AdminIndexView(
+    #     name='主页',
+    #     template='index.html',
+    #     url='/admin'
+    # )
 )
 # admin.add_view(MyView(name='Hello'))
 # seems py3.7 not support FileAdmin
